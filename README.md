@@ -14,12 +14,13 @@ Ejercicios de JavaScript para Aprender y Practicar
     y tambien crear un archivo JSON que contenga donde cada Objeto tendra los siguiente datos de las empresas: 
     
     <ul>
+        <li>Imagen del Fundador</li>
         <li>Fundador</li>
         <li>Oficinas Centrales</li>
         <li>Año de Fundacion</li>
         <li>Lugar de Fundacion</li>
         <li>Ingresos</li>
-        <li>Google</li>
+        <li>Nombre Empresa</li>
     </ul>
     que Al Darle Click a los iconos de la empresas Muestre la Siguiente Informacion : CON AJAX
 </p>
