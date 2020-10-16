@@ -1,0 +1,68 @@
+[
+    {
+        "Empresa" : "Facebook",
+        "Fundador" : " Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, Chris Hughes", 
+        "Img" : "<img src='./Img/create.webp' width='200px'>", 
+        "Oficinas" : "Menlo Park, California, Estados Unidos" , 
+        "Año" :"febrero de 2004", 
+        "Lugar" :"Cambridge, Massachusetts, Estados Unidos", 
+        "Ingresos" : "70,7 miles de millones USD (2019)"
+    },
+
+    
+    {
+        "Empresa" : "GitHub",
+        "Fundador" : " Tom Preston-Werner, Chris Wanstrath, Scott Chacon, P. J. Hyett", 
+        "Img" : "<img src='./Img/creas.jpg' width='200px'>", 
+        "Oficinas" : " San Francisco (California), Estados Unidos" , 
+        "Año" : 2008,
+        "Lugar" :"San Francisco (California), Estados Unidos", 
+        "Ingresos" :"1,9 millones USD (2019)"
+    },
+
+
+    {
+        "Empresa" : "Instagram",
+        "Fundador" : "Kevin Systrom, Mike Krieger", 
+        "Img" : "<img src='./Img/Kevin.jpg' width='200px'>", 
+        "Oficinas" : "San Francisco (California), Estados Unidos" , 
+        "Año" : "6 de octubre de 2010", 
+        "Lugar" :"San Francisco (California), Estados Unidos", 
+        "Ingresos" :"No estimados"
+    },
+
+    
+    {
+        "Empresa" : "Whatsapp",
+        "Fundador" : "Brian Acton , Jan Koum", 
+        "Img" : "<img src='./Img/what.jpg' width='200px'>", 
+        "Oficinas" : "Mountain View, California, Estados Unidos" , 
+        "Año" :"24 de febrero de 2009 ", 
+        "Lugar" :"Mountain View, California, Estados Unidos", 
+        "Ingresos" :"No estimados"
+    },
+
+    
+    {
+        "Empresa" : "Twitter",
+        "Fundador" :"Jack Dorsey, Evan Williams, Noah Glass, Biz Stone", 
+        "Img" : "<img src='./Img/tweet.jpg' width='200px'>", 
+        "Oficinas" : "San Francisco, California, Estados Unidos" , 
+        "Año" : "21 de marzo de 2006", 
+        "Lugar" :"San Francisco, California, Estados Unidos", 
+        "Ingresos" :"USD 45,03 -0,94 (-2,04 %)"
+    },
+
+
+    {
+        "Empresa" : "Google",
+        "Fundador" :"Larry Page, Serguéi Brin", 
+        "Img" : "<img src='./Img/larry.jpg' width='200px'>", 
+        "Oficinas" : "Mountain View, California, Estados Unidos" , 
+        "Año" :"4 de septiembre de 1998", 
+        "Lugar" :"Menlo Park, California, Estados Unidos", 
+        "Ingresos" :"No estimado"
+    }
+
+]
+    

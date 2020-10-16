@@ -1,11 +1,59 @@
+<!--
+    Crear una Lista de Iconos de las siquientes empresas  Facebook,Github,Instragram,Whatsapp,Twiter,Google tambien crear
+    un archivos JSON que contenga Un Array de Objetos donde cada Objetoten los siguiente datos: 
+    Fundador:
+    Oficinas Centrales:
+    Año de Fundacion:
+    Lugar de Fundacion:
+    Ingresos:
+    que Al Darle Click  Muestre la Siguiente Informacion:
+    CON AJAX
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 0</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+    <script type="text/javascript" src="./Js/script.js"></script>
 </head>
 <body>
+    <section class="header"> 
+
+        <div class="m1">
+            <ul class="sci">
+                <li id="FACE"><img src="./Img/facebook.png" ></li>
+                <li id="GIT"><img src="./Img/signo-de-github.png" ></li>
+                <li id="GOO"><img src="./Img/google.png" ></li>
+            </ul>
+    
+            <div class="box blue" id="facebook"></div>
+            <div class="box1 yellow" id="google"></div>
+            <div class="box2 black" id="github" style="color: #2ea44f;"></div>
+        </div>
+
+        <div class="m2">
+            <ul class="sci">
+                <li id="INST"><img src="./Img/instagram.png"  ></li>
+                <li id="WHAT"><img src="./Img/whatsapp.png" ></li>
+                <li id="TWET"><img src="./Img/gorjeo.png" ></li>
+            </ul>
+    
+            <div class="box orange" id="instagram"></div>
+            <div class="box1 celst" id="twitter"></div>
+            <div class="box2 green" id="whatsapp"></div>
+        </div>
+
+
+        <div id="content">
+        </div>
+
+
+</section>
+
+
     
 </body>
 </html>
