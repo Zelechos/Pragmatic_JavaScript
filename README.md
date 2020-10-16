@@ -1,8 +1,7 @@
 # Pragmatic_JS
 Ejercicios de JavaScript para Aprender y Practicar
 <h1>Exercise 0 </h1>
-<p>
-    Crear una Lista de Iconos de las siquientes empresas 
+<p>Crear una Lista de Iconos de las siquientes empresas </p>
     <ul>
         <li>Facebook</li>
         <li>Instragram</li>
@@ -11,8 +10,7 @@ Ejercicios de JavaScript para Aprender y Practicar
         <li>Whatsapp</li>
         <li>Google</li>
     </ul>
-    y tambien crear un archivo JSON que contenga donde cada Objeto tendra los siguiente datos de las empresas: 
-    
+    <p> y tambien crear un archivo JSON que contenga donde cada Objeto tendra los siguiente datos de las empresas: </p>
     <ul>
         <li>Imagen del Fundador</li>
         <li>Fundador</li>
@@ -22,5 +20,4 @@ Ejercicios de JavaScript para Aprender y Practicar
         <li>Ingresos</li>
         <li>Nombre Empresa</li>
     </ul>
-    que Al Darle Click a los iconos de la empresas Muestre la Siguiente Informacion : CON AJAX
-</p>
+    <p> que Al Darle Click a los iconos de la empresas Muestre la Siguiente Informacion : CON AJAX </p>
