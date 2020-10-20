@@ -1,0 +1,24 @@
+[
+    
+    {
+        "Tecnologia":  "JavaScript",
+        "Fecha": "Publicado el : 19/10/2020 ",
+        "Publicacion": "Aprendí Como hacer un botón que copia texto  de un Input que seleccione"
+    },
+    
+    {
+        "Tecnologia": "JavaScript",
+        "Fecha": "Publicado el : 19/10/2020 ",
+        "Publicacion": "Estoy Aprendiendo AJAX con Jquery por el metodo $.get()"
+    },
+    {
+        "Tecnologia": "HTML",
+        "Fecha": "Publicado el : 19/10/2020 ",
+        "Publicacion": "Aprendi que las libreria Jquery tambien tiene use para AJAX"
+    },
+    {
+        "Tecnologia": "HTML",
+        "Fecha": "Publicado el : 19/10/2020 ",
+        "Publicacion": "Hoy Aprendi que el stakeholder en la etiqueta textarea de HTML es para poner dentro de tu textarea un mensje inicial para el usuario que desaparece cuando empieza a escribir"
+    }
+]

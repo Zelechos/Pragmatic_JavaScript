@@ -1,14 +1,43 @@
-
+<!--
+    Crear formulario que reciba un Publicacion para guardarlos en el LocalStorage y mostrar abajo con la fecha de la publicacion 
+    y la publicacion y luego buscar un lugar donde alojar gratis la web
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+    <script src="./Js/script.js"></script>
+    <link rel="stylesheet" href="./Css/style.css">
 </head>
 <body>
-    <div id = "facebook">
+    <h1>Commit Zelechos</h1>
+    <form action="" id="form">
+        <label for="Publicacion">commits</label><br>
+        <input type="text" id="addTecnologia" placeholder="Your Tech . . ."><br>
+        <textarea name="Publicacion" id="addPublicacion" cols="30" rows="10" autocomplete="on" placeholder="Your Commit . . ."></textarea>
+        <br><br>
+        <button type="submit" id="btn">Create</button>
+    </form>
+    <br>
+    <h2>Copiar el JSON generado al Archivo Publicaciones.json</h2>
+    
+    <textarea id="json">
+    </textarea>
+    
+    <br>
+    <img id="btnCopy" src="./Img/github.png" alt="">
+    <h2 id="aviso"></h2>
+
+    <button id="btnR">Publicar</button>
+
+    <div id="Box">
+        <h2>Que has Prendido Hoy?</h2>
     </div>
+    
+
 
 </body>
 </html>

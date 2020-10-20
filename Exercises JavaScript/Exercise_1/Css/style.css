@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+#addPublicacion{
+    width:80%;
+    min-height: 250px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 3px solid #396afc;
+}
+
+#addTecnologia{
+    width:80%;
+    min-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 3px solid #396afc;
+}
+
+
+#btn{
+    font-family: 'Montserrat', sans-serif;
+    width: 70%;
+    height: 50px;
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 5px;
+    color: #000;
+    font-size: 30px;
+}
+
+#btnR{
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;
+    height: 50px;
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 5px;
+    color: #000;
+    font-size: 30px;
+}
+
+#btnCopy{
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 27px;
+}
+
+#json{
+    text-align: start;
+    width:70%;
+    min-height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 5px solid #000;
+    margin: auto;
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#json:focus{
+    outline: none;
+}
+
+#json::moz-selection{
+    background-color: transparent;
+}
+
+#json::selection{
+    background-color: transparent;
+}
+
+
+
+#Publicaciones{
+    text-align: start;
+    width:70%;
+    min-height: 250px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 5px solid #000;
+    margin: auto;
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#Box{
+    text-align: start;
+    width:70%;
+    min-height: 250px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    margin: auto;
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
