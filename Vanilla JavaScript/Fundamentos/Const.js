@@ -44,10 +44,11 @@ console.log(Lenguajes);
 
 /* 
 como los objetos y arrays son tipos de Datos compuestos 
-si les ponemos en ves de let le ponemos de tipo const
+si les ponemos en ves de let, el tipo const
 igual funcionaria ya que son exactemente eso tipos de Datos 
-Compuestos
-*/console.log("*********Objeto creado con const********");
+Compuestos y podemos agregar y quitar valores
+*/
+console.log("*********Objeto creado con const********");
 
 const IA = {
     nombre: "Morgan",
@@ -58,3 +59,5 @@ console.log(IA);
 IA.nacimiento = '22/10/2020';
 console.log("Acabo de agregar su fecha de creacion:");
 console.log(IA);
+
+// Entonces con datos compuestos const no funciona

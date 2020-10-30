@@ -2,20 +2,26 @@
 
 console.log("\n***************Var&Let*****************\n");
 //Usar let no var
-let Saludo = "joder de nuevo empezando JavaScript";
+let Saludo = "Empezando aprender JavaScript";
 
 
 var saludo = "hola estoy manchando tu ventana";
 console.log(Saludo);
 
-//el objeto window mapea toda la ventana del navegador 
+/*
+    el objeto window mapea toda la ventana del navegador   
+    Objeto : window
+    Es el objeto principal en la jerarquía y contiene 
+    las propiedades y métodos para controlar la ventana del navegador. 
+    De él dependen todos los demás objetos de la jerarquía
+*/
 console.log(window);
 console.log(window.saludo);
 console.log(window.Saludo);
 
 console.log("***********************************************************");
 console.log("VAR");
-
+console.log("");
 
 /*como se ve en la salida de la console la 
     variable cambia dentro del bloque y afuera
