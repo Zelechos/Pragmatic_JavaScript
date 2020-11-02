@@ -36,6 +36,4 @@ window.addEventListener('load', ()=>{
     console.log(LLenar);
     LLenar += " Es el mejor Lenguaje";
     console.log(LLenar);
-
-
 });
