@@ -22,3 +22,4 @@ let Mensaje = `
 `;
 
 document.write(Mensaje);
+document.write("hola como estas....");
