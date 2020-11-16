@@ -35,7 +35,7 @@ function funcionDeclarada(){
 }
 funcionDeclarada();
 
-//Funcion Anonima
+//Funciones Expresadas o Funcion Anonima
 funcionExpresada();//Aqui nos da error pues solo las funciones Declaradas pues Invocarse antes de Declaracion
 const funcionExpresada = function (){
     console.log("Esto es una funcion Expresada tambien conocida como funcion Anonima");

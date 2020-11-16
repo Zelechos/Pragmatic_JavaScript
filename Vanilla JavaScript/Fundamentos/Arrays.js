@@ -1,4 +1,3 @@
-
 const array = [];
 const Array1 = [1, true, "Etherum", ["A","B","C",[1,2,3,4,5,6,7,8,9,0]]]; 
 
@@ -20,7 +19,7 @@ console.log(arreglo);
 const ecommerce = Array(100).fill("Descuento");
 console.log(ecommerce);
 
-const lenguajes = new Array("JavaScript","Java","Python","C","PHP","Golang","TypeScript","Perl","Rust");
+const lenguajes = new Array("JavaScript","Java","Python","C","PHP","Golang","TypeScript","Perl","Rust","C++");
 console.log(lenguajes);
 
 const Colores = ["Blanco","Rojo","Verde"];
@@ -45,9 +44,3 @@ lenguajes.forEach(function(element,index){
     document.write(`<li id="${index}">${element}</li>`);
 });
 document.write("</ul>");
-
-
-
-
-
-
