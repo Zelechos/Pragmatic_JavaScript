@@ -34,7 +34,6 @@ function Menu(){
   }while(Opcion != 5);
 }
 
-
 function Data(){
   let Number1 = parseInt(prompt("Digite un Numero : ",0));
   let Number2 = parseInt(prompt("Digite otro Numero : ",0));

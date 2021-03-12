@@ -1,11 +1,11 @@
 'use strict'
 
 //Metodos para Transformar TEXTO
-var num = 99;
-var text = "JavaScript me da de Comer";
-var text2  ="  JAVA es mejor , pero quiero ser experto en JAVA  ";
+let num = 99;
+let text = "JavaScript me da de Comer";
+let text2  ="  JAVA es mejor , pero quiero ser experto en JAVA  ";
 
-var Dato = num.toString();//para converti cualquier dato a String
+let Dato = num.toString();//para converti cualquier dato a String
     Dato = text.toUpperCase();//par convertir el texto en mayusculas
     Dato = text.toLowerCase();//para converti en minusculas el texto
 console.log("el dato es : "+Dato+"\nsu tipo de dato es : "+typeof(Dato));
@@ -17,12 +17,12 @@ console.log("ha sido tranformado correctamente. . .");
 
 //Concatenacion de texto ovbio
 
-var TextRes = text.concat(text2);//claro que tambien podemos usar el simbolo mas pero con concat() se ve mas elegante
+let TextRes = text.concat(text2);//claro que tambien podemos usar el simbolo mas pero con concat() se ve mas elegante
 console.log(TextRes);
 
 // Buscar una palabra especifica dentro de un TEXTO
 
-var buscar = text2.indexOf("JAVA");//encuentra la primera palabra
+let buscar = text2.indexOf("JAVA");//encuentra la primera palabra
     buscar = text2.lastIndexOf("JAVA");//Encutra la ultima palabra
     buscar  = text2.search("JAVA")//casi es lo mismo que indexof
     buscar = text2.match("JAVA");//TE DEVUELVE LA PALABRA DENTRO DE UN ARRAY EN EL INDICE 0

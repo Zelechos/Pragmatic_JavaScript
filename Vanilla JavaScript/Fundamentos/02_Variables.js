@@ -1,12 +1,12 @@
 //Variables
 
-var Country = "Argentina";
-var Continent = "SudAmerica";
-var Antiquity = 20000;
-var CountryAndContinent = Country+' '+Continent;
+let Country = "Argentina";
+let Continent = "SudAmerica";
+let Antiquity = 20000;
+let CountryAndContinent = Country+' '+Continent;
 
 
-// los mas recomendable en el 2021 y para adelante es usar let en vez de var
+// los mas recomendable en el 2021 y para adelante es usar let en vez de let
 
 let LLamada = 'Conectando';
 

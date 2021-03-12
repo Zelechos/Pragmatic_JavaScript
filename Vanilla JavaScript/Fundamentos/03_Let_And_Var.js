@@ -2,7 +2,7 @@
 //Variables let and Var
 
 //Prueba con Var
-var Numero = 40;
+let Numero = 40;
 console.log(Numero);//40
 if(true){
   Numero = 50;

@@ -1,6 +1,6 @@
 'use strict'
 
-var Year = 2020;
+let Year = 2020;
 
 while(Year <= 2100){
   console.log("we are in the Year : "+Year);
@@ -11,7 +11,7 @@ while(Year <= 2100){
 }
 
 // DO WHILE
-var years = 25;
+let years = 25;
 do{
   alert("is Twelve");
   years--;

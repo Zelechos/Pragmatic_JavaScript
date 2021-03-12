@@ -1,6 +1,6 @@
 'use strict'
 
-var Age = 5;
+let Age = 5;
 
 switch(Age){
     case 18:

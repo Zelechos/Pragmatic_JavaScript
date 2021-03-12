@@ -10,5 +10,5 @@ function frutas(fruta1,fruta2,...RestoDeFrutas){
 frutas("pomelos","durznos","naranaja","limon","uva","pera");
 
 //Parametro SPREAD ---> frutas( {...cajonFrutas} ,"pomelos","durznos","naranaja","limon","uva","pera");
-var cajonFrutas = ["bananas","Manzanas","aguacate"];
+let cajonFrutas = ["bananas","Manzanas","aguacate"];
 frutas(...cajonFrutas,"pomelos","durznos","naranaja","limon","uva","pera");

@@ -6,7 +6,7 @@ alert("Joderrrr");
 alert("mas rapido");
 */
 //CONFIRMACION
-var resultado = confirm("Estas seguro de ir mas Rapido");
+let resultado = confirm("Estas seguro de ir mas Rapido");
 console.log(resultado);
 
 //MAS EJEMPLOS
@@ -19,7 +19,7 @@ if(confirmacion){
 
 
 //INGRESAR DATOS
-var respuesta = prompt("Que tan rapido quieres Aprender JavaScript", "muy rapido");
+let respuesta = prompt("Que tan rapido quieres Aprender JavaScript", "muy rapido");
 console.log(respuesta);
 
 //MAS EJEMPLOS

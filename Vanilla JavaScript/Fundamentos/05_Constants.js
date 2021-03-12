@@ -1,7 +1,7 @@
 'use strict'
 
 //Constants
-var web = "https://ArgusAphocraphex.com";
+let web = "https://ArgusAphocraphex.com";
 const IP = "198.0.0.15";
 console.log(web , IP);
 

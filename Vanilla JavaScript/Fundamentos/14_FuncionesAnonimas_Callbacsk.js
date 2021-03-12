@@ -2,14 +2,14 @@
 
 //Funcion anonimas es una funcion que no tiene nombre
 
-var pelicula = function(nombre){
+let pelicula = function(nombre){
   return "La pelicula es :"+ nombre;
 }
 
 //CallBacks
 
 function Sumar(number1, number2 , Datos , MostrarSuma , SumaporDos){
-  var suma = number1+number2;
+  let suma = number1+number2;
 
   //aqui le pasamos el parametro a nuestras funcuiones
   Datos(number1,number2);
