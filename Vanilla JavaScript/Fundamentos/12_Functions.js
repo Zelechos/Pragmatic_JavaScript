@@ -1,4 +1,109 @@
 'use strict'
+//Funcion Declarada
+function estoEsUnaFuncion(){
+  console.log("Uno");
+  console.log("Dos");
+  console.log("Tres");
+}
+//Ivocacion de Funciones
+estoEsUnaFuncion();
+
+//Funcion que Devuelve un Valor
+function unaFuncionQueDevuelveUnValor(){
+  console.log("Hola bienvenido a tu Chat ... ");
+  return "Escribe un Mensaje";
+  console.log("Tenemos que escribir un Mensaje...");
+  return "Falta, Escribir un Mensaje!!";
+}
+
+let valorDeNuestraFuncion = unaFuncionQueDevuelveUnValor();
+console.log(valorDeNuestraFuncion);
+
+
+//Funcion que Acepta Parametros
+let Nombre = ["Sergio","Erick","Gustavo","Hector"];
+function Saludar(Nombre = "Desconocido", Edad = "000" ){//Valores por defecto
+  console.log(`Hola mi Nombre es ${Nombre} y mi edad es ${Edad}`);
+}
+Saludar(Nombre[2],99);
+Saludar();
+
+
+//Funciones Declaradas & Funciones Expresadas
+funcionDeclarada();
+function funcionDeclarada(){
+  console.error("Esta es mi funcion Declarada puedes ejecutarse en cualquier parte de nuestro codigo incluso antes de su declaracion");
+}
+funcionDeclarada();
+
+//Funciones Expresadas o Funcion Anonima
+//funcionExpresada();//Aqui nos da error pues solo las funciones Declaradas pues Invocarse antes de Declaracion
+const funcionExpresada = function (){
+  console.log("Esto es una funcion Expresada tambien conocida como funcion Anonima");
+}
+funcionExpresada();
+
+//Ejemplo de Funcion Anonima
+const Mostrar = function(Codigo){
+  let html = `
+  <h1>Algoritmo la Pelicula</h1>
+  <code>${Codigo}</code>
+  `; 
+  document.write(html);
+} 
+
+const code = `+alert("man JavaScript will feed me");<br>
+document.write("HelloWorld from document.write codeeeee ;) ");<br>
+console.log("show this on the Console");<br>
+console.log(8+1);`;
+Mostrar(code);
+
+//Funciones Self Invoking
+const Lista = [ "JavaScript","Java","Python","C","PHP","Golang"];
+(function(...ether){
+  ether.forEach( elemento=> {
+      console.log(elemento);
+  });
+})(Lista);
+
+//Ejemplos de Funcion Self Invoking
+(function(){
+  arguments[0].forEach(element =>{
+      console.log(element);
+  });
+})(Lista);
+
+//Metodos arguments & tostring
+
+//arguments
+function miFuncion(){
+  //Podemos ver cuantos argumentos ha reciibido nuestra funcion
+  console.log("Argumentos recibidos en la Funcion : ",arguments.length);
+  console.log(arguments[0]);
+  console.log(arguments[1]);
+  console.log(arguments[2]);
+}
+miFuncion(2, 3, 4);
+
+
+//tostring
+function Fibonacci(Numero){
+  if(Numero == 0){
+      return 0;
+  }else if(Numero == 1 || Numero == 2){
+      return 1;
+  }else{
+      return Fibonacci(Numero-1) + Fibonacci(Numero-2);
+  }
+}
+// Con toString puedes ver el contenido de la funcion en formato texto
+let res = ` Sucesion Fibonacci
+  ${Fibonacci.toString()}
+`;
+console.log(res);
+
+
+//Ejercicio con Funciones
 let Opcion;
 function Menu(){
   do{
