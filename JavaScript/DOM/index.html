@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+</head>
+<body>
+    <h1>javascript DOM Document Object Model</h1>
+    <h2>Ejercicio 1</h2>
+    <div id="Texto">Hazme mas Grande</div>
+    <script type="text/javascript" src="03_Exercise(DOM).js"></script>
+    <hr>
+    
+    <h2>Ejercicio 2</h2>
+    <label for="Color">Escriba Un Color en Ingles</label><br>
+    <input type="text" name="Color" id="Color"><br><br>
+    <input type="button" value="Mostrar" onclick="Capturar();">
+    <div id="Caja"></div>
+    <script type="text/javascript" src="01_Exercise(DOM).js"></script>
+    <hr>
+    
+
+    <h2>Ejercicio 3</h2>
+    <label for="Number1">Introduzca un Numero</label><br>
+    <input style ="width : 300px; height : 30px;" type="text" name="Number1" id="X"><br><br>
+    <label for="Number2">Introduzca otro Numero</label><br>
+    <input style ="width : 300px; height : 30px;" type="text" name="Number2" id="Y" ><br><br>
+    <input type="button" value="Sumar" onclick="Calcular();">
+    <script type="text/javascript" src="02_Exercise(DOM).js"></script>   
+    <div id="Resultado">Respuesta</div>
+    <hr>
+
+    <h2>Ejercicio 4</h2>
+    <section id="miseccion">
+        <h2>aqui mostramos todo el contenido de la etiquetas que getElementsByTagName() obtuvo</h2>
+    </section>
+
+    <h2>aqui solo se muestran las etiquetas h4 que introdujimos en getElementsByTagName()</h2>
+        <h4 class="celeste">Primer h4</h4>
+        <h4 class="blanco"> Segundo h4</h4>
+        <h4 class="celeste">Tecer h4</h4>
+        <h4 class="negro">Cuarto h4</h4>    
+    
+        <script type="text/javascript" src="04_Exercise(DOM).js"></script>   
+        <hr>
+
+    <h2>Ejercicio 5</h2>
+    <h1> examinando el querySelectorAll()</h1>
+        <p>Parrafo1</p>
+        <p>Parrafo2</p>
+        <p>Parrafo3</p>
+        <p>Parrafo4</p>
+
+            
+        <div id="test">
+            <div class="highlighted">
+                <p>Me Encontraste 1</p>
+                <p>Me Encontraste 1</p>
+                <p>Me Encontraste 1</p>
+            </div>
+        </div>         
+
+
+            <iframe data-src="lol" frameborder="0">
+                <h1>Argus </h1>
+                <h1>Aphocraphex</h1>
+            </iframe>
+
+            <iframe data-src="ko" frameborder="0">
+                <h1>Etherias</h1>
+                <h1>Zelechos</h1>  
+            </iframe>
+
+            <div id="userlis" onclick="Desactivacion()" style="background-color: aqua;">
+            <ul  >
+                <li class="g" data-active="1">Activado</li>
+                <li class="g" data-active="1">Activado</li>
+                <li class="g" data-active="1">Activado</li>
+                <li class="g" data-active="1">Activado</li>
+                <li class="g" data-active="1">Activado</li>
+            </ul>    
+            </div>
+
+            <div id="userlist">
+            <ul onclick="Activacion()">
+                <li class="l" data-active="0">Desactivado</li>
+                <li class="l" data-active="0">Desactivado</li>
+                <li class="l" data-active="0">Desactivado</li>
+                <li class="l" data-active="0">Desactivado</li>
+                <li class="l" data-active="0">Desactivado</li>
+            </ul>
+            </div>
+            
+        <script type="text/javascript" src="05_Exercise(DOM).js"></script>   
+
+</body>
+</html>

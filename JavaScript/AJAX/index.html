@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+    <script type="text/javascript" src="00.Ajax.js"></script>
+    <style>
+        #data{
+            border: 2px solid green;
+            width: 518px;   
+            height: 518px;
+            overflow: scroll;
+            float: left;
+        }
+
+        #data1{
+            border: 2px solid red;
+            width: 518px;   
+            height: 518px;
+            overflow: scroll;
+            float: right;
+        }
+        #data2{
+            border: 2px solid blue;
+            width: 518px;   
+            height: 518px;
+            overflow: scroll;
+            float: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX Asyncronys javascript and XML</h1>
+    
+    <form action="https://reqres.in/api/users" method="post" id="formajax">
+        <label for="firstname">FirstName</label><br>
+        <input type="text" name="firstname" id="lsName"><br>
+        <label for="lastname">LastName</label><br>
+        <input type="text" name="lastname" id="frName"><br>
+        <label for="website">Web</label><br>
+        <input type="text" name="website" id="web"><br>
+        <label for="age">Age</label><br>
+        <input type="number" name="age" id="ag"><br><br>
+        <input type="submit" value="to register"><br><br>
+    </form>
+    <hr>
+
+    <div id="data">
+        <h1>GET for ajax</h1>
+    </div>
+
+    <div id="data1">
+        <h1>POST for ajax</h1>
+    </div>
+
+    <div id="data2">
+        <h1>$.ajax method</h1>
+    </div>
+
+</body>
+</html>

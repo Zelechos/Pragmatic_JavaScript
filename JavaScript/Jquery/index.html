@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="00_Selectores.js"></script>
+    <style>
+        .zebra{
+        border : 3px dashed black;
+        }
+        .margen-superior{
+            display: block;
+            margin-top: 45px;
+        }
+        .resaltado{
+            border-bottom: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo JQuery </h1>
+    <h2>exercise 1</h2>
+    <p id="rojo" class="sin-borde">Practicando Jquery</p>
+    <p id="amarillo" class="zebra">Practicando la libreria de Jquery</p>
+    <p id="verde" class="sin-borde">con parrafos</p>
+    <p class="zebra">Selectores de clase</p>
+    <hr>
+    <h2>exercise 2</h2>
+    <ul>
+        <li><a href="https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwiJws7I1I3YAhVIQpAKHXxMDnAQPAgD" title="Google">Google</a></li>
+        <li><a href="https://www.facebook.com/" title="Facebook">Facebook</a></li>
+        <li><a href="https://www.youtube.com/?hl=es-419" title="Youtube">Youtube</a></li>
+        <li><a href="https://web.whatsapp.com/" title="Whatsapp">Whatsapp</a></li>
+        <li><a href="https://github.com/github" title="Github">Github</a></li>
+    </ul>
+    <hr>
+    <h2>exercise 3</h2>
+    <div id="caja">
+        <p>probando mas maneras de seleccionar</p>
+        <ul>
+            <li>Elemento1</li>
+            <li class="resaltado">Elemento2</li>
+        </ul>
+        <span class="resaltado">soy un span</span>
+    </div>
+</body>
+</html>

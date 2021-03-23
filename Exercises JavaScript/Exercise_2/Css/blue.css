@@ -1,0 +1,75 @@
+body{
+    font-family: 'Alata', sans-serif;
+}
+
+#container{
+    color: #00AAFF;
+    box-shadow: 0px 0px 20px #00AAFF;
+}
+
+#logo{
+    color: #00AAFF;
+}
+
+#menu{
+    box-shadow: 0px 0px 20px #00AAFF;
+}
+
+#menu a{
+    color: #00AAFF;
+}
+
+.read-more:hover{
+    box-shadow: 0px 0px 40px #00AAFF;
+    color: #00AAFF;
+}
+
+form input[type = "text"],
+form input[type = "password"],
+form input[type = "email"],
+form input[type = "number"]{
+    color: #00AAFF;
+    box-shadow: 0px 0px 10px #00AAFF;
+}
+
+form input[type = "submit"]:hover{
+    color: #00AAFF;
+    box-shadow: 0px 0px 30px #00AAFF;
+}
+
+
+.footer{
+    color: #00AAFF;
+    box-shadow: 0px 0px 10px #00AAFF;
+}
+
+#init{
+    box-shadow: 0px 0px 20px #00AAFF;
+    background-color: #00AAFF;
+}
+
+#acordeon .cont{
+    color: #00AAFF;
+    border-color: #00AAFF;
+    box-shadow: 0px 0px 30px #00AAFF;
+}
+
+#acordeon h2{
+    border-color: #00AAFF;
+    box-shadow: 0px 0px 20px #00AAFF;
+}
+
+#reloj{
+    border: 3px #00AAFF solid;
+    box-shadow: 0px 0px 120px #00AAFF;
+}
+
+#opcional{
+    color: #00AAFF;
+    box-shadow: 0px 0px 10px #00AAFF;
+}
+
+.form-error{
+    background-color: #00AAFF;
+    box-shadow: 0px 0px 40px #00AAFF;
+}

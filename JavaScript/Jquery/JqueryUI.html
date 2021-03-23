@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery UI</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="JqueryUI.js"></script>
+    <style>
+            .Element{
+                width: 300px;
+                height: 300px;
+                background-color: cornflowerblue;
+                border: 3px black solid;
+                float: left;
+                margin: 50px;
+            }
+            .List li{
+                width: 80%;
+                padding: 20px;
+                border: 3px solid darkgray;
+                list-style: none;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+
+            ul .ui-selecting{
+                background-color: cornflowerblue;
+            }
+            ul .ui-selected{
+                background-color: green;
+            }
+
+            #moved{
+                width: 200px;
+                height: 200px;
+                background-color: purple;
+                float: left;
+                margin: 50px;
+            }
+
+            #content{
+                width: 400px;
+                height: 400px;
+                background-color: darkslateblue;
+                float: left;
+
+                margin: 50px;
+            }
+
+        .Element{
+                background-color: white;
+                float: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo Jquery UI</h1>
+    <h2>Droppable</h2>
+    <div id="moved" >
+
+    </div>
+    <div id="content" > 
+
+    </div>
+    <hr style="margin-top: 550px;">
+    <h2>Selectable & sortable</h2>
+    <ul class="List">
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Go</li>
+        <li>Rust</li>
+    </ul>
+    <h2>draggable & resizable</h2>
+    <div class="Element">
+        <hr>
+        Hey , i am a Element of the web
+    </div>
+    <div class="Element">
+        Hey , i am a Element of the web
+    </div>
+    <div class="Element">
+        Hey , i am a Element of the web
+    </div>
+        <hr style="margin-top: 100px;">
+    <h2>efectos </h2>
+    <button id="effect">effect</button>
+    <div class="box-effects Element">
+        <h1>effect</h1>
+    </div>
+    <hr style="margin-top: 100px;">
+    <h2>Tooltip </h2>
+    <div>
+        <a href="#" id="my-info" title="access to my information">My Info</a><br>
+        <a href="#" id="my-info" title="identify myself">My identification</a><br>
+        <a href="#" id="my-info" title="see all my friends">My Friends</a><br>
+    </div>
+    <hr>
+    <h2>Cuadros de Dialogo </h2>
+    <button id="Exit">Exit</button>
+    <div id="popup" title="Are you Sure?" style="display: none;">
+        <p>if you continue in the course you will learn a lot about JavaScript</p>
+    </div>
+    <hr>
+    <h2>Calendar</h2>
+    <div>
+        <input type="text" id="calendar"/>
+    </div>
+    <hr>
+    <h2>Pestañas</h2>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Python</a></li>
+            <li><a href="#tabs-2">Java</a></li>
+            <li><a href="#tabs-3">JavaScript</a></li>
+            <li><a href="#tabs-4">Rust</a></li>
+        </ul>
+        <div id="tabs-1">Learn Python</div>
+        <div id="tabs-2">Learn Java</div>
+        <div id="tabs-3">Learn JavaScript</div>
+        <div id="tabs-4">Learn Rust</div>
+    </div>
+    <hr>
+</body>
+</html>

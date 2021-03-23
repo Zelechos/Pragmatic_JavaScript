@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="00_Eventos.js"></script>
+    <style>
+        #caja{
+            width: 250px;
+            height: 250px;
+            border: 2px solid;
+            transition: 300ms all;
+            background: yellow;
+        }
+
+        #box{
+            width: 250px;
+            height: 250px;
+            border: 2px solid;
+            transition: 300ms all;
+            background: burlywood;
+        }
+
+        #box1{
+            width: 250px;
+            height: 250px;
+            border: 2px solid;
+            transition: 300ms all;
+            background: darkslategrey;
+        }
+
+        input{
+            padding: 10px;
+            width: 300px;
+            font-size: 20px;
+        }
+
+        #datos{
+            border: 4px dashed darkcyan;
+            padding: 10px;
+            width: 250px;
+            height: 150px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #datos1{
+            border: 9px dashed darkgoldenrod;
+            padding: 10px;
+            width: 250px;
+            height: 150px;
+            margin-top: 20px;
+        }
+
+        #sigueme{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            display: block;
+            background: darkcyan;
+            opacity: 0.3;
+            border-radius: 999px;
+            border: 4px solid black;
+        }
+/*
+        #caja:hover{
+            background: rebeccapurple;
+            cursor: pointer;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h1>Eventos Jquery</h1>
+    <h2>Eventos mouseover y mouseout</h2>
+    <p>eventos mouseover y mouseout aplican aqui</p>
+    <div id="caja">
+    </div>
+    <hr>
+    <h2>Evento hover</h2>
+    <p>el evento hover se usa aqui</p>
+    <div id="box">
+    </div>
+    <hr>
+    <h2>Evento Click y doble click  </h2>
+    <p>el evento Click y doble clickse usa aqui</p>
+    <div id="box1">
+
+    </div>
+    <hr>
+    <h2>Eventos Focus y Blur</h2>
+    <form action="">
+        <input type="text" id="nombre">
+    </form>
+    <div id="datos">
+
+    </div>
+    <hr>
+    <h2>Eventos mousedown y mouseup</h2>
+    <div id="datos1">
+
+    </div>
+    <hr>
+    <h2>Eventos mousemove</h2>
+    <div id="sigueme"></div>
+</body>
+</html>
