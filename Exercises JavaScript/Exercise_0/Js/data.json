@@ -6,7 +6,9 @@
         "Oficinas" : "Menlo Park, California, Estados Unidos" , 
         "Año" :"febrero de 2004", 
         "Lugar" :"Cambridge, Massachusetts, Estados Unidos", 
-        "Ingresos" : "70,7 miles de millones USD (2019)"
+        "Ingresos" : "70,7 miles de millones USD (2019)",
+        "Recurso" : "./Img/create.webp",
+        "Web" : "https://www.facebook.com/"
     },
 
     
@@ -17,7 +19,9 @@
         "Oficinas" : " San Francisco (California), Estados Unidos" , 
         "Año" : 2008,
         "Lugar" :"San Francisco (California), Estados Unidos", 
-        "Ingresos" :"1,9 millones USD (2019)"
+        "Ingresos" :"1,9 millones USD (2019)",
+        "Recurso" : "./Img/creas.jpg",
+        "Web" : "https://github.com/"
     },
 
 
@@ -28,7 +32,9 @@
         "Oficinas" : "San Francisco (California), Estados Unidos" , 
         "Año" : "6 de octubre de 2010", 
         "Lugar" :"San Francisco (California), Estados Unidos", 
-        "Ingresos" :"No estimados"
+        "Ingresos" :"No estimados",
+        "Recurso" : "./Img/Kevin.jpg",
+        "Web" : "https://www.instagram.com/?hl=es-la"
     },
 
     
@@ -39,7 +45,9 @@
         "Oficinas" : "Mountain View, California, Estados Unidos" , 
         "Año" :"24 de febrero de 2009 ", 
         "Lugar" :"Mountain View, California, Estados Unidos", 
-        "Ingresos" :"No estimados"
+        "Ingresos" :"No estimados",
+        "Recurso" : "./Img/what.jpg",
+        "Web" : "https://web.whatsapp.com/"
     },
 
     
@@ -50,7 +58,9 @@
         "Oficinas" : "San Francisco, California, Estados Unidos" , 
         "Año" : "21 de marzo de 2006", 
         "Lugar" :"San Francisco, California, Estados Unidos", 
-        "Ingresos" :"USD 45,03 -0,94 (-2,04 %)"
+        "Ingresos" :"USD 45,03 -0,94 (-2,04 %)",
+        "Recurso" : "./Img/tweet.jpg",
+        "Web" : "https://twitter.com/?lang=es"
     },
 
 
@@ -61,7 +71,9 @@
         "Oficinas" : "Mountain View, California, Estados Unidos" , 
         "Año" :"4 de septiembre de 1998", 
         "Lugar" :"Menlo Park, California, Estados Unidos", 
-        "Ingresos" :"No estimado"
+        "Ingresos" :"No estimado",
+        "Recurso" : "./Img/larry.jpg",
+        "Web" : "https://www.google.com/?hl=es"
     }
 
 ]

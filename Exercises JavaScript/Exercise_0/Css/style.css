@@ -28,6 +28,16 @@ body{
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #1a2a6c;
+    background-color:#2ea44f;
+    padding: 3px;
+    border: 4px solid #1a2a6c;
+    border-radius: 9px;
+}
+
 .box1{
     border: 9px solid #5861F3;
     width: 563px;   

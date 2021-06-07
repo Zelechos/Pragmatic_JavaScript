@@ -17,114 +17,65 @@ $(document).ready(function(){
 */
 $('#FACE').click(function (){
     $.get('./Js/data.json' , response =>{
-        let obj = response[0]; 
-        MetaData(obj);
+        let Obj = response[0]; 
+        $('#facebook').append(Data(Obj));
     });     
 })
 
 $('#GIT').click(function (){
     $.get('./Js/data.json' , response =>{
-        let obj = response[1]; 
-        MetaData(obj);
+        let obj = response[1];
+        $('#github').append(Data(obj));
     });     
 })
 
 $('#GOO').click(function (){
     $.get('./Js/data.json' , response =>{
         let obj = response[5]; 
-        MetaData(obj);
+        $('#google').append(Data(obj));
     });     
 })
 
 $('#INST').click(function (){
     $.get('./Js/data.json' , response =>{
         let obj = response[2]; 
-        MetaData(obj);
+        $('#instagram').append(Data(obj));
     });     
 })
 
 $('#WHAT').click(function (){
     $.get('./Js/data.json' , response =>{
         let obj = response[3]; 
-        MetaData(obj);
+        $('#whatsapp').append(Data(obj));
     });     
 })
 
 $('#TWET').click(function (){
     $.get('./Js/data.json' , response =>{
         let obj = response[4]; 
-        MetaData(obj);
+        $('#twitter').append(Data(obj));
     });     
 })
     
+//Data para mostrar
+function Data(Obj){
+    let DataShow = `
+    <hr>
+    <h1>${Obj.Empresa}</h1>
+    <h3>${Obj.Fundador}</h3>
+    ${Obj.Img}
+    <h4>Oficinas : ${Obj.Oficinas}</h4>
+    <h4>Residencia : ${Obj.Lugar}</h4>
+    <h4>Año : ${Obj.Año}</h4>
+    <h4>Ingresos : ${Obj.Ingresos}</h4>
+    <a href="${Obj.Recurso}" download >Descargar Imagen</a>
+    <a href="${Obj.Web}" target="_blank" >Ir a la Web</a>
     
+    <hr>
+`;
+    return DataShow;
+}
 
-
-
-
-
-
-    function MetaData(Obj){
-
-            if(Obj.Empresa == "Facebook"){
-                $('#facebook').append(
-                '<h1>'+Obj.Empresa+'</h1>'+
-                '<h3>'+Obj.Fundador+'</h3>'+
-                '<a>'+Obj.Img+'</a>'+
-                '<h4>Oficinas : '+Obj.Oficinas+'</h4>'+
-                '<h4>'+Obj.Lugar+'</h4>'+
-                '<h4>Año : '+Obj.Año+'</h4>'+
-                '<h4> Ingresos : '+Obj.Ingresos+'</h4>');
-            }else if(Obj.Empresa == "GitHub"){
-                $('#github').append(
-                '<h1>'+Obj.Empresa+'</h1>'+
-                '<h3>'+Obj.Fundador+'</h3>'+
-                '<a>'+Obj.Img+'</a>'+
-                '<h4>Oficinas : '+Obj.Oficinas+'</h4>'+
-                '<h4>'+Obj.Lugar+'</h4>'+
-                '<h4>Año : '+Obj.Año+'</h4>'+
-                '<h4> Ingresos : '+Obj.Ingresos+'</h4>');
-            }else if(Obj.Empresa == "Instagram"){
-                $('#instagram').append(
-                '<h1>'+Obj.Empresa+'</h1>'+
-                '<h3>'+Obj.Fundador+'</h3>'+
-                '<a>'+Obj.Img+'</a>'+
-                '<h4>Oficinas : '+Obj.Oficinas+'</h4>'+
-                '<h4>'+Obj.Lugar+'</h4>'+
-                '<h4>Año : '+Obj.Año+'</h4>'+
-                '<h4> Ingresos : '+Obj.Ingresos+'</h4>');
-            }else if(Obj.Empresa == "Whatsapp"){
-                $('#whatsapp').append(
-                '<h1>'+Obj.Empresa+'</h1>'+
-                '<h3>'+Obj.Fundador+'</h3>'+
-                '<a>'+Obj.Img+'</a>'+
-                '<h4>Oficinas : '+Obj.Oficinas+'</h4>'+
-                '<h4>'+Obj.Lugar+'</h4>'+
-                '<h4>Año : '+Obj.Año+'</h4>'+
-                '<h4> Ingresos : '+Obj.Ingresos+'</h4>');
-            }else if(Obj.Empresa == "Twitter"){
-                $('#twitter').append(
-                '<h1>'+Obj.Empresa+'</h1>'+
-                '<h3>'+Obj.Fundador+'</h3>'+
-                '<a>'+Obj.Img+'</a>'+
-                '<h4>Oficinas : '+Obj.Oficinas+'</h4>'+
-                '<h4>'+Obj.Lugar+'</h4>'+
-                '<h4>Año : '+Obj.Año+'</h4>'+
-                '<h4> Ingresos : '+Obj.Ingresos+'</h4>');
-            }else if(Obj.Empresa == "Google"){
-                $('#google').append(
-                '<h1>'+Obj.Empresa+'</h1>'+
-                '<h3>'+Obj.Fundador+'</h3>'+
-                '<a>'+Obj.Img+'</a>'+
-                '<h4>Oficinas : '+Obj.Oficinas+'</h4>'+
-                '<h4>'+Obj.Lugar+'</h4>'+
-                '<h4>Año : '+Obj.Año+'</h4>'+
-                '<h4> Ingresos : '+Obj.Ingresos+'</h4>');
-            }
-            
-
-        }
-    
     });
 
 
