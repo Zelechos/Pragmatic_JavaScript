@@ -76,11 +76,4 @@ function Data(Obj){
     return DataShow;
 }
 
-    });
-
-
-
-
-    
-    
-
+});
