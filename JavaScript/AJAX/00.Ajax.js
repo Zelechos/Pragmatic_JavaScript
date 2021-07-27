@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     // aqui usamos un objeto json para llegar a la pagina donde estan nuestra API    
     //$.get("https://reqres.in/api/users", {page:2}, function(response){
-        $.get("https://reqres.in/api/users",function(response){
+        $.get("https://reqres.in/api/users", function(response){
             console.log(response);
             response.data.forEach(element=>{
                 $('#data').append("<p>"+element.id +'.- '+ element.first_name +' '+ element.last_name +"<br><img src="+element.avatar+">"+'  ' +"<br>email :"+element.email +"</p>");

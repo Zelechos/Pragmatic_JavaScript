@@ -8,14 +8,10 @@ console.log(web , IP);
 web = "https://Etherias.com";
 console.log(web , IP);
 
-
-'use strict'
-
 console.log("\n***************Const*****************\n");
-
 /*
-para denotar las constantes valores que no cambiaran 
-a lo largo del Programa en este caso tu script
+    para denotar las constantes valores que no cambiaran 
+    a lo largo del Programa en este caso tu script
 */
 const PI = 3.1416;
 //PI = 9 ; --> esto no se puede hacer porque causa un error
@@ -31,8 +27,8 @@ let Persona = {
 }
 
 /*
-como es un objeto variable se le puede agregar
-atributos como correo incluso mas atributos ...
+    como es un objeto variable se le puede agregar
+    atributos como correo incluso mas atributos ...
 */
 console.log(Persona);
 Persona.correo = "zelechos@hotmail.com";

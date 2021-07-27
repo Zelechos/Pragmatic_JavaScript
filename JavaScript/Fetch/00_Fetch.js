@@ -3,6 +3,7 @@
 //FETCH para hacer peticiones asincronas al servidor/api rest
 
 //fetch('https://jsonplaceholder.typicode.com/users')
+
 var usuarios = document.querySelector('#users');
 var janete = document.querySelector('#Janet');
 var profesor = document.querySelector('#prof');
@@ -36,18 +37,19 @@ function getJanet(){
 }
 
 function getInfo(){
-    var Profesor = {
+    let Profesor = {
         name : 'Argus',
         lastname : 'Aphocraphex Ether',
         url : 'https://ethereum.org/en/'
     }
+
     return new Promise((resolve , reject)=>{
-        var profesor_string = "";
+        let profesor_string = "";
         setTimeout(()=>{
             profesor_string = JSON.stringify(Profesor);
-            if(typeof profesor_string != 'string' || profesor_string === " ")return reject('error');
+            if(typeof profesor_string != 'string' || profesor_string === " ") return reject('error');
             return resolve(profesor_string);
-        },3000);
+        },1000);
     });
 }
 
@@ -63,7 +65,8 @@ function ListadoUsuarios(users){
 
 function mostrarJanet(jan){
         let nombre = document.createElement('h4');
-        let avatar = document.createElement('img')
+        let avatar = document.createElement('img');
+
         nombre.innerHTML = jan.first_name + " " + jan.last_name;
         avatar.src = jan.avatar;
         avatar.width = '100';
