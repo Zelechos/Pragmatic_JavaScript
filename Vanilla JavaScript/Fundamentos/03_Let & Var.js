@@ -12,21 +12,31 @@ if(true){
 console.log(Number);//50
 
 //Prueba con Let
-let Texto = "Sigmundus Esct";
-console.log(Text);
+let TextDark = "Sigmundus Esct";
+console.log(TextDark);
+
+let TextPragmatic = "All you Need is Code"
+console.log(TextPragmatic);
+
 //afuera de la condicional la variable Text es -> Sigmundus Esct
 if(true){
-  let Text = "Find the Argus Aphocraphex";
-  console.log(Text);
+  let TextDark = "Find the Argus Aphocraphex";
+  console.log(TextDark);
+
+  //Tomar en cuenta que si no pones let el cotenido de la variable cambia como si fuera var
+  TextPragmatic = "the Code is useless"
+  console.log(TextPragmatic);
 }
-console.log(Text);
+
+console.log(TextDark);
+console.log(TextPragmatic);
+
 
 console.log("\n***************Var&Let*****************\n");
 //Usar let no var
-let Greeting = "Empezando aprender JavaScript";
+let Greeting = "starting to learn JavaScript";
+var greeting = "hello i am staining your window";
 
-
-var greeting = "hola estoy manchando tu ventana";
 console.log(Greeting);
 
 /*
@@ -66,7 +76,7 @@ console.log("LET");
 
 /*
 como se ve en la console la variable tipo let
-si cambia depenediendo el bloque y cuando no esta fuera
+si cambia dependiendo el bloque y cuando no esta fuera
 de ese bloque el valor se conserva igual que antes 
 y no se ve en el objeto window dejando limpio el objeto
 window y es muy buena practica de programacion
@@ -74,12 +84,12 @@ window y es muy buena practica de programacion
 
 
 let gender = "Rock";
-console.log("La Musica que te gusta es ", gender);
+console.log("the Music you like : ", gender);
 
 {
     let gender = "Reguetton";
-    console.log("La Musica que te gusta es ", gender);
+    console.log("the Music you like :  ", gender);
 }
 
-console.log("La Musica que te gusta hoy es",gender);
+console.log("the Music you like today :",gender);
 
