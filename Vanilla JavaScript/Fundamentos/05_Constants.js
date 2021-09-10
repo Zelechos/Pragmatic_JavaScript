@@ -10,7 +10,7 @@ console.log(web , IP);
 
 console.log("\n***************Const*****************\n");
 /*
-    para denotar las constantes valores que no cambiaran 
+    para denotar las constantes que son valores que no cambiaran 
     a lo largo del Programa en este caso tu script
 */
 const PI = 3.1416;
@@ -18,12 +18,12 @@ const PI = 3.1416;
 console.log(PI); 
 
 //Aqui creamos un objeto JSON
-
 console.log("Creacion de Objeto Persona:");
 let Persona = {
     nombre: "Argus",
     apellido: "Aphocraphex",
-    edad: 999
+    edad: 999,
+    web: "https://ArgusAphocraphex.com"
 }
 
 /*
@@ -34,7 +34,9 @@ console.log(Persona);
 Persona.correo = "zelechos@hotmail.com";
 console.log("El correo de la Persona a sido agregado");
 console.log(Persona);
-
+Persona.sshKey = "F23jf24tybgp3v234v234tcfn34t20347thf34t70";
+console.log("La llave SSH ha sido creado");
+console.log(Persona);
 
 //Aqui creamos un Array
 console.log("Creacion de Array Lenguajes de Programacion:");
@@ -47,6 +49,11 @@ tambien podemos agregarle datos la cantidad que nosotros queramos..
 console.log(Lenguajes);
 console.log("El lenguaje Go ha sido agregado...");
 Lenguajes.push("Go")
+console.log(Lenguajes);
+console.log("La Familia de Lenguajes C .. ha sido agregado");
+Lenguajes.push("C")
+Lenguajes.push("C++")
+Lenguajes.push("C#")
 console.log(Lenguajes);
 
 /* 
@@ -68,4 +75,13 @@ console.log("Acabo de agregar su fecha de creacion:");
 console.log(IA);
 
 // Entonces con datos compuestos const no funciona
+console.log("*********Array creado con const********");
+
+const AreasIA = ['Vision por Computadora', 'Procesamiento del Lenguaje Natural']
+console.log(AreasIA);
+
+console.log("Se agrego Big Data a las Areas de IA");
+AreasIA.push('Big Data')
+console.log(AreasIA);
+
 

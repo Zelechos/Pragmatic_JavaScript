@@ -1,5 +1,12 @@
 'use strict'
 
+let Name = String(prompt("Digite su Nombre : "))
+let LastName = String(prompt("Digite sus Apellidos"))
+
+if(Name == "Alex" && LastName == "Tumiri Huanca")console.log("Bienvenido "+Name +" "+ LastName);
+  else console.error("Usted no es un Usuario Valido . . .");
+
+
 let Number1 = Number(prompt('Digite el Primer numero'));
 let Number2 = Number(prompt('Digite el Segundo numero'));
 
@@ -10,6 +17,7 @@ let Number2 = Number(prompt('Digite el Segundo numero'));
 }else{
   alert("Both numbers at the same");
 }*/
+
 
 //Una manera mas elegante de escribir condicionales en JS
 if(Number1 < Number2)alert(Number2+" is the eldest \n" + Number1+" is the minor");

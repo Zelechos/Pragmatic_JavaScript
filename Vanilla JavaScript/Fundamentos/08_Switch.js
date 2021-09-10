@@ -1,21 +1,73 @@
 'use strict'
 
-let Age = 5;
+const Messages = [
+    "Eres un Code Caster <>"
+    ,"Eres un Conqueror <>"
+    ,"Eres una Eminencia <> "
+    ,"Eres un Sabio <> "
+    ,"Eres un Code Master <> "
+    ,"No eres Parte del Club <>"
+];
+
+let Entry = 0
+let History = []
+
+function App(){
+    Active();
+    ShowHistory(History);
+}
+
+App();
+
+function Active(){
+let Age = Number(prompt("Entrada "+Entry+"\n Digite su Antiguedad en el Club : "));
+
+let Response = `
+<fieldset>
+    <legend>Su Antiguedad es de ${Age}</legend>
+    <p>Entrada : ${Entry}</p>
+    <p> Rango : ${ChekerAge(Age)}</p>        
+    <input type="button" value="Agregar Entradas" onclick="App();">
+</fieldset>
+`;
 
 switch(Age){
     case 18:
-        console.log("Usted es mayor de edad Bienvenido al Club <>");
+        History.push(Response)
     break;
     case 25:
-        console.log("Ya eres un Conqueror <>");
+        History.push(Response)
     break;
     case 40:
-        console.log("Eres una Eminencia <> ");
+        History.push(Response)
+    break;
+    case 50:
+        History.push(Response)
     break;
     case 75:
-        console.log("Ya eres un Sabio <>");
+        History.push(Response)
     break;
     default:
-        console.log("No eres Parte del Club <>");
+        History.push(Response)
     break;
 }
+
+    Entry += 1;
+}
+
+
+function ShowHistory(Historia){
+    for(let i = 0 ; i < Historia.length ; i++){
+        document.write(Historia[i]);
+    }
+}
+
+function ChekerAge(age){
+    if(age == 18) return Messages[0]
+        else if(age == 25) return Messages[1]
+            else if(age == 40) return Messages[2]
+                else if(age == 50) return Messages[3]
+                    else if(age == 75) return Messages[4]
+                        else return Messages[5]
+}
+
