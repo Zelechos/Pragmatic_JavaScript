@@ -49,13 +49,11 @@ function Active(){
     }
 
     Entry += 1;
-    ShowHistory(History);
 }
 
 
 function ShowHistory(Historia){
     let Iterator = Historia.length - 1;
-    console.log(Iterator);    
     while(Iterator < Historia.length){
         document.write(Historia[Iterator]);
         Iterator += 1;
@@ -73,6 +71,7 @@ function ChekerAge(age){
 
 function App(){
     Active();
+    ShowHistory(History);
 }
 
 App();
