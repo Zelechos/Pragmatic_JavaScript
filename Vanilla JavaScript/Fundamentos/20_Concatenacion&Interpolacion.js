@@ -36,4 +36,9 @@ window.addEventListener('load', ()=>{
     console.log(LLenar);
     LLenar += " Es el mejor Lenguaje";
     console.log(LLenar);
+
+    // Interpolacion usando un Template Script
+    let Title = `<h1>${LLenar}</h1>`;
+    document.write(Title);
+
 });

@@ -52,7 +52,7 @@ const Mostrar = function(Codigo){
   document.write(html);
 } 
 
-const code = `+alert("man JavaScript will feed me");<br>
+const code = `alert("man JavaScript will feed me");<br>
 document.write("HelloWorld from document.write codeeeee ;) ");<br>
 console.log("show this on the Console");<br>
 console.log(8+1);`;
@@ -61,7 +61,7 @@ Mostrar(code);
 //Funciones Self Invoking
 const Lista = [ "JavaScript","Java","Python","C","PHP","Golang"];
 (function(...ether){
-  ether.forEach( elemento=> {
+  ether.forEach( elemento => {
       console.log(elemento);
   });
 })(Lista);
@@ -96,6 +96,7 @@ function Fibonacci(Numero){
       return Fibonacci(Numero-1) + Fibonacci(Numero-2);
   }
 }
+
 // Con toString puedes ver el contenido de la funcion en formato texto
 let res = ` Sucesion Fibonacci
   ${Fibonacci.toString()}

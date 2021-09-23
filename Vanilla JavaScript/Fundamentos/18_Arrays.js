@@ -68,7 +68,7 @@ let LenguajEscogido = `
 
 
 document.write(Anuncio);
-document.write("<a href = 'Cursos.html'><strong><ul>");
+document.write("<a href = 'Cursos.html'  ><strong><ul>");
 
 //Manera de Mostrar un array
 /* Mostrando la manera clasica de recorrer un Array

@@ -36,10 +36,8 @@ console.warn('Tipo de dato:');
 console.log(typeof Verdadero);
 console.log(typeof(Falso));
 
-
 // let dato = 10;
 // let dato1 = false;
-
 
 // console.log(dato);
 // console.log(dato1);
@@ -47,7 +45,7 @@ console.log(typeof(Falso));
 // console.log(typeof(dato1));
 
 // // Cosas que se puede hacer con Boolean
-// console.log("************************");
+// console.log("************ Valores que Tienden a true o false************");
 // console.log(Boolean(0));
 // console.log(Boolean(-424));
 // console.log(Boolean("si hay una cadena"));
