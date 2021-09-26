@@ -18,7 +18,8 @@ const PragmaticCoder = {
         Cel : 78662983,
         Facebook : "https://www.facebook.com/PragmaticCodersGroup/",
         Twitter : "@CoderPragmatic",
-        LinkedIn : "https://www.linkedin.com/in/alex-tumiri-huanca-6462851b0/"
+        LinkedIn : "https://www.linkedin.com/in/alex-tumiri-huanca-6462851b0/",
+        Instagram : "https://www.instagram.com/zelechos/"
     },
     Saludo : function(){
         alert("Welcome, Pragmatic!!!!!");
@@ -31,11 +32,15 @@ const PragmaticCoder = {
         });
         document.write("</ul>");
     },
-    ShowMe : function(){
-        document.write(
-            `<h1>Hola soy, ${this.Nombre}</h1>
-                <h4>Sigueme en<a href="https://twitter.com/CoderPragmatic" target = "_blank">${this.Contactos.Twitter}</a></h4>
-                <h4><a href="${this.Github}" target = "_blank">Mi GitHub</a></h4>
+    ShowMe : function(){//Utilizamos una funcion flecha en ves de una anonima
+        document.write(`<h1>Hola soy, ${this.Nombre}</h1>
+                <ul>
+                    <li><a href="https://twitter.com/CoderPragmatic" target = "_blank">${this.Contactos.Twitter}</a></li>
+                    <li><a href="${this.Github}" target = "_blank">GitHub</a></li>
+                    <li><a href="${this.Contactos.Facebook}" target = "_blank">Facebook</a></li>
+                    <li><a href=${this.Contactos.Instagram} target = "_blank">Instagram</a></li>
+                    <li><a href=${this.Contactos.LinkedIn} target = "_blank">LinkedIn</a></li>
+                </ul>
         `);
     }
 }
