@@ -10,9 +10,9 @@ function frutas(fruta1,fruta2,...RestoDeFrutas){
 frutas("pomelos","duraznos","naranaja","limon","uva","pera");
 
 //Parametro SPREAD ---> frutas( {...cajonFrutas} ,"pomelos","durznos","naranaja","limon","uva","pera");
+// Operador de Propagacion
 let cajonFrutas = ["bananas","Manzanas","aguacate"];
 frutas(...cajonFrutas,"pomelos","durznos","naranaja","limon","uva","pera");
-
 
 //Parametro REST ---> Suma de Numeros
 console.log("---------------------------------------------");
