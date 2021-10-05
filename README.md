@@ -1,5 +1,5 @@
 # Piscina Pragmatic_JS !!!
-### Desde el 23 de septiembre hasta el 26 ...
+### Desde el 5 de octubre hasta el 22 Acabar todo el Curso
 ----------------------------------------------------------------------
 # Vanilla Js
 ----------------------------------------------------------------------
