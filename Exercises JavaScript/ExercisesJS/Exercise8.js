@@ -107,7 +107,6 @@ const Me = {
         document.write(`
         <div class="portafolio">    
             <h2>Estas son algunas webs que desarrolle</h2>
-
             <div class = "webs">
         `);
 
