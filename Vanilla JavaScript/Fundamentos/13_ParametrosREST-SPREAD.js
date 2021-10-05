@@ -30,7 +30,6 @@ const Numbers = [100, 100, 100, 500];
 let Resultado = Suma(10, 9, ...Numbers);
 console.log(Resultado);
 
-
 //Parametro SPREAD ---> Resta de Numeros
 // ATENCION!!!! : Sirve tambien para meter como parametros un vector
 function Resta(Number3 , ...Numbers){
@@ -49,7 +48,6 @@ console.log(Resultado);
 
 
 //Parametro SPREAD ---> Mezclando Arreglos
-
 const Arr1 = [1, 2, 3, 4, 5] , Arr2 = [6, 7, 8, 9, 10];
 
 // Aqui se aprecia que solo se muestran como arrays dentro de una array 
@@ -61,9 +59,3 @@ console.log("----------- Aplicando Parametros SPREAD ---------------------");
 // TAMBIEN conocido como operador de Propagacion
 const Arr4 = [...Arr1 , ...Arr2];
 console.log(Arr4);
-
-
-
-
-
-
