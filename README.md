@@ -1,5 +1,8 @@
-# Piscina Pragmatic_JS !!!
-### Desde el 5 de octubre hasta el 22 Acabar todo el Curso
+# Welcome Pragmatic_JavaScript !!!
+
+
+![ezgif com-gif-maker](https://miro.medium.com/max/3200/1*OF0xEMkWBv-69zvmNs6RDQ.gif)
+###
 ----------------------------------------------------------------------
 # Vanilla Js
 ----------------------------------------------------------------------
