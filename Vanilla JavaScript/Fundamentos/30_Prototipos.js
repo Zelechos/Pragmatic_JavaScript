@@ -57,6 +57,7 @@ Subrutina.prototype.programar = function(){
     console.log(`-------------------------------\n Aqui Programando en ${this.Nombre} la Subrutina ${this.NombreSubrutina} `);
 }
 
+// Metodo Adicional
 Subrutina.prototype.utilidad = function(){
     console.log(`La Utilidad de la Subrutina ${this.NombreSubrutina} es ${this.Utilidad}`);
 }
