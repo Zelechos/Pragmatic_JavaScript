@@ -78,6 +78,7 @@ for (let index = 0; index < array.length; index++) {
     }
 }
 console.timeEnd("Compilation Time ==> ");
+
 console.log(array);
 
 console.clear();
