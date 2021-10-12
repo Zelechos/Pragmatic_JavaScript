@@ -1,5 +1,4 @@
 'use strict'
-
 // Method Builder
 function MathModules (number = 0, number1 = 0 ){
     // Attributes
@@ -32,7 +31,6 @@ let Number = parseInt(prompt("Digite un Numero : "));
 let Number1 = parseInt(prompt("Digite otro Numero : "));
 
 const Respuesta = new MathModules();
-
 Respuesta.suma(Number, Number1);
 Respuesta.resta(Number, Number1);
 Respuesta.multiplicacion(Number, Number1);
