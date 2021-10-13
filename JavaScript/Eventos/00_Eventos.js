@@ -1,9 +1,10 @@
 'use strict'
 
+window.addEventListener('load', ()=>{
 
 function CambioColor(){
     
-    var bg = Boton.style.backgroundColor;
+    let bg = Boton.style.backgroundColor;
     
     if( bg == "green"){
         Boton.style.backgroundColor = "red";
@@ -17,7 +18,8 @@ function CambioColor(){
     return true;
 }
 
-var Boton = document.querySelector('#Boton');
+const Boton = document.querySelector('#Boton');
+
 //un Oyente de Accion
 Boton.addEventListener('click'
     ,()=>{
@@ -29,31 +31,40 @@ Boton.addEventListener('click'
 Boton.addEventListener('mouseover'
     ,()=>{
         CambioColor();
-        console.log(this);
-        this.style.backgroundColor = "#ccc";
+        Boton.style.backgroundColor = "#ccc";
     }
 );
 
 // mouseout = Exited
-Boton.addEventListener('mouseout'
-    ,()=>{
+Boton.addEventListener('mouseout' , ()=>{
         CambioColor();
-        this.style.backgroundColor = "blue";
+        Boton.style.backgroundColor = "blue";
+});
+
+
+// Agrandando el texto con clicks
+
+let increment = 33;
+let number = 0;
+
+const title = document.querySelector("#title");
+title.style.cursor = "pointer";
+
+title.addEventListener('click' , ()=>{
+    effectTitle();
+});
+
+function effectTitle (){
+    title.style.fontSize = increment+"px";
+    if(increment % 2 == 0){
+        title.textContent = number;
+        title.style.backgroundColor = `#000${number}`;
+    }else{
+        title.textContent = number;
+        title.style.backgroundColor = `#888${number}`;
     }
-);
+    number++;
+    increment++;
+}
 
-var i = 10;
-var parrafo = document.createElement('p');
-parrafo.append("Linux");
-var jo = document.querySelector('p');
-document.write(parrafo.innerHTML);
-
-parrafo.addEventListener("click" 
-,()=>{
-    i++;
-    parrafo.style.fontSize = i+"px";
-} 
-);
-console.log(parrafo);
-
-
+});
