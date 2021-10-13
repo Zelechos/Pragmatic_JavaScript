@@ -2,38 +2,32 @@
 window.addEventListener('load', ()=>{
     
     function Intervalo(){
-        var Tiempo = setInterval(
-            ()=>{
+        let Tiempo = setInterval(()=>{
                 console.log('setInterval Activado');
                 
-                var escavezado = document.querySelector('h1');
+                let header = document.querySelector('h1');
+                let headerScript = header.style.fontSize;
                 
-                if (escavezado.style.fontSize == "50px"){
-                    escavezado.style.fontSize = "100px";
+                if (headerScript == "50px"){
+                    headerScript = "100px";
                 }else{
-                    escavezado.style.fontSize = "50px";                
+                    headerScript = "50px";                
                 }
-            
-            }
-            , 1000
-        );
-    return Tiempo;
+        } , 1000);
+        return Tiempo;
     }
 
-    var Time = Intervalo();
-    var stop = document.querySelector('#stop');
+    let Time = Intervalo();
+    let stop = document.querySelector('#stop');
 
-    stop.addEventListener('click'
-    ,()=>{
-            console.log('Acabas de ser el Primer humano en detener el Tiempo');
-            clearInterval(Time);//para detener el setInterval
-    }
-    );
+    stop.addEventListener('click',()=>{
+        console.log('Acabas de ser el Primer humano en detener el Tiempo');
+        clearInterval(Time);//para detener el setInterval
+    });
 
-    var start = document.querySelector('#start');
-    start.addEventListener('click'
-    ,()=>{
+    let start = document.querySelector('#start');
+    start.addEventListener('click' ,()=>{
         Intervalo();
-    }
-    );
+    });
+    
 });

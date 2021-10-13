@@ -1,26 +1,26 @@
 'use strict'
 
 //Fechasss
-var Fecha =  new Date();
+let Fecha =  new Date();
 
-var year = Fecha.getFullYear();
-var month = Fecha.getMonth();
-var date =Fecha.getDate();
+let year = Fecha.getFullYear();
+let month = Fecha.getMonth();
+let date = Fecha.getDate();
 
-var day = Fecha.getDay();
-var hour = Fecha.getHours();
+let day = Fecha.getDay();
+let hour = Fecha.getHours();
 
 
-var Tiempo = `
-    El Año es : "${year}",
+let Tiempo = `
+    El Año es : ${year}
     El Mes es : ${month}
     El Dia es : ${day}
     El Fecha es : ${date}
     La Hora es : ${hour}
 `;
+
 console.log(Fecha);
 console.log(Tiempo);
 
 //Funciones MATH
-
 console.log(Math.ceil(Math.random()*10000));
