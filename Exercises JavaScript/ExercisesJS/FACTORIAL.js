@@ -1,6 +1,6 @@
 'use strict'
 
-var Numero = parseInt(prompt("Digite un Numero Para Hayar Su Factorial : ",0));
+let Numero = parseInt(prompt("Digite un Numero Para Hayar Su Factorial : ",0));
 function Factorial(Numero){
   if(Numero== 0 || Numero ==1){
     console.log(Numero);

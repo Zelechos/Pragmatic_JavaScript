@@ -1,6 +1,6 @@
 'use strict'
 
-var Num = 10;
+let Num = 10;
 
 function Saludo(CantidadSaludos) {
 

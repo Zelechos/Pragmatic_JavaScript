@@ -35,7 +35,3 @@ Respuesta.suma(Number, Number1);
 Respuesta.resta(Number, Number1);
 Respuesta.multiplicacion(Number, Number1);
 Respuesta.division(Number, Number1);
-
-
-
-
