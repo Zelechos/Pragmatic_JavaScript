@@ -12,9 +12,9 @@ console.log(resultado);
 //MAS EJEMPLOS
 let confirmacion = confirm("Estas seguro de que quieres descargar el achivo??? ");
 if(confirmacion){
-    console.error("Bienvenido Almundo del Hacking ");
+    console.error("Bienvenido Al mundo del Hacking ");
 }else{
-    console.warn("HOla tranquilo no paso nada");
+    console.warn("tranquilo no paso nada no me ofendo haha");
 }
 
 
