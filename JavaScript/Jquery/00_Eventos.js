@@ -2,9 +2,9 @@
 $(document).ready(()=>{
 
     //Eventos mouse over y mouse out
-    var caja = $("#caja");
-    var box = $("#box");
-    var box1 = $("#box1");
+    let caja = $("#caja");
+    let box = $("#box");
+    let box1 = $("#box1");
 
     caja.mouseover(function(){
         $(this).css("background","red");
@@ -37,7 +37,7 @@ box.hover(Violet , Dark);
         $(this).css('background','pink');
     });
 
-    var name =$("#nombre");
+    let name =$("#nombre");
     name.focus(function(){
         $(this).css('border','2px solid green');
     });
@@ -48,7 +48,7 @@ box.hover(Violet , Dark);
     });
 
     //Eventos mousedown & mouseup
-    var data = $("#datos1");
+    let data = $("#datos1");
     data.mousedown(function(){
         $(this).css('border-color','red');
     });
@@ -61,6 +61,7 @@ box.hover(Violet , Dark);
     $(document).mousemove(function(){
         console.log(event.clientX);
         console.log(event.clientY);
+        
         $('body').css("cursor","none");
         $("#sigueme").css("left", event.clientX)
             .css("top", event.clientY);
