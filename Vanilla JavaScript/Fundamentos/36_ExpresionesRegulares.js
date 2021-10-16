@@ -27,3 +27,4 @@ console.log("___________ Tecera Expresion Regular_____________");
 console.log(expresionRegular3.test(text));
 console.log(expresionRegular3.exec(text));
 
+// FALTA MUCHOS ENTENDER ESO ESTUDIAR MUCHOOOO
