@@ -6,7 +6,6 @@ let CountryAndContinent = Country+' , '+Continent;
 let IP = "1:342::234:234"
 let Address = "https:ethernet/Hack/learning"
 
-
 // los mas recomendable en el 2021 y para adelante es usar let en vez de var
 let Call = 'Conectando';
 
