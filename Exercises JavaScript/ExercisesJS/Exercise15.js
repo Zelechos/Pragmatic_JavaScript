@@ -59,7 +59,9 @@ function AppWebTrigonometric(){
                     console.log(message);
                 }("The Option not Exist!!!");
             break;
+
         }
+        
     }while(funTrigonometric != 7);
 
 }
