@@ -1,66 +1,72 @@
 
 // Crear un Programa que calcule la funciones trigonometricas basicas
+function AppWebTrigonometric(){
 
-let funTrigonometric = parseInt(prompt("Elija una funcion trigonometrica : \n 1. Sen() \n 2. Cos() \n 3. Tan() \n 4. Sec() \n 5. Cosec \n 6. Cotan"));
-
-((function (option){
-    let number = parseInt(prompt("Digite un Numero : "));
+    let funTrigonometric, number;
     do{
-        switch(option){
+        funTrigonometric = inputOption();
+        
+        if(funTrigonometric != 7){
+            number = parseInt(prompt("Enter a number : "));
+        }
+
+        switch(funTrigonometric){
+            // esto no es necesario pero recuerda estamos aprendiendo
             case 1:
-                console.log(sinFunction(number));
+                ((function (number){
+                    console.log(Math.sin(number));
+                })(number));
             break;
 
             case 2:
-                cosFunction();
+                ((function (number){
+                    console.log(Math.cos(number));
+                })(number));
             break;
 
             case 3:
-                tanFunction();
+                ((function (number){
+                    console.log(Math.tan(number));
+                })(number));
             break;
 
             case 4:
-                sinFunction();
+                ((function (number){
+                    console.log(1/Math.cos(number));
+                })(number));
             break;
 
             case 5:
-                sinFunction();
+                ((function (number){
+                    console.log(1/Math.sen(number));
+                })(number));
             break;
 
             case 6:
-                sinFunction();
+                ((function (number){
+                    console.log(1/Math.tan(number));
+                })(number));
             break;
 
             case 7:
-                console.warn("Program End . . .");
+                !function(text){
+                    console.warn(text);
+                }("Program End . . .");
             break;
 
             default:
-                console.log("The Option not Exist!!!");
+                !function(message){
+                    console.log(message);
+                }("The Option not Exist!!!");
             break;
         }
-    }while(option != 7);
+    }while(funTrigonometric != 7);
 
-})(funTrigonometric));
-
-
-
-function sinFunction(number){
-    return Math.sin(number);
 }
 
-function cosFunction(number){
-    return Math.cos(number);
+function inputOption(){
+    let funTrigonometric = parseInt(prompt("Select a trigonometric function : \n 1. Sen() \n 2. Cos() \n 3. Tan() \n 4. Sec() \n 5. Csc() \n 6. Cot() \n 7.Leave"));
+    return funTrigonometric;
 }
 
-function tagFunction(number){
-    return Math.tan(number);
-}
-
-function secFunction(number){
-    return Math.s(number);
-}
-
-
-
-
+AppWebTrigonometric();

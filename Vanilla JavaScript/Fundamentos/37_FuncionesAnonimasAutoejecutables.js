@@ -11,7 +11,6 @@
     c.log(d);
     c.log(w);
     c.log(c);
-
 })(document, window, console);
 
 // Exponente del Numero
