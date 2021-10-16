@@ -38,7 +38,7 @@ function AppWebTrigonometric(){
 
             case 5:
                 ((function (number){
-                    console.log(1/Math.sen(number));
+                    console.log(1/Math.sin(number));
                 })(number));
             break;
 
@@ -50,8 +50,14 @@ function AppWebTrigonometric(){
 
             case 7:
                 !function(text){
-                    console.warn(text);
-                }("Program End . . .");
+                    if(confirm(text)){
+                        alert("goodbye")
+                        console.log("goodbye");
+                    }else{
+                        // reiniciamos la variable para que siga su proceso
+                        funTrigonometric = 0;
+                    }
+                }("Program End ?");
             break;
 
             default:
@@ -67,7 +73,7 @@ function AppWebTrigonometric(){
 }
 
 function inputOption(){
-    let funTrigonometric = parseInt(prompt("Select a trigonometric function : \n 1. Sen() \n 2. Cos() \n 3. Tan() \n 4. Sec() \n 5. Csc() \n 6. Cot() \n 7.Leave"));
+    let funTrigonometric = parseInt(prompt("Select a trigonometric function : \n 1. Sen() \n 2. Cos() \n 3. Tan() \n 4. Sec() \n 5. Csc() \n 6. Cot() \n 7. Leave"));
     return funTrigonometric;
 }
 
