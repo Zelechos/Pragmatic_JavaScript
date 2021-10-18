@@ -6,7 +6,9 @@ import validateString , { validateNumber } from "./Exercise20.js";
 const chainCutter = (data, cutter) =>
 (validateString(data) && validateNumber(cutter))
     ? (cutter <= data.length)
-        ? console.log(data.substring(0, cutter))
+        ? (cutter > 0)
+            ? console.log(data.substring(0, cutter))
+            : console.warn(`El cortador no puede ser negativo`)
         : console.warn(`El cortador de cadena tiene que ser menor o igual [${data.length}]`)
     : console.warn(`wrong parameters => parameter{${typeof(data)}} , parameter1{${typeof(cutter)}} ,\n was expected => parameter{string} , parameter1 {number}`);
 
@@ -19,4 +21,5 @@ chainCutter();
 chainCutter("",9);
 chainCutter("ether");
 chainCutter("hacking . . ." , []);
-chainCutter([],9);
+chainCutter([],-9);
+chainCutter("pragmatic",-9);

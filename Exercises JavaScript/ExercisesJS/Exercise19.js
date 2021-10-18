@@ -4,7 +4,9 @@ import validateString, { validateNumber } from "./Exercise20.js"
 
 const textRepeater = (data , repeater) =>
     (validateString(data) && validateNumber(repeater))
-        ? console.log(data.repeat(repeater))
+        ?(repeater > 0 && repeater != 0 )
+            ? console.log(data.repeat(repeater))
+            : console.error(`el repetidor no puede ser 0 o negativo!!! tu repetidor => {${repeater}}`)
         : console.warn(`wrong parameters => parameter{${typeof(data)}} , parameter1{${typeof(repeater)}},\n was expected => parameter{string} , parameter1{number}`);    
     
 // Testing
@@ -20,3 +22,5 @@ textRepeater([],34);
 textRepeater("pragmatic coder",{});
 textRepeater(false,true);
 textRepeater(false,5);
+textRepeater("argus", 0);
+textRepeater("argus", -9);
