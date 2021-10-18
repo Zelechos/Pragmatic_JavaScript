@@ -20,6 +20,7 @@ const finderPattern = (data, pattern) => {
 // Testing
 destroyPattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
 destroyPattern("https://www.ether.com , https://www.zelechos.com , https://www.aphocraphex.com", "https://www.");
+destroyPattern("https://www.ether.com , https://www.zelechos.com , https://www.aphocraphex.com", "https://");
 destroyPattern([],"x");
 destroyPattern("hola como estas que tienes",true);
 destroyPattern("hola como estas que tienes",9);
