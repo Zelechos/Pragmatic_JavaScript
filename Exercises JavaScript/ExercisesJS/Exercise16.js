@@ -1,6 +1,6 @@
 // 16) Programa una función que cuente el número de caracteres de una cadena de texto, testeando el tipo de dato recibido pe. miFuncion("Hola Mundo") devolverá 10.
 
-import validateString from "./Exercise20.js";
+import validateString from "./validations.js";
 'use strict'
 
 const numberCharacters = data =>
