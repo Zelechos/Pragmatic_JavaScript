@@ -14,6 +14,7 @@ export default function validateString(data){
     }
 }
 
+// Module para verificar si es un number
 export function validateNumber(data){
     try {
         if(typeof(data) != "number" && data instanceof(Number) == false){
