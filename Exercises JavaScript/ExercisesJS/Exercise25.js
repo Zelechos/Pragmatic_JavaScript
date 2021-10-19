@@ -8,8 +8,7 @@ const capicuaNumber = number =>
     : console.warn(`wrong parameter => parameter{${typeof(number)}} \n was expected => parameter{number}`) 
 
 const reverseNumber = number =>{
-    let reverseNum = parseInt(String(number).split("").reverse().join(""));
-    return (number === reverseNum);
+    return (String(number) === String(number).split("").reverse().join(""));
 }
 
 // Testing
@@ -22,4 +21,8 @@ capicuaNumber('5005');
 capicuaNumber([]);
 capicuaNumber(false);
 capicuaNumber();
+capicuaNumber(12.543);
+capicuaNumber(212.212);
+capicuaNumber(123.321);
+
 

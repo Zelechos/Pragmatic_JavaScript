@@ -12,6 +12,7 @@ const calculateFactorial = number =>
 
 // Testing
 calculateFactorial(9);
+calculateFactorial(8);
 calculateFactorial(0);
 calculateFactorial(1);
 calculateFactorial(5);
@@ -22,4 +23,3 @@ calculateFactorial(true);
 calculateFactorial("80");
 calculateFactorial(-5);
 calculateFactorial(-50);
-
