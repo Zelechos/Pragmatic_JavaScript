@@ -4,21 +4,13 @@ import validateString from "./validations.js";
 
 const destroyPattern = (data, pattern) =>
     (validateString(data) && validateString(pattern))
-    ? console.log(`with pattern => ${data} \n without pattern => ${finderPattern(data, pattern)}`)
+    ? console.log(`with pattern => ${data} \n without pattern => ${data.replace(new RegExp(pattern,"ig"),"")}`)
     : console.warn(`wrong parameters => parameter{${typeof(data)}} parameter1{${typeof(pattern)}} \n was expected => parameter{string} parameter1{string}`) 
-
-const finderPattern = (data, pattern) => {
-    let database = data.split(" "), datafinal = [];
-    for (let index = 0; index < database.length; index++) {
-        (database[index].includes(pattern))
-        ? datafinal[index] = database[index].replace(pattern,"")
-        : datafinal[index] = database[index];
-    }
-    return String(datafinal.join(" "));
-}
 
 // Testing
 destroyPattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+destroyPattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xy");
+destroyPattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "[a-z]");
 destroyPattern("https://www.ether.com , https://www.zelechos.com , https://www.aphocraphex.com", "https://www.");
 destroyPattern("https://www.ether.com , https://www.zelechos.com , https://www.aphocraphex.com", "https://");
 destroyPattern([],"x");
@@ -28,3 +20,5 @@ destroyPattern();
 destroyPattern([]);
 destroyPattern(true);
 destroyPattern(9);
+destroyPattern("Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, soluta commodi alias adipisci, animi ab modi necessitatibus est consectetur cupiditate veniam. Eligendi nesciunt corrupti tempora dolor. In incidunt quam maxime.", "o");
+destroyPattern("Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, soluta commodi alias adipisci, animi ab modi necessitatibus est consectetur cupiditate veniam. Eligendi nesciunt corrupti tempora dolor. In incidunt quam maxime.", "[m,n,i]");

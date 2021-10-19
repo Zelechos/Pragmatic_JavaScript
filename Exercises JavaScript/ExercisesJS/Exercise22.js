@@ -4,12 +4,13 @@ import validateString from './validations.js'
 
 const palidromoText = data =>
     (validateString(data))
-    ? console.log(`the word {${data}} is a palindrome => ${String(data) === String(data.split("").reverse().join(""))}`)
+    ? console.log(`the word {${data}} is a palindrome => ${String(data.toLowerCase()) === String(data.toLowerCase().split("").reverse().join(""))}`)
     : console.warn(`wrong parameter => parameter{${typeof(data)}} \n was expected => parameter{string}`) 
 
+
 // Testing
-let text = new String("solos");
-palidromoText("salas");
+let text = new String("Solos");
+palidromoText("salaS");
 palidromoText(text);
 palidromoText(9);
 palidromoText([]);

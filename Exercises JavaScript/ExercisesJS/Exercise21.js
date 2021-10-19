@@ -9,8 +9,7 @@ const counterWord = (data, word) =>
 
 
 const finderWord = (data, word) =>{
-    let count = 0;
-    let database = data.split(" ");
+    let count = 0, database = data.split(" ");
     for (let index = 0; index < database.length; index++) {
         if(database[index] === word){
             count++;
