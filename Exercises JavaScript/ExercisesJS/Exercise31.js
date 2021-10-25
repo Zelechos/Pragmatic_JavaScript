@@ -4,14 +4,20 @@ import { validateNumber } from "./validations.js"
 
 const  finalAmount = (amount, discount)=>
     (validateNumber(amount) && validateNumber(discount))
-    ? console.log(`final amount => ${amount - (amount*discount)/100}`)
+    ? (amount <= 0)    
+        ? console.error(`the amount cannot be 0 or negative your amount => ${amount}`)
+        : console.log(`final amount => ${amount - (amount*discount)/100}`)
     : console.warn(`wrong parameters => parameter{${typeof(amount)}} , parameter1{${typeof(discount)}} \n was expected => parameter{number} ,parameter1{number}`); 
+
 
 // Testing
 finalAmount(1000,20);
 finalAmount(1000,50);
+finalAmount(1000);
 finalAmount(517,32);
 finalAmount(517,0);
+finalAmount(0,10);
+finalAmount(-140,50);
 finalAmount(0,0);
 finalAmount([],32);
 finalAmount("517");

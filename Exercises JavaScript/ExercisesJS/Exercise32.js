@@ -5,7 +5,7 @@ import { validateObjectDate } from "./validations.js";
 const ageUser = date => 
     (validateObjectDate(date))
         ? console.log(`the age of user is => ${new Date().getFullYear() - date.getFullYear()}`)
-        : console.warn(`wrong parameter => parameter{${typeof(date)}} \n was expected => parameter{object}`); 
+        : console.warn(`wrong parameter => parameter{${typeof(date)}} \n was expected => parameter{Date}`); 
 
 // Testing
 let test = new Date(1984,4,23);
@@ -14,4 +14,6 @@ ageUser(new Date(1996,4,23));
 ageUser(100);
 ageUser("ether");
 ageUser(false);
+ageUser([]);
+ageUser({});
 ageUser();

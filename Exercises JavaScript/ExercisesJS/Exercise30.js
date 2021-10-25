@@ -2,14 +2,33 @@
 import validateString, { validateNumber } from './validations.js';
 'use strict'
 
-const binaryConverter = (binary, decimal) =>
-    (validateString(binary) && validateNumber(decimal))
-    ? (validateDigits(binary))
-        ? console.error(`the binary number only contains 1 and 0`)
-        : console.log(`response binary ${binary} to decimal => ${binaryToDecimal(binary)} \n response decimal ${decimal} to binary => ${decimalToBinary(decimal)}`)
+const binaryConverter = (number, base) =>
+    (validateNumber(number) && validateNumber(base))
+    ? (base === 2)
+        ? console.log(`response binary ${number} to decimal => ${binary(number, base)}`)
+        : (base === 10) 
+            ? console.log(`response decimal ${number} to binary => ${decimal(number, base)}`)
+            : console.error(`wrong base => ${base} was expected => {2},{10}`)
     : console.warn(`wrong parameters => parameter{${typeof(binary)}} , parameter1{${typeof(decimal)}} \n was expected => parameter{string} ,parameter1{number}`); 
 
+const binary = (number , base)=> parseInt(number , base);
+const decimal = (number, base)=> number.toString(base-8);
 
+// Testing
+binaryConverter(100,2);
+binaryConverter(555,10);
+binaryConverter(4,10);
+binaryConverter(77777,10);
+binaryConverter(10101010,2);
+binaryConverter("s;dfkljas;d",40);
+binaryConverter();
+binaryConverter(555555,90);
+binaryConverter("1100","100");
+binaryConverter(true);
+binaryConverter([],{});
+
+
+// --------------- Codigo Ineficiente pero interesante ---------------------
 const binaryToDecimal = binary => {
     let digits = binary.split("");// 100 => [1,0,0]
     let response = 0, position = 0;
@@ -38,14 +57,3 @@ const validateDigits = binary =>{
 
 const decimalToBinary = decimal => (decimal >>> 0).toString(2);
 
-// Testing
-binaryConverter("100",2);
-binaryConverter("1010110011110",230);
-binaryConverter("77777",40);
-binaryConverter("1111222210101010",[]);
-binaryConverter("s;dfkljas;d",40);
-binaryConverter();
-binaryConverter(555555,90);
-binaryConverter("1100","100");
-binaryConverter(true);
-binaryConverter([],{});

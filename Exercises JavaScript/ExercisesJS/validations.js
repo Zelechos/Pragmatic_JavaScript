@@ -32,11 +32,10 @@ export function validateNumber(data){
 // Modulo para validar Objetos
 export function validateObjectDate(data){
     try {
-        if(typeof(data) !== typeof(new Date())){
+        if(!(data instanceof Date)){
             throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
         }
         return true;
-        
     } catch (error) {
         console.error(error);
         return false;
