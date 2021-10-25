@@ -28,3 +28,19 @@ export function validateNumber(data){
         console.warn("==> Preprocessed number finished !!");
     }
 }
+
+// Modulo para validar Objetos
+export function validateObjectDate(data){
+    try {
+        if(typeof(data) !== typeof(new Date())){
+            throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
+        }
+        return true;
+        
+    } catch (error) {
+        console.error(error);
+        return false;
+    }finally{
+        console.warn("==> Preprocessed object finished !!");
+    }
+}
