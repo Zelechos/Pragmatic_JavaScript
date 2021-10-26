@@ -5,10 +5,11 @@ import validateString from './validations.js'
 const validateNames = name =>
     (validateString(name))
     ? console.log(` the name { ${name} } has had a ${ validator(name) } `)
-    : console.warn(`wrong parameter => parameter{${typeof(date)}} \n was expected => parameter{string}`); 
+    : console.warn(`wrong parameter => parameter{${typeof(name)}} \n was expected => parameter{string}`); 
 
 const validator = name =>(new RegExp(/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/).test(name))? "successful validation" : "wrong validation"
 
+// Testing
 validateNames("Jonathan MirCha");
 validateNames("Alex Tumiri Huanca");
 validateNames("alex ether");
