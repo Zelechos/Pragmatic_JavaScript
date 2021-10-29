@@ -43,3 +43,18 @@ export function validateObjectDate(data){
         console.warn("==> Preprocessed object finished !!");
     }
 }
+
+// Modulo para validar Objetos
+export function validateArray(data){
+    try {
+        if(!(data instanceof Array)){
+            throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
+        }
+        return true;
+    } catch (error) {
+        console.error(error);
+        return false;
+    }finally{
+        console.warn("==> Preprocessed object finished !!");
+    }
+}
