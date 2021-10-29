@@ -1,6 +1,6 @@
 // 1) Programa una Funcion que dado de Numeros retorne cual es el mayor
 import { validateNumber } from './validations.js';
-"use strict";
+'use strict';
 
 let Number1 = parseInt(prompt("Digite un numero : ", 0));
 let Number2 = parseInt(prompt("Digite otro numero : ", 0));
@@ -26,4 +26,3 @@ let Number2 = parseInt(prompt("Digite otro numero : ", 0));
   }
 
 })(Number1, Number2));
-  

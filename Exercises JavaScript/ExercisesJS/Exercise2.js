@@ -1,40 +1,38 @@
+// 2) Programa una Funcion para sumar una cantidad de numeros indicado por teclado function(2) 5+5=10 y el promedio 10/2 = 5
 'use strict'
+let Cantidad = Number(prompt("Cuantos numeros desea Introducir : ", 0));
 
-do{
-   var Cantidad = Number(prompt("Cuantos numeros desea Introducir : ",0));
-   var Suma = 0;
-   var Promedio= 0;
-   var Contador=0;
+((function (Cantidad){
 
-   if(isNaN(Cantidad)){
+  let Promedio = 0;
+  let Suma = 0;
+  let Contador = 0;
 
-     console.log("Error de Conexion");
-     alert("No introdujo un Numero Intentelo de nuevo.");
+  if(isNaN(Cantidad)){
 
-   }else{
-     console.log("Conexion Exitosa");
+    console.log("Error de Conexion");
+    alert("No introdujo un Numero Intentelo de nuevo.");
 
-     while(Contador < Cantidad){
-       var Numero = Number(prompt("Digite un numero : ", 0));
+  }else{
+    console.log("Conexion Exitosa");
 
-       if(isNaN(Numero)){
+    while(Contador < Cantidad){
+      let Numero = Number(prompt("Digite un numero : ", 0));
 
-         console.log("Error de Conexion");
-         alert("No introdujo un Numero Intentelo de nuevo.");
+      if(isNaN(Numero)){
+        console.log("Error de Conexion");
+        alert("No introdujo un Numero Intentelo de nuevo.");
+      } else {
+        Suma+=Numero;
+        console.warn("Conexion Exitosa");
+        console.log("NumeroIntroducido : "+Numero+" , Acumulacion Actual : "+Suma);
+      }
+      Contador++;
+    }
+  }
+Promedio = Suma/Cantidad;
 
-       }else{
-
-         Suma+=Numero;
-         Contador++;
-         console.log("Conexion Exitosa");
-         console.log("Iteracion : "+Contador+" , NumeroIntroducido : "+Numero+" , Acumulacion Actual : "+Suma);
-
-       }
-   }
-}
-  Promedio = Suma/Cantidad;
-
-}while(isNaN(Cantidad) || isNaN(Numero));
-
-document.write("la Suma de todos los numeros que introdujo es : "+Suma+" y el Promedio : "+Promedio);
+alert("la Suma de todos los numeros que introdujo es : "+Suma+"\ny el Promedio : "+Promedio);
 console.log("End of the Program");
+
+})(Cantidad));
