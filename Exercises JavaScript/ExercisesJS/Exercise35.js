@@ -7,11 +7,12 @@ const validateEmails = email =>
     ? console.log(`the email { ${email} } had has a ${validator(email)}`)
     : console.warn(`wrong parameter => parameter{${typeof(email)}} \n was expected => parameter{string}`); 
 
-const validator = email => (new RegExp(/^[\w]+@{1}[\w]+\.[a-z]{2,3}$/).test(email))? "successful validation" : "wrong validation"
+const validator = email => (new RegExp(/^[\w]+@{1}[\w]+\.[a-z]{2,15}$/).test(email))? "successful validation" : "wrong validation"
 
 // Testing
 validateEmails("Alex Tumiri");
 validateEmails("pragmaticmorphoid@gmail.com");
+validateEmails("pragmatic,morph,oid@gmail.com");
 validateEmails("");
 validateEmails([]);
 validateEmails({});
