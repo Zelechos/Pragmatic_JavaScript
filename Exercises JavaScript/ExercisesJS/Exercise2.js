@@ -29,6 +29,7 @@ let Cantidad = Number(prompt("Cuantos numeros desea Introducir : ", 0));
       }
       Contador++;
     }
+    
   }
 Promedio = Suma/Cantidad;
 

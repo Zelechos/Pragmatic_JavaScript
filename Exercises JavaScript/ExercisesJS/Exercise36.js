@@ -5,8 +5,10 @@ import { validateNumber, validateArray } from "./validations.js"
 const squared = array => {
     if (validateArray(array)){
         if(array.length !== 0 ){
+            
             let squaredArray = [];
             let validationState = true;
+            
             for (let index = 0; index < array.length; index++) {
                 if (validateNumber(array[index]) && validationState){
                     squaredArray.push(Math.pow(array[index], 2));
