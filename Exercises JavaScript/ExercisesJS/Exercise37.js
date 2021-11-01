@@ -3,21 +3,11 @@ import { validateArray , validateNumber } from "./validations.js"
 'use strict'
 
 const numberFinder = array => {
-    let higher = 0 , less = 0, validateState = true;
+    let higher = 0 , less = 0, validateState;
     if(validateArray(array)){
-
         if(array.length > 1 ){
 
-            for (let index = 0; index < array.length; index++) {
-                if(validateNumber(array[index]) && validateState){
-                    validateState = true;
-                }else{
-                    console.error(`wrong element ${index} of array => element [${typeof(array[index])}] \n was expected => element [number]`); 
-                    validateState = false;
-                }
-
-            }
-            
+            validateState = validateStatus(array);
             if(validateState){
                 less = Math.min(...array);
                 higher = Math.max(...array);
@@ -25,7 +15,6 @@ const numberFinder = array => {
                 console.log(`the greater number is : ${higher}`);
                 console.log(`the smallest number is : ${less}`);
             }
-
         }else{
             console.error(`the array length is => ${array.length} \nthere is nothing to calculate!!!`);
         }
@@ -34,8 +23,21 @@ const numberFinder = array => {
     }
 }
 
+const validateStatus = array=>{
+    let validateState, index_capture;    
+    for (let index = 0; index < array.length; index++) {
+        if(!(validateNumber(array[index]))){
+            validateState = false;
+            index_capture = index;
+            break;
+        }
+    }
+    console.error(`wrong element ${index_capture} of array => element [${typeof(array[index_capture])}] \n was expected => element [number]`); 
+    return validateState;
+} 
 // TESTING
 numberFinder([10 ,1, 400, 5, 45, 900, -34]);
+numberFinder([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]);
 numberFinder([1, 4, 5, 99, -60]);
 numberFinder([10 ,1, 400, "56"]);
 numberFinder([]);
@@ -46,4 +48,4 @@ numberFinder({});
 numberFinder(1);
 numberFinder(false)
 numberFinder("[10 ,1, 400]");
-
+numberFinder([false, "ethernet", 54645]);
