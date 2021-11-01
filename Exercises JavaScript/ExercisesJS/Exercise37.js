@@ -23,8 +23,8 @@ const numberFinder = array => {
     }
 }
 
-const validateStatus = array=>{
-    let validateState, index_capture;    
+const validateStatus = array =>{
+    let validateState = true , index_capture;    
     for (let index = 0; index < array.length; index++) {
         if(!(validateNumber(array[index]))){
             validateState = false;
@@ -32,7 +32,11 @@ const validateStatus = array=>{
             break;
         }
     }
-    console.error(`wrong element ${index_capture} of array => element [${typeof(array[index_capture])}] \n was expected => element [number]`); 
+
+    if(!validateState){
+        console.error(`wrong element ${index_capture} of array => element [${typeof(array[index_capture])}] \n was expected => element [number]`); 
+    }
+
     return validateState;
 } 
 // TESTING
