@@ -15,6 +15,7 @@ const sequenceNumbersPairs = (LimiteInferior, LimiteSuperior) =>{
   }
 }
 
+// Testing
 sequenceNumbersPairs(1,10);
 sequenceNumbersPairs(1,100);
 sequenceNumbersPairs(1,20);
