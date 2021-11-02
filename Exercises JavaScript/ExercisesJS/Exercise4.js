@@ -1,9 +1,7 @@
 // 4) Programa una Funcion que introduzca un limite inferior y un limite superior devuelva una sucesion de numeros impares ejemplo function(1,10) => 1,3,5,7,9
 'use strict'
 
-const sequenceNumbersPairs = () =>{
-  let LimiteInferior = parseInt(prompt("Introduzca Su Limite Inferior",0));
-  let LimiteSuperior = parseInt(prompt("Introduzca Su Limite Superior",0));
+const sequenceNumbersPairs = (LimiteInferior, LimiteSuperior) =>{
   if (isNaN(LimiteInferior) || isNaN(LimiteSuperior)) {
     console.error("No introdujo Numero porfa Hagalo");
   }else{
@@ -16,4 +14,9 @@ const sequenceNumbersPairs = () =>{
     console.log(odds);
   }
 }
-sequenceNumbersPairs();
+
+sequenceNumbersPairs(1,10);
+sequenceNumbersPairs(1,100);
+sequenceNumbersPairs(1,20);
+sequenceNumbersPairs(1,30);
+
