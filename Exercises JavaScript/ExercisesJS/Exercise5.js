@@ -1,22 +1,13 @@
+// 5) Realize una un programa que dado un funcion reconozca si el numero es par o impar ejemplo function(5) es impar
 'use strict'
 
-var Number;
+const Par_Impar = Number => 
+    (Number % 2 == 0)
+        ? console.log(Number,' es Par') 
+        : console.log(Number,' es Impar');
 
-function Impar_O_Par (Numero ,Par , Impar) {
-    if (Numero % 2 == 0) {
-        Par();
-    }else{
-        Impar();
-    }
-}
-
-
-Impar_O_Par(
-    Number = parseInt(prompt("Digite un Numero : ")),
-Mensaje=>{
-    document.write("El numero es Par.");
-},
-MensajeImpar=>{
-    document.write("El numero es Impar.");
-}
-);
+//Testing
+Par_Impar(5);
+Par_Impar(50);
+Par_Impar(10);
+Par_Impar(9);
