@@ -7,13 +7,19 @@ const arrayRipper = array => {
         if (array.length > 1){
             if(validateStatus(array)){
                 let response = ripper(array);
+                console.warn("---- With my methods ---");
                 console.info({pairs : response[0], odd : response[1]});
+                console.warn("---- With filter method ---");
+                console.info(effectiveRipper(array));
             }
         }else{
             console.warn(`the length of the array must be greater than 1!!!`);
         }
     }
 }
+
+// de esta manera tambien se podia realizar el llenado de array usando filter
+const effectiveRipper = array => new Object({pairs: array.filter(element => element % 2 === 0), odds: array.filter(element => element % 2 !== 0)})
 
 const ripper = array =>{
     let arrayPair = [] , arrayOdd = [];
@@ -47,6 +53,7 @@ const validateStatus = array =>{
 
 // Testing
 arrayRipper([1,2,3,4,5,6,7,8,9,0]);
+arrayRipper([12,13,14,15,16,17,18,19,20]);
 arrayRipper([1,2,3,4,5,6,false,0]);
 arrayRipper([]);
 arrayRipper([1]);

@@ -18,8 +18,10 @@ const squared = array => {
                     validationState = false;
                 }
             }
-
+            
             if(validationState){
+                // tambien podemos usar el metodo map para crear el squaredArray 
+                // squaredArray = array.map(element => element * element);
                 console.log(`array before => [${array}] \narray after => [${squaredArray}]`);
             }
         } else {
@@ -38,9 +40,3 @@ squared(4);
 squared("hello function");
 squared(false);
 squared([false, "hola", 4, 5]);
-
-
-
-
-
-

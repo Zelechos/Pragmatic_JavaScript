@@ -11,5 +11,6 @@
         numbers.push(index);
       }
       console.log(numbers);
+      
     }
 })());

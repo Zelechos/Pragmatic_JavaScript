@@ -39,6 +39,7 @@ const validateStatus = array =>{
 
     return validateState;
 } 
+
 // TESTING
 numberFinder([10 ,1, 400, 5, 45, 900, -34]);
 numberFinder([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]);
