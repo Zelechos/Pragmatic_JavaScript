@@ -55,6 +55,6 @@ export function validateArray(data){
         console.error(error);
         return false;
     }finally{
-        console.warn("==> Preprocessed object finished !!");
+        console.warn("==> Preprocessed array finished !!");
     }
 }
