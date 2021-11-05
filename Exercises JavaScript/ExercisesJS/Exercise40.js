@@ -4,8 +4,14 @@ import { validateArray } from './validations.js';
 
 const removeDuplicates = array => {
     if(validateState(array)){
+
+        console.warn("-----------aplicando metodos filter() & indexOf()-----------");
         console.log(`array before => `, array);
-        console.log(`array after => `, array.filter( (ele,pos) => array.indexOf(ele) == pos));
+        console.log(`array after => `, array.filter((element, index, self) => self.indexOf(element) === index));
+        //Una manera mas compresible de realizar la discriminacion de elementos iguales seria esta : 
+        console.warn("-----------aplicando aplicando un nuevo tipo de dato Set-----------");
+        console.log(`array before => `, array);
+        console.log(`array after => `, [...new Set(array)]);
     }
 }
 
@@ -26,7 +32,6 @@ removeDuplicates([]);
 removeDuplicates({});
 removeDuplicates("hola");
 removeDuplicates(true);
-removeDuplicates(["x", 10,  2, "10", true]);
 removeDuplicates(["x", 10,  2, "10", true,"x", 10,  2, "10", true,9 ,"ether","ether",2,3,4,5,"ether"," https://github.com/Zelechos"," https://github.com/Zelechos"," https://github.com/Zelechos"," https://github.com/Zelechos",false]);
 
 

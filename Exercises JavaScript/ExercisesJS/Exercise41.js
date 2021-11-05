@@ -4,18 +4,37 @@ import { validateNumber , validateArray } from "./validations.js";
 
 const averageNumbers = array =>{
     if (validateState(array)){
-        let sum = 0;
-        for (const iterator of array) {
-            sum += iterator;
-        }
-        console.log(`the array is [${array}]\nthe average of the numbers is => ${sum/array.length}`);
+        console.warn("------- solucion anticuada ------");
+        average(array);
+        console.warn("------- solucion ECMASCRIPT-6 ------");
+        averageECMA6(array);
+
     }
 }
+
+// Solucion ECMASCRIPT 6 actual
+const averageECMA6 = array => array.reduce((sum, element, index, array)=>{
+    sum += element;
+    if (index === array.length-1) 
+        return console.log(`the array is [${array}]\nthe average ECMA-6 of the numbers is => ${sum/array.length}`);
+    else 
+        return sum;
+});
+
+// Esta es una solucion anticuadad de ECMASCRIPT 5 para abajo 
+const average = array =>{
+    let sum = 0;
+    for (const iterator of array) {
+        sum += iterator;
+    }
+    return console.log(`the array is [${array}]\nthe average of the numbers is => ${sum/array.length}`);
+}
+        
 
 const validateState = array =>{ 
     if (validateArray(array)){
         if (array.length > 1){
-            if((validateStatus(array))){
+            if(validateStatus(array)){
                 return true;
             }
         }else{
@@ -53,4 +72,3 @@ averageNumbers({});
 averageNumbers(false);
 averageNumbers(2341324);
 averageNumbers();
-

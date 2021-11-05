@@ -5,7 +5,11 @@ import {validateArray, validateNumber} from "./validations.js";
 
 const shortItems = array => {
     if (validateState(array)){
+        console.warn("Aplicando sort() directamenete al array sin el metodo map()");
         console.log({upward : upwardArray(array)  , falling : downwardArray(array)});
+
+        console.warn("Aplicando sort() junto con el metodo map() NOTA : NO ES FUNCIONAL DEL TODO!!!");
+        console.log({upward : upArray(array)  , falling : downArray(array)});
     } 
 }
 
@@ -20,6 +24,13 @@ const downwardArray = array => {
     }
     return cloneArray;
 }
+
+//------------------------ aplicando map() -------------------------
+const upArray = array => array.map(element => element).sort();
+const downArray = array => array.map(element => element).sort().reverse();
+
+
+
 
 const validateState = array =>{ 
     if (validateArray(array)){
