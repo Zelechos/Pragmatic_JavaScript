@@ -54,6 +54,6 @@ window.addEventListener('load', ()=> {
 
     }
   })(moviesInstances));
-  
+
   Movie.acceptedGenresDatabase();
 });
