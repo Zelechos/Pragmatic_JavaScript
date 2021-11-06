@@ -45,3 +45,20 @@ export function validateIdImdb(idImdb){
         console.warn("==> Preprocessed idIMDB finished !!");
     }
 }
+
+// validamos el titulo no rebase 100 caracteres
+export function validateTitle(title){
+    try {
+        // validamos que el title cuenta con 100 o menos caracteres
+        if (title.length <= 100){
+                return true;
+        } else {
+            throw new Error(` ==> the number characters ${title.length} wrong\n==> was expected 100 or less characters!!`);
+        }
+    } catch (error) {
+        console.error(error);
+        return false;
+    } finally {
+        console.warn("==> Preprocessed title finished !!");
+    }
+}
