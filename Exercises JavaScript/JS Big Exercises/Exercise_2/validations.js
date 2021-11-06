@@ -1,7 +1,7 @@
 // x Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
 // x Valida que el título no rebase los 100 caracteres.
 // x Valida que el director no rebase los 50 caracteres.
-// - Valida que el año de estreno sea un número entero de 4 dígitos.
+// x Valida que el año de estreno sea un número entero de 4 dígitos.
 // - Valida que el país o paises sea introducidos en forma de arreglo.
 // - Valida que los géneros sean introducidos en forma de arreglo.
 // - Valida que los géneros introducidos esten dentro de los géneros 
@@ -77,6 +77,55 @@ export function validateDirector(director){
         return false;
     } finally {
         console.warn("==> Preprocessed director finished !!");
+    }
+}
+
+// validamos el año tenga 4 digitos y que sea un numero
+export function validateYear(year){
+    try {
+        // validamos que el title cuenta con 100 o menos caracteres
+        if (validateNumber(year)){
+            if(year <= 9999 && year > 999){
+                return true;
+            } else {
+                throw new Error(` ==> the number digits ${year.toString().length} wrong\n==> was expected 4 digits!!`);
+            }
+        }
+    } catch (error) {
+        console.error(error);
+        return false;
+    } finally {
+        console.warn("==> Preprocessed year finished !!");
+    }
+}
+
+// Module para verificar si es un string
+export function validateString(data){
+    try {
+        if(typeof(data) != "string" && data instanceof(String) == false){
+            throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
+        }    
+        return true;
+    } catch (error) {
+        console.error(error);
+        return false;
+    }finally{
+        console.warn("==> Preprocessed text finished !!");
+    }
+}
+
+// Module para verificar si es un number
+export function validateNumber(data){
+    try {
+        if(typeof(data) != "number" && data instanceof(Number) == false){
+            throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
+        }    
+        return true;
+    } catch (error) {
+        console.error(error);
+        return false;
+    }finally{
+        console.warn("==> Preprocessed number finished !!");
     }
 }
 
