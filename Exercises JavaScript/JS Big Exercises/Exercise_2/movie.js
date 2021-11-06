@@ -15,5 +15,6 @@ export default class Movie{
         this.imdbRating = imdbRating;
     }
 
+    
 
 }

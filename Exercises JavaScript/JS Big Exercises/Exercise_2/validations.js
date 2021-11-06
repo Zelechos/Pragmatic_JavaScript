@@ -2,25 +2,10 @@
 // x Valida que el título no rebase los 100 caracteres.
 // x Valida que el director no rebase los 50 caracteres.
 // x Valida que el año de estreno sea un número entero de 4 dígitos.
-// - Valida que el país o paises sea introducidos en forma de arreglo.
+// x Valida que el país o paises sea introducidos en forma de arreglo.
 // - Valida que los géneros sean introducidos en forma de arreglo.
-// - Valida que los géneros introducidos esten dentro de los géneros 
+// - Valida que los géneros introducidos esten dentro de los géneros aceptados
 'use strict'
-
-// Modulo para validar Arrays
-export function validateArray(array){
-    try {
-        if(!(array instanceof Array)){
-            throw new Error(` ==> Tipo de Dato ${typeof(array)} incorrecto!! `);
-        }
-        return true;
-    } catch (error) {
-        console.error(error);
-        return false;
-    } finally {
-        console.warn("==> Preprocessed array finished !!");
-    }
-}
 
 // validamos el ID DE IMDB : EF9283746
 export function validateIdImdb(idImdb){
@@ -99,6 +84,25 @@ export function validateYear(year){
     }
 }
 
+// validamos el año tenga 4 digitos y que sea un numero
+export function validateCountry(country){
+    try {
+        // validamos que el title cuenta con 100 o menos caracteres
+        if (validateArray(country)){
+            if(country.length >= 1){
+                return true;
+            } else {
+                throw new Error(` ==> the array length is ${country.length} wrong\n==> was expected 1 or greater!!`);
+            }
+        }
+    } catch (error) {
+        console.error(error);
+        return false;
+    } finally {
+        console.warn("==> Preprocessed country finished !!");
+    }
+}
+
 // Module para verificar si es un string
 export function validateString(data){
     try {
@@ -129,4 +133,17 @@ export function validateNumber(data){
     }
 }
 
-
+// Modulo para validar Arrays
+export function validateArray(array){
+    try {
+        if(!(array instanceof Array)){
+            throw new Error(` ==> Tipo de Dato ${typeof(array)} incorrecto!! `);
+        }
+        return true;
+    } catch (error) {
+        console.error(error);
+        return false;
+    } finally {
+        console.warn("==> Preprocessed array finished !!");
+    }
+}
