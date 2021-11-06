@@ -8,7 +8,7 @@
 'use strict'
 
 // validamos el ID DE IMDB : EF9283746
-export function validateIdImdb(idImdb){
+function validateIdImdb(idImdb){
     try {
         // validamos que el id cuenta con 9 caracteres
         if (idImdb.length === 9){
@@ -32,7 +32,7 @@ export function validateIdImdb(idImdb){
 }
 
 // validamos el titulo no rebase 100 caracteres
-export function validateTitle(title){
+function validateTitle(title){
     try {
         // validamos que el title cuenta con 100 o menos caracteres
         if (title.length <= 100){
@@ -49,7 +49,7 @@ export function validateTitle(title){
 }
 
 // validamos el director no rebase 50 caracteres
-export function validateDirector(director){
+function validateDirector(director){
     try {
         // validamos que el title cuenta con 100 o menos caracteres
         if (director.length <= 50){
@@ -66,7 +66,7 @@ export function validateDirector(director){
 }
 
 // validamos el año tenga 4 digitos y que sea un numero
-export function validateYear(year){
+function validateYear(year){
     try {
         // validamos que el title cuenta con 100 o menos caracteres
         if (validateNumber(year)){
@@ -85,7 +85,7 @@ export function validateYear(year){
 }
 
 // validamos que country sea un Array 
-export function validateCountry(country){
+function validateCountry(country){
     try {
         // validamos que es un Array
         if (validateArray(country)){
@@ -104,7 +104,7 @@ export function validateCountry(country){
 }
 
 // validamos que generos sea un Array 
-export function validateGender(gender){
+function validateGender(gender){
     try {
         // validamos que es un Array
         if (validateArray(gender)){
@@ -123,7 +123,7 @@ export function validateGender(gender){
 }
 
 // validamos la calificacion que se entre 0 y 10 y que tengo un decimal example => 3.2
-export function validateQualification(qualification){
+function validateQualification(qualification){
     try {
         // validamos que el title cuenta con 100 o menos caracteres
         if (validateNumber(qualification)){
@@ -142,7 +142,7 @@ export function validateQualification(qualification){
 }
 
 // Module para verificar si es un string
-export function validateString(data){
+function validateString(data){
     try {
         if(typeof(data) != "string" && data instanceof(String) == false){
             throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
@@ -157,7 +157,7 @@ export function validateString(data){
 }
 
 // Module para verificar si es un number
-export function validateNumber(data){
+function validateNumber(data){
     try {
         if(typeof(data) != "number" && data instanceof(Number) == false){
             throw new Error(` ==> Tipo de Dato ${typeof(data)} incorrecto!! `);
@@ -172,7 +172,7 @@ export function validateNumber(data){
 }
 
 // Modulo para validar Arrays
-export function validateArray(array){
+function validateArray(array){
     try {
         if(!(array instanceof Array)){
             throw new Error(` ==> Tipo de Dato ${typeof(array)} incorrecto!! `);
@@ -185,3 +185,24 @@ export function validateArray(array){
         console.warn("==> Preprocessed array finished !!");
     }
 }
+
+// generos aceptados database
+const genders = ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary","Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"]
+
+// Creamos Objeto para enviar todas nuestras rutinas de validacion
+
+const validationsExports = {
+    validateIdImdb,
+    validateTitle,
+    validateDirector,
+    validateYear,
+    validateCountry,
+    validateGender,
+    validateQualification,
+    validateString,
+    validateNumber,
+    validateArray,
+    acceptedGenres : genders
+}
+
+export default validationsExports;
