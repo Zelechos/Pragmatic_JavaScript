@@ -19,7 +19,7 @@
 
 * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
 */
-import { validateCountry, validateDirector, validateIdImdb, validateTitle, validateYear } from './validations.js';
+import { validateCountry, validateDirector, validateGender, validateIdImdb, validateTitle, validateYear } from './validations.js';
 'use strict'
 
 // TESTING OF VALIDATES
@@ -47,5 +47,10 @@ if(validateYear(testFour)){
 let testFive = [];
 if(validateCountry(testFive)){
   console.log(`approved test => ${testFive}`);
+}
+
+let testSix = [];
+if(validateGender(testSix)){
+  console.log(`approved test => ${testSix}`);
 }
 

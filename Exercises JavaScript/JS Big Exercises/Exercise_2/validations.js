@@ -3,8 +3,8 @@
 // x Valida que el director no rebase los 50 caracteres.
 // x Valida que el año de estreno sea un número entero de 4 dígitos.
 // x Valida que el país o paises sea introducidos en forma de arreglo.
-// - Valida que los géneros sean introducidos en forma de arreglo.
-// - Valida que los géneros introducidos esten dentro de los géneros aceptados
+// x Valida que los géneros sean introducidos en forma de arreglo.
+// - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
 'use strict'
 
 // validamos el ID DE IMDB : EF9283746
@@ -84,10 +84,10 @@ export function validateYear(year){
     }
 }
 
-// validamos el año tenga 4 digitos y que sea un numero
+// validamos que country sea un Array 
 export function validateCountry(country){
     try {
-        // validamos que el title cuenta con 100 o menos caracteres
+        // validamos que es un Array
         if (validateArray(country)){
             if(country.length >= 1){
                 return true;
@@ -100,6 +100,25 @@ export function validateCountry(country){
         return false;
     } finally {
         console.warn("==> Preprocessed country finished !!");
+    }
+}
+
+// validamos que generos sea un Array 
+export function validateGender(gender){
+    try {
+        // validamos que es un Array
+        if (validateArray(gender)){
+            if(gender.length >= 1){
+                return true;
+            } else {
+                throw new Error(` ==> the array length is ${gender.length} wrong\n==> was expected 1 or greater!!`);
+            }
+        }
+    } catch (error) {
+        console.error(error);
+        return false;
+    } finally {
+        console.warn("==> Preprocessed gender finished !!");
     }
 }
 
