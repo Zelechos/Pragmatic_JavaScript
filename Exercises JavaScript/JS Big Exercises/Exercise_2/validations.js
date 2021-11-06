@@ -1,5 +1,5 @@
 // x Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
-// - Valida que el título no rebase los 100 caracteres.
+// x Valida que el título no rebase los 100 caracteres.
 // - Valida que el director no rebase los 50 caracteres.
 // - Valida que el año de estreno sea un número entero de 4 dígitos.
 // - Valida que el país o paises sea introducidos en forma de arreglo.
@@ -62,3 +62,5 @@ export function validateTitle(title){
         console.warn("==> Preprocessed title finished !!");
     }
 }
+
+
