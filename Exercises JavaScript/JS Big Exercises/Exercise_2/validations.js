@@ -1,4 +1,4 @@
-// - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+// x Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
 // - Valida que el título no rebase los 100 caracteres.
 // - Valida que el director no rebase los 50 caracteres.
 // - Valida que el año de estreno sea un número entero de 4 dígitos.
@@ -33,7 +33,7 @@ export function validateIdImdb(idImdb){
             if (idPattern.test(idImdb)){
                 return true;
             } else {
-                throw new Error(` ==> the pattern characters ${idImdb} wrong\n==> was expected ef2938471!!`);
+                throw new Error(` ==> the pattern characters ${idImdb} wrong\n==> was expected for example =>{ef2938471}!!`);
             }
         } else {
             throw new Error(` ==> the number characters ${idImdb.length} wrong\n==> was expected 9 characters!!`);
@@ -42,6 +42,6 @@ export function validateIdImdb(idImdb){
         console.error(error);
         return false;
     } finally {
-        console.warn("==> Preprocessed array finished !!");
+        console.warn("==> Preprocessed idIMDB finished !!");
     }
 }
