@@ -1,10 +1,10 @@
 'use strict'
 
-var Numero = parseInt(prompt("Digite un Numero : "));
+let number = parseInt(prompt("Digite un Numero : "));
 
-for(var Divisor = 1; Divisor <= Numero; Divisor++) {
+for(let Divisor = 1; Divisor <= number; Divisor++) {
 
-    if (Numero % Divisor == 0) {
+    if (number % Divisor == 0) {
         console.log("Divisor es : "+Divisor);
     }
 
