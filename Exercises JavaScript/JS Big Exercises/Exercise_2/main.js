@@ -21,47 +21,39 @@ import Movie from './movie.js';
 window.addEventListener('load', ()=> {
   'use strict'
 
-  // Data test
-const gendersMovie1 = [ "Talk-Show", "Musical"]
-const gendersMovie2 = [ "Talk-Show","Action", "Adult"]
-const gendersMovie3 = [ "Adventure","Film Noir","Western"]
+  // Testing
+  const gendersMovie1 = [ "Talk-Show", "Musical"]
+  const gendersMovie2 = [ "Talk-Show","Action", "Adult"]
+  const gendersMovie3 = [ "Adventure","Film Noir","Western"]
 
-const countrysMovie1 = ["Argentina"]
-const countrysMovie2 = [ "Inglaterra","Francia"]
-const countrysMovie3 = [ "Alemania", "Rusia" ,"U.S"]
+  const countrysMovie1 = ["Argentina"]
+  const countrysMovie2 = [ "Inglaterra","Francia"]
+  const countrysMovie3 = [ "Alemania", "Rusia" ,"U.S"]
 
-const moviesInstances = [
-                        ["as2545678 error","It","tarantino",2000,countrysMovie1,gendersMovie1,9.6465],
-                        ["xK1698763","The Shining","dross",1990,countrysMovie2,gendersMovie2,5.610654465],
-                        ["Zj0125478","Dark Tower","kubick",1545,countrysMovie3,gendersMovie3,7.8797465]
-];
+  const moviesInstances = [
+                          ["as2545678","It","tarantino",2000,countrysMovie1,gendersMovie1,9.6465],
+                          ["xK1698763","The Shining","dross",1990,countrysMovie2,gendersMovie2,5.610654465],
+                          ["Zj0125478","Dark Tower","kubick",1545,countrysMovie3,gendersMovie3,7.8797465]
+  ];
 
-// const movie = new Movie(...moviesInstances[0]);
+  // Testing Method
+  ((function (movies){
 
-
-((function (movies){
-
-  for (let index = 0; index < movies.length; index++) {
-  
-    const movie = new Movie(...movies[index]);
+    for (let index = 0; index < movies.length; index++) {
     
-    let status = movie.acceptedGenres(movie.getGender);
-    movie.imdbRatingValue(movie.getImdbRating);
+      const movie = new Movie(...movies[index]);
+      
+      let status = movie.acceptedGenres(movie.getGender);
+      movie.imdbRatingValue(movie.getImdbRating);
 
-    if(Movie.validationsFinal(...movies[index]) && status){
-      document.write(movie.dataSheet());
-    }else{
-      document.write(movie.dataSheetError());
+      if(Movie.validationsFinal(...movies[index]) && status){
+        document.write(movie.dataSheet());
+      }else{
+        document.write(movie.dataSheetError());
+      }
+
     }
-
-  }
-})(moviesInstances));
-
-
-// Testing
-  // movie.acceptedGenres(movie.getGender);
-  // movie.imdbRatingValue(movie.getImdbRating);
-  // Movie.acceptedGenresDatabase();
-
-
+  })(moviesInstances));
+  
+  Movie.acceptedGenresDatabase();
 });

@@ -122,6 +122,7 @@ export default class Movie{
         return data;
     }
 
+    // mostrar un error en pantalla de validacion
     dataSheetError(){
         let data = `
             <fieldset>
@@ -132,8 +133,6 @@ export default class Movie{
         return data;
     }
 
-    
-
     // metodo statico para devolver los generos aceptados
     static acceptedGenresDatabase(){
         return console.log(`the accepted genres are => [${validationsExports.acceptedGenres}]`,);
@@ -141,12 +140,16 @@ export default class Movie{
 
     // metodo statico para hacer las validaciones
     static validationsFinal(idMovieImdb, title, director, releaseYear, countryOfOrigin, gender, imdbRating){
+        
         const data = [idMovieImdb, title, director, releaseYear, countryOfOrigin, gender, imdbRating];
         let iterator = 0, validateState =  true;
+
         for (const key in validationsExports) {
+
             if(validationsExports[key](data[iterator])){
                 console.log(key);
                 console.log(data[iterator]);
+
             } else {
                 validateState =  false;
             }
@@ -159,6 +162,4 @@ export default class Movie{
         console.error("_____________________validation finished_________________________");
         return validateState;
     }
-
-
 }
