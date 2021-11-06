@@ -4,7 +4,7 @@
 // x Valida que el año de estreno sea un número entero de 4 dígitos.
 // x Valida que el país o paises sea introducidos en forma de arreglo.
 // x Valida que los géneros sean introducidos en forma de arreglo.
-// - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+// x Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
 'use strict'
 
 // validamos el ID DE IMDB : EF9283746
@@ -119,6 +119,25 @@ export function validateGender(gender){
         return false;
     } finally {
         console.warn("==> Preprocessed gender finished !!");
+    }
+}
+
+// validamos la calificacion que se entre 0 y 10 y que tengo un decimal example => 3.2
+export function validateQualification(qualification){
+    try {
+        // validamos que el title cuenta con 100 o menos caracteres
+        if (validateNumber(qualification)){
+            if(qualification <= 10 && qualification >= 0){
+                return true;
+            } else {
+                throw new Error(` ==> the qualification ${qualification} wrong\n==> was expected from 0 than 10!!`);
+            }
+        }
+    } catch (error) {
+        console.error(error);
+        return false;
+    } finally {
+        console.warn("==> Preprocessed qualification finished !!");
     }
 }
 
