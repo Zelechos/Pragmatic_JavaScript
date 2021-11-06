@@ -1,5 +1,4 @@
-/* 3) Programa una clase llamada Pelicula. 
-La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+/* 3) Programa una clase llamada Pelicula. La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
 - Todos los datos del objeto son obligatorios.
 - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
   7 restantes números.
@@ -20,3 +19,12 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
 
 * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
 */
+'use strict'
+
+let text = "eE1234367";
+let test = "RY3445672@";
+
+let idPattern = /^([a-zA-Z]){2}([0-9]){7}$/;
+console.log("___________ Primera Expresion Regular_____________");
+console.log(idPattern.test(text));
+console.log(idPattern.test(test));

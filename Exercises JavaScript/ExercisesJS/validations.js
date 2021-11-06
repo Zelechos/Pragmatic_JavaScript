@@ -44,7 +44,7 @@ export function validateObjectDate(data){
     }
 }
 
-// Modulo para validar Objetos
+// Modulo para validar Arrays
 export function validateArray(data){
     try {
         if(!(data instanceof Array)){
