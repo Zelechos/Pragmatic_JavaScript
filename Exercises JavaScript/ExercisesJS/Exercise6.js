@@ -11,3 +11,5 @@ function hello(number){
 
 // Testing
 hola(10);
+hola(100);
+hola(5);
