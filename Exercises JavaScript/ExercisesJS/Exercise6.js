@@ -1,15 +1,31 @@
+// 6) desarrolla un programa que simule una descarga en base a un tamaño en GB introducido por teclado function(1) 
+/*
+    ejemplo : 
+    function(1)
+    devuelve : 
+        Download. . .
+        Download. . .
+        Download. . .
+        Download. . .
+        Download. . .
+        Download Complete!!!
+
+ */
+
 'use strict'
-let number;
-function hello(number){
-    if(number <= 0 ){
-        return console.log("Descarga Completa.");
-    }else{
-        console.log("Descargando. . .");
-    }
-    return hola(number-1);
+
+const downloadScript = size =>{
+    let iterator = size * 5;
+    let interval = 500;
+    let execution = setInterval(() => {
+        console.log(`[${iterator}] => Download. . .`);
+        if(iterator === 1 ){
+            clearInterval(execution);
+            console.warn("Download Complete!!!");
+        }
+        iterator--;
+    }, interval);
 }
 
-// Testing
-hola(10);
-hola(100);
-hola(5);
+let size = parseInt(prompt("enter your file size en GB : "),0);
+downloadScript(size);
