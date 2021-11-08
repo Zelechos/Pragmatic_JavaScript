@@ -6,7 +6,7 @@ window.addEventListener('load', ()=> {
     let recorderPairs = [];
 
     const pairToContinue = number =>{
-        let timeout = 1000;
+        let timeout = 1500;
         let execution = setTimeout(() => {
             number = Number(prompt("enter a number pair : ",0));
             if(number % 2 ===0){
