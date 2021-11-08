@@ -1,13 +1,13 @@
 // 5) Realize una un programa que dado un funcion reconozca si el numero es par o impar ejemplo function(5) es impar
 'use strict'
 
-const Par_Impar = Number => 
+const pairOrOdd = Number => 
     (Number % 2 == 0)
-        ? console.log(Number,' es Par') 
-        : console.log(Number,' es Impar');
+        ? console.log(Number,' is Pair') 
+        : console.log(Number,' is Odd');
 
 //Testing
-Par_Impar(5);
-Par_Impar(50);
-Par_Impar(10);
-Par_Impar(9);
+pairOrOdd(5);
+pairOrOdd(50);
+pairOrOdd(10);
+pairOrOdd(9);

@@ -1,28 +1,41 @@
 // 1) Programa una Funcion que dado de Numeros retorne cual es el mayor
+
 import { validateNumber } from './validations.js';
-'use strict';
 
-let Number1 = parseInt(prompt("Digite un numero : ", 0));
-let Number2 = parseInt(prompt("Digite otro numero : ", 0));
+window.addEventListener('load', ()=> {
+  'use strict';
 
-((function(Number1, Number2){
-  
-  if (validateNumber(Number1) && validateNumber(Number2)){
-    if (Number1 < Number2) {
-      console.log("El numero mayor es : " + Number2);
-      alert("El numero mayor es : " + Number2);
-      document.write("El numero mayor es : " + Number2);
-    } else if (Number2 < Number1) {
-      console.log("El numero mayor es : " + Number1);
-      alert("El numero mayor es : " + Number1);
-      document.write("El numero mayor es : " + Number1);
+  let number1 = parseInt(prompt("Enter a number : ", 0));
+  let number2 = parseInt(prompt("Enter another number : ", 0));
+
+  ((function(number1, number2){
+    
+    if (validateNumber(number1) && validateNumber(number2)){
+      if (number1 < number2) {
+
+        console.log("The largest number is : " + number2);
+        alert("The largest number is : " + number2);
+        document.write("The largest number is : " + number2);
+
+      } else if (number2 < number1) {
+      
+        console.log("The largest number is : " + number1);
+        alert("The largest number is : " + number1);
+        document.write("The largest number is : " + number1);
+      
+      } else {
+      
+        console.log("The numbers entered are the same.");
+        alert("The numbers entered are the same.");
+        document.write("The numbers entered are the same.");
+      
+      } 
+
     } else {
-      console.log("Los numeros introducidos son iguales.");
-      alert("Los numeros introducidos son iguales.");
-      document.write("Los numeros introducidos son iguales.");
-    } 
-  } else {
-    alert("Introduza Numeros No Simbolos ni Caracteres");
-  }
 
-})(Number1, Number2));
+      alert("Enter Numbers, No Symbols or Characters.");
+
+    }
+
+  })(number1, number2));
+});
