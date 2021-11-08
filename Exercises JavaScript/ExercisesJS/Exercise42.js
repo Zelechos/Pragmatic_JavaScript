@@ -10,7 +10,6 @@
     loading: ¤¤¤¤¤¤¤
     .etc
 */
-
 window.addEventListener('load', ()=> {
 
     'use strict'
