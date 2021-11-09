@@ -1,4 +1,5 @@
 // 43) desarrollar una funcion que dado que pida un numero si el numero es impar el programa finalize si el numero es par mostrar los numeros en pantalla ejemplo function(5) programa finalizo
+
 window.addEventListener('load', ()=> {
     'use strict'
 

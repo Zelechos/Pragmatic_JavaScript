@@ -20,6 +20,7 @@ let interval = 1000;
 let watch = setInterval(()=>{
     console.log(new Date().toLocaleTimeString());
 }, interval);
+
 //el metodo clearInterval() sirve para detener el temporizador
 clearInterval(watch);
 console.log("program end setInterval() finish");
