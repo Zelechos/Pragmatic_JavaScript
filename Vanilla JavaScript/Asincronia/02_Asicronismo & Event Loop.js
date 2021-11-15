@@ -43,17 +43,17 @@ console.error(`_________________________________________________________________
     function two(){
         let timeout = 1000;
         setTimeout(()=>{
-            console.log(`Two`);
+            console.log(`two`);
         },timeout);
     }
 
     function one(){
         let timeout = 0;
         setTimeout(()=>{
-            console.log(`One`);
+            console.log(`one`);
         },timeout);
         two();
-        console.log(`Three`);
+        console.log(`three`);
     }
 
     one();
