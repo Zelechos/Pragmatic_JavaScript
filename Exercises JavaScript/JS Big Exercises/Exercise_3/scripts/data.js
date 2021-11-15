@@ -32,14 +32,26 @@ const postgraduates = {
             name : "web developer",
             fecha : "30-10-2021",
             url : "web-developer.html",
-
         },
 
         cloudComputing : {
             name : "cloud computing",
             fecha : "20-11-2021",
             url : "cloud-computing.html",
+        },
+
+        machineLearning : {
+            name : "machine learning",
+            fecha : "30-11-2021",
+            url : "machine-learning.html",
+        },
+
+        ethicalHacker : {
+            name : "ethical hacker",
+            fecha : "00-00-0000",
+            url : "ethical-hacker.html",
         }
+
     }
 }
 
