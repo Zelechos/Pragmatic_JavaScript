@@ -1,16 +1,17 @@
+// Aplicando la recursividad en una funcion
 'use strict'
 
-let Num = 10;
+let number = 10;
 
-function Saludo(CantidadSaludos) {
+function Saludo(cantidadSaludos) {
 
-    if(CantidadSaludos > 0) {
-        console.log(CantidadSaludos+" .- Hola");
+    if(cantidadSaludos > 0) {
+        console.log(cantidadSaludos+" .- Hello");
     }else{
-        return console.log("Adios");
+        return console.warn("Good bye");
     }
     
-    return Saludo(CantidadSaludos-1);
+    return Saludo(cantidadSaludos-1);
 }
 
-Saludo(Num);
+Saludo(number);
