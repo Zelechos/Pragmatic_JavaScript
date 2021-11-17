@@ -1,4 +1,4 @@
-// Relizar un Portafolio de mi mismo rapido con puro objetos
+// 8) usando objectos y funciones dentro del objeto representar tu informacion que tendria tu portafolio
 
 const Me = {
     Name : "Alex",
