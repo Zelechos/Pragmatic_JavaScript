@@ -1,3 +1,4 @@
+//11) Crear una Clase que tenga como Herencia otras 3 Clases aplicar herencia y otros conceptos de POO(Programacion Orientada A Objetos)
 'use strict'
 
 document.write(`
@@ -189,7 +190,7 @@ DataScientist.prototype.models = function(){
     });
 }
 
-//######################## Testeamos al BackendDeveloper
+//######################## Testeamos al DataScientist
 
 const TecnologiasDataScientist = ["Python", "Pytorch", "Rust" ,"Git/Github", "TensorFlow", "Numpy","Anaconda", "Matplotlib", "SQL", "Keras", "spaCy"];
 
