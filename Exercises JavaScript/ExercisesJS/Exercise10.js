@@ -1,52 +1,55 @@
+// 10) crear una funcion para generar muchas cuentas de usuarios y mostrarlas en la web
+
 'use strict'
-const Cuenta = {
+
+const cuenta = {
     name: 'alex',
     email: "zelechos@hotmail.com",
     password : "zelechos@"
 }
 
-const Cuenta1 = {
+const cuenta1 = {
     name: 'sofia',
     email: "zelechos@gmail.com",
     password : "ethernet"
 }
 
-const Cuenta2 = {
+const cuenta2 = {
     name: 'yolamda',
     email: "etherias@hotmail.com",
     password : "aphocraphex"
 }
 
-const Cuenta3 = {
+const cuenta3 = {
     name: 'luis',
     email: "aphocraphex@gmail.com",
     password : "etherias"
 }
 
-const Cuenta4 = {
+const cuenta4 = {
     name: 'esteban',
     email: "morphoid@gmail.com",
     password : "morphling"
 }
 
-const Cuenta5 = {
+const cuenta5 = {
     name: 'argus',
     email: "etherias@hotmail.com",
     password : "etherum"
 }
 
-const Cuenta6 = {
+const cuenta6 = {
     name: 'etherum',
     email: "field@hotmail.com",
     password : "etherum"
 }
 
 // DATABASE
-const CuentasDatabase = [Cuenta , Cuenta1, Cuenta2, Cuenta3, Cuenta4 , Cuenta5 , Cuenta, Cuenta6];
+const cuentasDatabase = [cuenta , cuenta1, cuenta2, cuenta3, cuenta4 , cuenta5 , cuenta, cuenta6];
 
-function HackPassword(...CuentasDatabase){
+function hackPassword(...cuentasDatabase){
     document.write(`<h1>Hack Passwords</h1>`);
-    for (const key in CuentasDatabase) {
+    for (const key in cuentasDatabase) {
         document.write(`
 
         <style>
@@ -57,14 +60,14 @@ function HackPassword(...CuentasDatabase){
         </style>
 
         <fieldset>
-            <legend>Victima : ${CuentasDatabase[key].name}</legend>
-            <p>Email : ${CuentasDatabase[key].email}</p>
-            <p>Password : ${CuentasDatabase[key].password}</p>
+            <legend>Victima : ${cuentasDatabase[key].name}</legend>
+            <p>Email : ${cuentasDatabase[key].email}</p>
+            <p>Password : ${cuentasDatabase[key].password}</p>
         </fieldset>
         <br>
         `);
     }
 }
 
-HackPassword(...CuentasDatabase);
+hackPassword(...cuentasDatabase);
 
