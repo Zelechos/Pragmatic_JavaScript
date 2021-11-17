@@ -1,3 +1,4 @@
+// 12) crear una clase MathModules y usar prototypes para para crear sus funciones
 'use strict'
 // Method Builder
 function MathModules (number = 0, number1 = 0 ){
