@@ -1,5 +1,6 @@
 'use strict'
-// Callbacks
+// Callbacks Importante!!!!
+
 // NOTA: el callback es un mecanismo que tenemos para manejar el asincronia
 function squareCallback (value, callback, timeout){
     let numberAleatorio = Math.round(Math.random() * 1000);//0 al 1000

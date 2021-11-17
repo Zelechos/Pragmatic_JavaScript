@@ -6,7 +6,6 @@ let Fecha =  new Date();
 let year = Fecha.getFullYear();
 let month = Fecha.getMonth();
 let date = Fecha.getDate();
-
 let day = Fecha.getDay();
 let hour = Fecha.getHours();
 
