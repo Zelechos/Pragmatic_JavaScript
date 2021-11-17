@@ -3,15 +3,15 @@
 
 let number = 10;
 
-function Saludo(cantidadSaludos) {
+function saludo(cantidadsaludos) {
 
-    if(cantidadSaludos > 0) {
-        console.log(cantidadSaludos+" .- Hello");
+    if(cantidadsaludos > 0) {
+        console.log(cantidadsaludos+" .- Hello");
     }else{
         return console.warn("Good bye");
     }
     
-    return Saludo(cantidadSaludos-1);
+    return saludo(cantidadsaludos-1);
 }
 
-Saludo(number);
+saludo(number);

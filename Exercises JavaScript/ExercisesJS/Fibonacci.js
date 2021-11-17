@@ -1,25 +1,25 @@
+// Una funcion que genere la Sucesion de fibonacci 
 'use strict'
 
-var Numero = Number(prompt("Digite la posicion que quiere ver de la Sucesion de Fibonacci : ",0));
+let number = Number(prompt("enter a number : ",0));
 
-function Fibonacci(Numero){
+function fibonacci(number){
 
-    if(Numero == 0){
+    if(number == 0){
       return 0;
-    }else if(Numero == 1 || Numero == 2){
+    }else if(number == 1 || number == 2){
       return 1;
     }else{
-      return Fibonacci(Numero-1) + Fibonacci(Numero-2);
+      return fibonacci(number-1) + fibonacci(number-2);
     }
 }
 
-document.write("<h3>El numero Fibonacci es : "+Fibonacci(Numero)+"</h3>");
+document.write("<h3>the number fibonacci is : "+fibonacci(number)+"</h3>");
 
-
-
-// Numero=5
-//                     Fibonacci(4)               +            Fibonacci(3)
-//          Fibonacci(3)     +      Fibonacci(2)  + Fibonacci(2)     +      Fibonacci(1)
-//Fibonacci(2) + Fibonacci(1)+    1   +  1   +   1
+// Demostracion de lo que
+// number=5
+//                     fibonacci(4)               +            fibonacci(3)
+//          fibonacci(3)     +      fibonacci(2)  + fibonacci(2)     +      fibonacci(1)
+//fibonacci(2) + fibonacci(1)+    1   +  1   +   1
 //    1         +    1      +            3
 //   5
