@@ -1,3 +1,4 @@
+// 13) Crear una clase Hacker con su respectivo metodo constructor, metodos getters y setters , metodo genericos , y metodos estaticos y crear un objeto de la clase Hacker
 'use strict'
 
 class Hacker{
@@ -87,4 +88,3 @@ console.log(Etherias.getName);
 console.log(Etherias.getLastname);
 console.log(Etherias.getCode);
 console.log(Etherias.getSpecialty);
-
