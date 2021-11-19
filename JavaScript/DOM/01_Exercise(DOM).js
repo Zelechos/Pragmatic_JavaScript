@@ -9,7 +9,7 @@ function catchData(){
       changeColor(color);
 }
 
-function changeColor (color) {
+function changeColor(color) {
       box.style.background = color;
       box.style.width = "50px";
       box.style.fontSize = "25px";
@@ -20,42 +20,17 @@ function changeColor (color) {
       box.style.borderRadius= "120px";
       box.innerHTML = color;
       box.className = "Cuadro";
-      box.setAttribute("onclick" ,"Crecer();");
+      box.setAttribute("onclick" ,"growingUp();");
 }
 
-function Crecer(){
+function growingUp(){
       box.style.width = "100px";
       box.style.padding = "100px";
-      box.setAttribute("onclick" ,"Reducir();") ;
+      box.setAttribute("onclick" ,"reduce();") ;
 }
 
-function Reducir(){
+function reduce(){
       box.style.width = "50px";
       box.style.padding = "50px";
-      box.setAttribute("onclick" ,"Crecer();") ;
+      box.setAttribute("onclick" ,"growingUp();") ;
 }
-
-var Imagen = document.getElementById("Metodo 1");
-
-/*function Fondo (){
-    Imagen.style.backgroundImage = 'url("img/Lawrencium.jpg")';
-    Imagen.style.width = "1000px";
-    Imagen.style.height = "1000px";
-}*/
-
-var Body = document.querySelector("body");
-function Fondo (){
-  Body.style.backgroundImage = 'url("img/Lawrencium.jpg")';
-  Body.style.color = "white";
-}
-
-
- //Seleccionando un elemento mediante su ID
- //var box = document.getElementById("box");
- 
- //Seleccionando elementos con query
- 
-console.log(box);
-console.log(Imagen);
-Fondo();
-
