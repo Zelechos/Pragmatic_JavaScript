@@ -65,12 +65,10 @@ function Activacion(){
 }
 
 function Desactivacion(){
-        
     var it;
     for(it in Gestion){
         if(Gestion[it].className == "l"){
             document.write(Gestion[it].textContent+"<br>");
-
         }
     }
 }
