@@ -1,6 +1,6 @@
 "use strict"
-      //DOM Document Object Model
-      
+//DOM Document Object Model
+
 let box = document.getElementById("box");
 
 function catchData(){
