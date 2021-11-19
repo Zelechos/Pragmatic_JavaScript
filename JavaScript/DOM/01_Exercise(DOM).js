@@ -1,7 +1,7 @@
 "use strict"
       //DOM Document Object Model
       
-let box = document.querySelector("#box");
+let box = document.getElementById("box");
 
 function catchData(){
       let data = document.getElementById("color");
