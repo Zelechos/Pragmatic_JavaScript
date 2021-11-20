@@ -1,18 +1,19 @@
 'use strict'
 
-function Calcular() {
-    var Numero1 = document.getElementById("X");
-    var Numero2 = document.getElementById("Y");
-    var X = parseInt(Numero1.value);
-    var Y = parseInt(Numero2.value);
-    var Respuesta = X + Y;
-    var resultado = document.getElementById("Resultado");
+function calculateSum() {
+    const number1 = document.getElementById("X");
+    const number2 = document.getElementById("Y");
+    let x = parseInt(number1.value);
+    let y = parseInt(number2.value);
+    let result = x + y;
+
+    const labelResult = document.getElementById("Resultado");
     
-    resultado.style.fontSize = "300px";
-    resultado.style.textAlign = "center";
-    resultado.style.marginTop = "-250px";
+    labelResult.style.fontSize = "300px";
+    labelResult.style.textAlign = "center";
+    labelResult.style.marginTop = "-250px";
     
-    resultado.innerHTML  = Respuesta;
+    labelResult.innerHTML  = result;
 }
 
-Calcular();
+calculateSum();
