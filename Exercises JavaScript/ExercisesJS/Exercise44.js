@@ -1,15 +1,16 @@
 // 44) crear una funcion que contenga una funcion callback para que dado dos valores obtenga la distanacia entre 2 puntos
 'use strict';
 
-const betweenPoints = (point1, point2, callback) => {
+const distanceBetweenPoints = (point1, point2, callback) => {
     console.log(`the points are : \nthe first point is ${point1} \nthe second point is ${point2}`);
     callback(point1, point2);
 }
 
-let point1 = [1,6];
+let point1 = [10,6];
 let point2 = [5,8];
 
-betweenPoints(point1, point2, (point1, point2) => {
+
+distanceBetweenPoints(point1, point2, (point1, point2) => {//function de callback
     let x1 = point1[0] , x2 = point2[0];
     let y1 = point1[1] , y2 = point2[1];  
 
