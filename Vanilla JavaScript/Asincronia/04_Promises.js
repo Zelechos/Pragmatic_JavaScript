@@ -22,6 +22,7 @@ function squaredPromise(value, timeout){
     });
 }
 
+// aplicando recursion
 squaredPromise(0)
     .then(object => {//si se cumple la promesa
         console.warn(`Beginning Promises`);
@@ -34,11 +35,11 @@ squaredPromise(0)
     })
     .then(object => {
         console.log(`response promise : number : ${object.value} , factorial : ${object.factorial}`);
-        return squaredPromise("3");
+        return squaredPromise(3);
     })
     .then(object => {
         console.log(`response promise : number : ${object.value} , factorial : ${object.factorial}`);
-        return squaredPromise(4);
+        return squaredPromise("4");
     })
     .then(object => {
         console.log(`response promise : number : ${object.value} , factorial : ${object.factorial}`);
