@@ -25,6 +25,7 @@ const invertArray = (array)=>{
 
 const array = [2,3,4,5,9,8,7];
 
+// aqui le aplicamos recusividad a la promesa
 invertArray(array)
     .then(arrayObject => {
         console.log(`the array is : ${arrayObject.array} , the reverse of array is : ${arrayObject.arrayReverse}`);
