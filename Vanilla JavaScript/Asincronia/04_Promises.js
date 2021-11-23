@@ -1,6 +1,5 @@
 'use strict'
 // Promises Importante!!!!
-
 function squaredPromise(value, timeout){
 
     if(typeof value !== "number") 
@@ -13,7 +12,7 @@ function squaredPromise(value, timeout){
         setTimeout(() => {
             const factorial = number => (number== 0 || number ==1)? 1 : number * factorial(number-1);
 
-            // resolve() es un metodo que consiste es que si la promesa se resuelve
+            // resolve() es un metodo que consiste en resolver la promesa y si la promesa se resuelve
             resolve({
                 value,
                 factorial:factorial(value)
