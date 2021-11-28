@@ -58,4 +58,3 @@ for(const privatePropertys in symbolPropertys){
 }
 
 // los Symbols() tambien funcionan con propiedades privadas de un objeto en js
-
