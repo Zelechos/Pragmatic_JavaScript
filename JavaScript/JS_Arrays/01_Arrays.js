@@ -9,6 +9,8 @@ const lenguages = new Array('HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node Js'
 console.log(movies);
 console.log(lenguages);
 
+/*--------------------------- RENDER DE ESTILOS -------------------*/
+
 const renderStyles = () => {
 
     document.write(`
