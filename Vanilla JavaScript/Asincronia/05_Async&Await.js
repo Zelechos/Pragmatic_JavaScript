@@ -60,7 +60,7 @@ validateEmails();
 // Esto es con promesas usando .then().catch()
 // emailChecker("Zelechos@github.dev")
 //     .then((email)=>{
-    //         console.log(`the email is validate [${email}]`);
+//         console.log(`the email is validate [${email}]`);
 //         return emailChecker("aphocraphex@gmail.com");
 //     })
 //     .then((email)=>{
