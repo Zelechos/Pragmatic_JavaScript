@@ -31,6 +31,8 @@ const renderStyles = () => {
 
 renderStyles();
 
+/*--------------------------- PROGRAMA DE SELECTOR DE LENGUAJE -------------------*/
+
 const selectLenguage = () => {
 
     let index = parseInt(prompt(`what programmer lenguage do you want? : `,0));
