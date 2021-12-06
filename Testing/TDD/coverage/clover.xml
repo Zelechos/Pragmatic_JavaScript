@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1638655629534" clover="3.2.0">
+  <project timestamp="1638655629535" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="11" coveredelements="11" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
+    <file name="areas-calculator.js" path="F:\Repositorios\Pragmatic_JavaScript\Testing\TDD\areas-calculator.js">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <line num="14" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
