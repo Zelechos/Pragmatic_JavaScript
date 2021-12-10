@@ -68,11 +68,3 @@ const values = [...map.values()];
 
 console.log(keys);
 console.log(values);
-
-
-
-
-
-
-
-
