@@ -1,4 +1,4 @@
-// 45) crear una funcion de tipo Promesa que consuma un API que encripte un mensaje y luego lo muestre el mensaje junto con el mensaje encriptado en el arichivo HTML de la web usando async await!!!
+// 45) crear una funcion de tipo Promesa que consuma un API que encripte un mensaje y luego lo muestre el mensaje junto con el mensaje encriptado en el archivo HTML de la web usando async await!!!
 'use strict';
 
 // Funcion para Crear la Promesa y validar el tipo de dato
@@ -13,11 +13,10 @@ const encryptedWord = (word) => {
         // el contador de tiempo
         let counter = 2;
         let loadMessage = setInterval(()=>{
-            document.write(`<h3 class ="notice">encrypting the word wait a ${counter--} second . . .</h3>`);
+            document.write(`<h3 class ="notice">encrypting the word wait a ${counter--} seconds . . .</h3>`);
             if(counter === 0){
                 clearInterval(loadMessage);
             }
-
         }, 1000);
 
         setTimeout(()=>{
@@ -134,7 +133,6 @@ const renderStyles = () => {
                     font-family: 'Outfit', sans-serif;
                     font-family: 'Zen Kaku Gothic Antique', sans-serif;
                     text-align : center;
-
                 }
 
                 fieldset{
@@ -186,6 +184,7 @@ const renderStyles = () => {
         `;
 
         document.write(styles);
+        
         // Aqui renderizamos nuestro titulo por la carga del archivo html
         renderTitle();
     });
