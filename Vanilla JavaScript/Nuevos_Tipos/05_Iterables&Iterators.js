@@ -35,5 +35,3 @@ while(!next.done){
     console.log(next.value);
     next = pointer.next();
 }
-
-

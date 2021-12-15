@@ -54,12 +54,3 @@ let cloneGenerator = generatorSquare();
 for(const response of cloneGenerator){
     console.log(response);
 }
-
-
-
-
-
-
-
-
-

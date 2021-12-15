@@ -1,4 +1,4 @@
-// 45) crear una funcion de tipo Promesa que consuma un API que encripte un mensaje y luego lo muestre el mensaje junto con el mensaje encriptado en el archivo HTML de la web usando async await!!!
+// 46) crear una funcion de tipo Promesa que consuma un API que encripte un mensaje y luego lo muestre el mensaje junto con el mensaje encriptado en el archivo HTML de la web usando async await!!!
 'use strict';
 
 // Funcion para Crear la Promesa y validar el tipo de dato
