@@ -44,7 +44,6 @@ console.table(HackerClubMembers);
 
 
 console.warn( `------------ Generators -----------------`);
-
 // Rutina para mostrar con la funcion Generator
 const ShowHacker = object => {
     return object;
@@ -57,9 +56,7 @@ function* generator(){
     yield ShowHacker(HackerClubMembers[2]);
 }
 
-
 let values = generator();
-
 for (const response of values) {
     console.table(response);
 }
