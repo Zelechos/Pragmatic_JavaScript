@@ -44,7 +44,7 @@ console.table(HackerClubMembers);
 
 
 console.warn( `------------ Generators -----------------`);
-// Rutina para mostrar con la funcion Generator
+// Rutina para mostrar elementos con la funcion Generator
 const ShowHacker = object => {
     return object;
 }
