@@ -29,7 +29,7 @@ const HackerClubMembers = [
 
 ];
 
-console.warn( `------------ Iterators -----------------`);
+console.warn(`------------ Iterators -----------------`);
 const iterator = HackerClubMembers[Symbol.iterator]();
 
 let show = iterator.next();
@@ -45,18 +45,34 @@ console.table(HackerClubMembers);
 
 console.warn( `------------ Generators -----------------`);
 // Rutina para mostrar elementos con la funcion Generator
-const ShowHacker = object => {
-    return object;
-}
+const showHacker = object => object;
 
 // Funcion Generator
 function* generator(){
-    yield ShowHacker(HackerClubMembers[0]);
-    yield ShowHacker(HackerClubMembers[1]);
-    yield ShowHacker(HackerClubMembers[2]);
+    console.log("first sentence");
+    yield showHacker(HackerClubMembers[0]);
+    console.log("second sentence");
+    yield  showHacker(HackerClubMembers[1]);
+    console.log("third sentence");
+    yield  showHacker(HackerClubMembers[2]);
 }
 
+// Funcion Generator aplicando un bucle
+function* generatorLoop(){
+    for (const index in HackerClubMembers) {
+        console.error(`sentence number : ${index}`);
+        yield HackerClubMembers[index];
+    }
+}
+
+console.warn( `------------ loop function Generator-----------------`);
+let valuesLoop = generatorLoop();
+for (const response of valuesLoop) {
+    console.error(response);
+}
+
+console.warn( `------------ normal function Generator-----------------`);
 let values = generator();
 for (const response of values) {
-    console.table(response);
+    console.log(response);
 }

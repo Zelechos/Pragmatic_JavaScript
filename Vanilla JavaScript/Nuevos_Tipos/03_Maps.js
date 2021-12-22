@@ -1,5 +1,4 @@
 'use strict'
-
 // el tipo de dato Map() se asemeja a un diccionario en Python
 
 // Creamos un dato Map()
@@ -18,6 +17,7 @@ console.log(object.size);
 // para evaluar si existe el atributo
 console.log(object.has("age"));
 console.log(object.has("name"));
+console.error(object.has("calendar"));
 
 
 // obtenemos un elemento especifico
@@ -48,6 +48,7 @@ console.log(object.get({}));
 console.log(object);
 
 // recorremos el dato map usando destructuracion
+console.error(`------------destructuracion--------------`);
 for (const [key, value] of object) {
     console.log(`${key} => ${value}`);
 }
@@ -62,7 +63,7 @@ const map = new Map([
 
 console.log(map);
 
-
+// funciones para traernos todas las llaves y los valor
 const keys = [...map.keys()];
 const values = [...map.values()];
 
