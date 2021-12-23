@@ -11,7 +11,7 @@ const postgraduates = {
         <title>Crear y pasar la informacion</title>
     </head>
     <body>
-        <h1>Ether<h1>
+        <h1>File creat with filecreator.js<h1>
     </body>
     </html>`,
 

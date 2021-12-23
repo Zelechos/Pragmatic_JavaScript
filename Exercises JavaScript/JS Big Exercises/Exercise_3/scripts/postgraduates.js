@@ -1,5 +1,5 @@
 import postgraduates from "./data.js"
-'use strict'
+'use strict';
 
 export default class Postgraduates {
     // Methods
@@ -30,9 +30,9 @@ export default class Postgraduates {
         let content = [];
 
         for (const key in postgraduates.masters) {
-
             if(postgraduates.masters[key].url === file){
-                let labelsContent = `<h1>${postgraduates.masters[key].name}</h1> 
+                let labelsContent = `
+                <h1>${postgraduates.masters[key].name}</h1> 
                 <h3>${postgraduates.masters[key].fecha}</h3> 
                 `;
                 let link = postgraduates.masters[key].url;

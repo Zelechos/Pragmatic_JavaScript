@@ -45,6 +45,3 @@ alex.age = 25;
 // alex.github = "https://github.com/Zelechos";
 
 console.log(alex);
-
-
-

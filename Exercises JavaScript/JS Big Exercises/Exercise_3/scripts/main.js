@@ -11,7 +11,8 @@ window.addEventListener('load', ()=> {
             let labelMain = document.getElementById('content-main');
             let data = labelData(links);
             labelMain.innerHTML = data;
-        } else if(file === data[0][1]){
+            
+        }else if(file === data[0][1]){//Verificamos que la url sea la del postgrado correcto
             let mainLabel = document.getElementById('content-main');
             mainLabel.innerHTML = data[0][0];
         }
@@ -21,8 +22,8 @@ window.addEventListener('load', ()=> {
         let text = `<ul>` ;
         for (let index = 0; index < links.length; index++) {
                 text += `<li>${links[index]} </li>`;
-            }
-            text += `</ul>`;
+        }
+        text += `</ul>`;
         return text;
     }
 
@@ -30,7 +31,7 @@ window.addEventListener('load', ()=> {
     const filename = ()=> {
 		let rutaAbsoluta = self.location.href;   
 		let posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
-		let rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
+		let rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length);
 		return rutaRelativa;  
 	}
 
