@@ -1,10 +1,8 @@
 'use strict'
 
 //Bom - Browser Object Model
-
-
-function getBom(){
-    //para ver la alture el tamaño de pantalla que tiene sin la consola
+const getBom = () => {
+    //para ver la altura el tamaño de pantalla que tiene sin la consola
     console.log(window.innerHeight);
 
     //para ver la anchura el tamaño de pantalla que tiene sin la consola
@@ -16,18 +14,19 @@ function getBom(){
 
     //te muestra toda la informacion de la pagina actual q esta abierta
     console.log(window.location);
+
     // te muestra el href del la pagina actual abierta
     console.log(window.location.href);
-    
 }
 
-function Redirect(url){
+const redirect = url => {
     window.location.href = url;
 }
 
-function Abrir(url){
+const open = url => {
     window.open(url,"","width=400px,height=300px");
     //window.location.href = url;
 }
-Abrir();
+
+open();
 getBom();
