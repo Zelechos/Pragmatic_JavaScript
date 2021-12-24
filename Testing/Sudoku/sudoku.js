@@ -1,7 +1,5 @@
-/*
-Debemos crear un sudoku con funcionalidades para testear
-*/
-
+'use strict'
+// Debemos crear un sudoku con funcionalidades para testear
 class Sudoku{
 
     // 1 area tiene 9 casillas

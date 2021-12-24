@@ -5,7 +5,7 @@ Calcular el area de un cuadrado de 2 x 2 debe dar como resultado 4
 Calcular el area de un rectangulo de 2 x 4 debe dar como resultado 8
 Calcular el area de un triangulo de altura 12 y base 20 debe dar como resultado 120
 */
-
+'use strict'
 
 const {it, expect} = require("@jest/globals");
 const Area = require("./areas-calculator");

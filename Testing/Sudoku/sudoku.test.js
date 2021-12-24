@@ -4,9 +4,8 @@ Calcular el la cantidad de Areas del Sudoku 1 area tiene 9 casillas
 Calcular el la cantidad de Areas del Sudoku 3 area tiene 27 casillas
 Calcular el la cantidad de Areas del Sudoku 9 area tiene 81 casillas
 Generar la cuadricula principal del sudoku para 0 tiene que ser 81 valores de 0 incialmente
-
 */
-
+'use strict'
 
 const {it, expect} = require("@jest/globals");
 const Sudoku = require("./sudoku");
@@ -33,10 +32,6 @@ describe('sudoku game ==> tests !!!', ()=>{
         const response = sudoku.generatorSudoku('005910308009403060027500100030000201000820007006007004000080000640150700890000420');
         expect(response).toBe(81);
     });
-
-
-
-
 });
 
 /*
