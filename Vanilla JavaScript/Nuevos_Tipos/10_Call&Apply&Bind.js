@@ -1,6 +1,7 @@
-'use strict'
+'use strict';
 
 // Call , Apply , Bind
+// son metodos que nos ayudar a manejar el contexto de diferentes ambitos para llevar y traer datos de diferentes objetos.
 console.log(this);
 
 this.lugar = "Global Context";
