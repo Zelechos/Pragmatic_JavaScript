@@ -10,23 +10,34 @@ $(document).ready(function(){
     //$.get("https://reqres.in/api/users", {page:2}, function(response){
         $.get("https://reqres.in/api/users", function(response){
             console.log(response);
+            
             response.data.forEach(element=>{
-                $('#data').append("<p>"+element.id +'.- '+ element.first_name +' '+ element.last_name +"<br><img src="+element.avatar+">"+'  ' +"<br>email :"+element.email +"</p>");
+                let content = `
+                <fieldset>
+                    <legend>Person ${element.id}</legend>
+                    <h2>Nombre : ${element.first_name} ${element.last_name} </h2>
+                    <img src="${element.avatar}">
+                    <h3>Email : ${element.email}</h3>
+                </fieldset>
+                `;
+                $('#data').append(content);
             })
         });
 
-    $('#formajax').submit(function(event){
+    $('#formajax').submit(function (event){
 
         //para que no se cargue en otra pagina
         event.preventDefault();
 
-        var user = {
+        // Data para los eventos 
+        const user = {
             firstname : $('#lsName').val(),
             lastname : $('#frName').val(),
             age : $('#ag').val(),
             WebSite : $('#web').val()
         }
-        var userx = {
+
+        const userx = {
             firstname : $('#lsName').val(),
             lastname : $('#frName').val(),
             age : $('#ag').val(),
@@ -34,15 +45,25 @@ $(document).ready(function(){
         }
 
         console.log(user);
-    
-        $.post($(this).attr("action"), userx , function(response){
-            console.log(response);
-                $('#data1').append("<p>Nombre : "+response.firstname +' '+ response.lastname +'<br>Edad : '+ response.age +'<br>Web : '+response.WebSite +"</p>");
-        }).done(function(){ 
-            console.log("Data Saved")
+
+        //Method $.Post
+        $.post($(this).attr("action"), userx , response =>{
+                console.log(response);
+                let content = `
+                <fieldset>
+                    <legend>Data</legend>
+                    <h2>Nombre : ${response.firstname} ${response.lastname} </h2>
+                    <h3>Edad : ${response.age}</h3>
+                    <h3>Web : ${response.WebSite}</h3>
+                </fieldset>
+                `;
+
+                $('#data1').append(content);
+            }).done(()=>{ 
+            console.log("Data Saved");
         });
 
-    //Method $.ajax
+        //Method $.ajax
         $.ajax({
             type : 'POST', //tipo de peticion
             url : $(this).attr("action"),
@@ -52,7 +73,14 @@ $(document).ready(function(){
             },
             success : function(response){
                 console.log(response);
-                $('#data2').append("<p>Nombre : "+response.firstname +' '+ response.lastname +'<br>Edad : '+ response.age +'<br>Web : '+response.WebSite +"</p>");
+                let content = `
+                <fieldset>
+                    <legend>Data</legend>
+                    <h2>Nombre : ${response.firstname} ${response.lastname} </h2>
+                    <h3>Edad : ${response.age}</h3>
+                    <h3>Web : ${response.WebSite}</h3>
+                </fieldset>`;
+                $('#data2').append(content);
             },
             error : function(){
                 console.log('ERROR . . ');
@@ -62,8 +90,5 @@ $(document).ready(function(){
 
         return false;
     });
-
-    
-
 
 });
