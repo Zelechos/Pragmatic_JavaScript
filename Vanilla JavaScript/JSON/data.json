@@ -1,0 +1,11 @@
+{
+    "cadena": "Alex",
+    "numero": 99,
+    "booleano": true,
+    "arreglo": ["uno", "dos", "tres"],
+    "objeto":{
+        "twitter": "@CoderPragmatic",
+        "email": "zelechos@gmail.com"
+    },
+    "nulo": "null"
+}
