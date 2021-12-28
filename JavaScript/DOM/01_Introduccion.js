@@ -39,11 +39,9 @@ console.log(document.title);
 console.warn(`accediendo a las etiquetas de enlaces del documento html`);
 console.log(document.links);
 
-
 // tambien podemos acceder a la lista de etiquetas <img> del documento
 console.warn(`accediendo a las etiquetas img del documento html`);
 console.log(document.images);
-
 
 // tambien podemos acceder a la lista de etiquetas <img> del documento
 console.warn(`accediendo a las etiquetas img del documento html`);
@@ -64,7 +62,6 @@ console.log(document.scripts);
 
 // para poder obtener el texto que seleccionemos en la web
 console.warn(`para poder obtener el texto que seleccionemos del documento html`);
-
 setTimeout(()=>{
     console.log(document.getSelection().toString());
 },3000);
