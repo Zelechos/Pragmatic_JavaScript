@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= body(1000);
+    styleArea.innerHTML= btnShadow(30);
 }
 
 const generatorColors = () =>{
@@ -58,4 +58,22 @@ const body = labels =>{
     }
 
     return bodyLabel;
+}
+
+
+// etiqueta body
+const btnShadow = labels =>{
+    let btnShadowLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-250)+250)
+        let randomFontSize = Math.floor(Math.random() * (25-15)+15)
+        btnShadowLabel += `
+
+        { 
+        "style" : ".btn { display:inline-block ; text-align:center ; vertical-align:middle ; padding:16px 24px ; border:1px solid ${generatorColors()} ; border-radius:8px ; background:${generatorColors()} ; background:-webkit-gradient(linear,left top,left bottom,from(${generatorColors()}),to(${generatorColors()})) ; background:-moz-linear-gradient(top,${generatorColors()},${generatorColors()}) ; background:linear-gradient(to bottom,${generatorColors()},${generatorColors()}) ; -webkit-box-shadow:${generatorColors()} 0 0 0 0 ; -moz-box-shadow:${generatorColors()} 0 0 0 0 ; box-shadow:${generatorColors()} 0 0 0 0 ; text-shadow:${generatorColors()} 1px 1px 1px ; font:normal normal bold 22px verdana ; color:#fff ; text-decoration:none } ",
+        "selector" : ".btn"
+      } ,`;
+    }
+
+    return btnShadowLabel;
 }
