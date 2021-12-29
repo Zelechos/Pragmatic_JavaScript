@@ -53,7 +53,7 @@ const body = labels =>{
         bodyLabel += `
         { 
         "style" : "body { font-family: 'IBM Plex Sans', sans-serif ; font-weight:${randomFont} ; background-color:${generatorColors()} ; font-size:${randomFontSize}px ; }",
-        "selector" : ".body"
+        "selector" : "body"
       } ,`;
     }
 
