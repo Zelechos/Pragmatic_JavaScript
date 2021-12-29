@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #0e1d32;
+    color: #ffeeaa;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto ;
+}
+
+#code{
+    width: 70%;
+    height: 60vh;
+    border: 5px solid #004f54 ;
+    border-radius: 5px ;
+    background-color: #ffeeaa;
+    color: #004f54;
+    font-size: 17px;
+    padding: 10px;
+}
+
+#btnCopy{
+    background-color: #Ffddee;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: #0e1d32;
+    border: 3px solid #ffeeaa;
+    border-radius: 5px;
+
+}
