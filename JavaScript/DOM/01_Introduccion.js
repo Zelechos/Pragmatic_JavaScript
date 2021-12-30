@@ -11,8 +11,8 @@ console.log(document.head);
 
 // accedemos a la etiqueta body del documento
 console.warn(`accediendo a la etiqueta body del documento html`);
-// nos da null por que el documento html no se cargo y se ejecuto antes nuestro script de html para solucionar esto se usa window.Addeventlistener
 console.log(document.body);
+// nos da null por que el documento html no se cargo y se ejecuto antes nuestro script de html para solucionar esto se usa window.Addeventlistener
 console.error(`nos da null por que el documento html no se cargo y se ejecuto antes nuestro script de javascript para solucionar esto se usa window.addEventListener('load',()=>{}`);
 
 window.addEventListener('load',()=>{
@@ -38,10 +38,6 @@ console.log(document.title);
 // tambien podemos acceder a la lista de enlaces que serian las cantidad de etiquetas <a> del documento
 console.warn(`accediendo a las etiquetas de enlaces del documento html`);
 console.log(document.links);
-
-// tambien podemos acceder a la lista de etiquetas <img> del documento
-console.warn(`accediendo a las etiquetas img del documento html`);
-console.log(document.images);
 
 // tambien podemos acceder a la lista de etiquetas <img> del documento
 console.warn(`accediendo a las etiquetas img del documento html`);
