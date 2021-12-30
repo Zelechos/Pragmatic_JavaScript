@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
-    <script type="text/javascript" src="./01_Introduccion.js"></script>
+    <script type="text/javascript" src="./02_Nodos Elementos & Selectores.js"></script>
 </head>
 <body>
     <style>
@@ -13,9 +13,80 @@
             background-color: #000;
             color: white;
         }
+
+        .card{
+            float: left;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #50404D;
+            width: 215px;
+        }
+
+        .link-dom{
+            display: block;
+        }
+
+
     </style>
     <h1>
         DOM (Document Object Model)
     </h1>
+    <hr>
+
+    <!-- Nodos.js -->
+    <fieldset>
+        <legend>
+            <h2>Elementos para Nodos.js </h2>
+        </legend>
+
+        <p id="what">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga unde ratione sed obcaecati. Amet doloribus numquam quis saepe, architecto adipisci repudiandae exercitationem sit inventore? Aspernatur modi distinctio et ipsa maxime!
+        </p>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Seccion 1</a></li>
+                <li><a href="#">Seccion 2</a></li>
+                <li><a href="#">Seccion 3</a></li>
+                <li><a href="#">Seccion 4</a></li>
+                <li><a href="#">Seccion 5</a></li>
+            </ul>
+        </nav>
+
+        <input type="text" name="name" placeholder="Name">
+        
+        <br><br>
+        <a class="link-dom" href="index.html">DOM</a>
+        <br><br>
+
+        <section class="cards">
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/tech" alt="Tech">
+                <figcaption>Tech</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/animals" alt="Animals">
+                <figcaption>Animals</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/people" alt="People">
+                <figcaption>People</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/arch" alt="Arch">
+                <figcaption>Arch</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="https://placeimg.com/200/200/nature" alt="Nature">
+                <figcaption>Nature</figcaption>
+            </figure>
+        </section>
+    </fieldset>
+
+
 </body>
 </html>
