@@ -3,13 +3,13 @@
 
 let box = document.getElementById("box");
 
-function catchData(){
+const catchData = ()=> {
       let data = document.getElementById("color");
       let color = data.value;
       changeColor(color);
 }
 
-function changeColor(color) {
+const changeColor = color => {
       box.style.background = color;
       box.style.width = "50px";
       box.style.fontSize = "25px";
@@ -23,13 +23,13 @@ function changeColor(color) {
       box.setAttribute("onclick" ,"growingUp();");
 }
 
-function growingUp(){
+const growingUp = () => {
       box.style.width = "100px";
       box.style.padding = "100px";
       box.setAttribute("onclick" ,"reduce();") ;
 }
 
-function reduce(){
+const reduce = () => {
       box.style.width = "50px";
       box.style.padding = "50px";
       box.setAttribute("onclick" ,"growingUp();") ;
