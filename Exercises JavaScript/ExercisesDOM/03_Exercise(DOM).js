@@ -1,16 +1,22 @@
 'use strict'
 
-var Texto = document.querySelector("#Texto");
-
-var Size = 10;
-function Tamaño(){
-    Texto.style.fontSize = Size+"px";
-    Texto.style.textAlign = "center";
-    Texto.style.cursor = "pointer";
-    Texto.style.margin = "auto";
-    Texto.setAttribute("onclick","Tamaño();");
-    Size++;
+const calculateSum = ()=> {
+    const number1 = document.getElementById("X");
+    const number2 = document.getElementById("Y");
+    let x = parseInt(number1.value);
+    let y = parseInt(number2.value);
+    
+    return x + y;
 }
 
-Tamaño();
-console.log(Texto);
+const renderResponse = ()=>{
+    const labelResult = document.getElementById("Resultado");
+    
+    labelResult.style.fontSize = "300px";
+    labelResult.style.textAlign = "center";
+    labelResult.style.marginTop = "-250px";
+    
+    labelResult.innerHTML  = calculateSum();
+}
+
+renderResponse();

@@ -1,36 +1,15 @@
-"use strict"
-//DOM Document Object Model
+'use strict'
 
-let box = document.getElementById("box");
+let text = document.querySelector("#Texto");
+let size = 10;
 
-function catchData(){
-      let data = document.getElementById("color");
-      let color = data.value;
-      changeColor(color);
+const sizeText = ()=> {
+    text.style.fontSize = size+"px";
+    text.style.textAlign = "center";
+    text.style.cursor = "pointer";
+    text.style.margin = "auto";
+    text.setAttribute("onclick","sizeText();");
+    size++;
 }
 
-function changeColor(color) {
-      box.style.background = color;
-      box.style.width = "50px";
-      box.style.fontSize = "25px";
-      box.style.textAlign = 'center';
-      box.style.margin = "auto";
-      box.style.padding = "50px";
-      box.style.cursor= "pointer";
-      box.style.borderRadius= "120px";
-      box.innerHTML = color;
-      box.className = "Cuadro";
-      box.setAttribute("onclick" ,"growingUp();");
-}
-
-function growingUp(){
-      box.style.width = "100px";
-      box.style.padding = "100px";
-      box.setAttribute("onclick" ,"reduce();") ;
-}
-
-function reduce(){
-      box.style.width = "50px";
-      box.style.padding = "50px";
-      box.setAttribute("onclick" ,"growingUp();") ;
-}
+sizeText();
