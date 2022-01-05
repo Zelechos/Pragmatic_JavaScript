@@ -2,12 +2,12 @@
 
 window.addEventListener('load',()=>{
     
-    let formulario = document.querySelector('#Form');
+    let form = document.querySelector('#form');
     let box = document.querySelector('.dashed');
     
     hideBox(box);
     
-    formulario.addEventListener('submit',()=>{
+    form.addEventListener('submit',()=>{
     
         const data = validateData();
         renderData(data);
@@ -28,10 +28,10 @@ const showBox = box =>{
 }
 
 const validateData = () => {
-    let name = document.querySelector('#nombre').value;
-    let lastname = document.querySelector('#apellido').value;
-    let age = parseInt(document.querySelector('#edad').value);
-    let skill = document.querySelector('#profesion').value;
+    let name = document.querySelector('#name').value;
+    let lastname = document.querySelector('#lastname').value;
+    let age = parseInt(document.querySelector('#age').value);
+    let skill = document.querySelector('#profession').value;
 
     if(name.trim() == null || name.trim().length == 0){
         alert("No introdujo un Nombre");
