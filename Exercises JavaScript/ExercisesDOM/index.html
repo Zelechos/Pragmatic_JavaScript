@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model (DOM)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>javascript DOM Document Object Model</h1>
@@ -54,53 +55,37 @@
 
     <!-- ---------------------------------------------------------------------------------------------- -->
     <h2>Ejercicio 5</h2>
-    <h1> examinando el querySelectorAll()</h1>
-        <p>Parrafo1</p>
-        <p>Parrafo2</p>
-        <p>Parrafo3</p>
-        <p>Parrafo4</p>
+    <div class="box">
+        <form action="#" method="POST" id="Form" onsubmit="return false;">
+            <label for="Nombre">Nombre</label><br>
+            <input type="text" name="Nombre" id="nombre"><br>
+            <label for="Apellido">Apellido</label><br>
+            <input type="text" name="Apellido" id="apellido"><br>
+            <label for="Edad">Edad</label><br>
+            <input type="number" name="Edad" id="edad"><br>
+            <label for="Profesion">Profesion</label><br>
+            <input type="text" name="Profesion" id="profesion"><br><br>
 
-            
-        <div id="test">
-            <div class="highlighted">
-                <p>Me Encontraste 1</p>
-                <p>Me Encontraste 1</p>
-                <p>Me Encontraste 1</p>
-            </div>
-        </div>         
-
-
-            <iframe data-src="lol" frameborder="0">
-                <h1>Argus </h1>
-                <h1>Aphocraphex</h1>
-            </iframe>
-
-            <iframe data-src="ko" frameborder="0">
-                <h1>Etherias</h1>
-                <h1>Zelechos</h1>  
-            </iframe>
-
-            <div id="userlis" onclick="Desactivacion()" style="background-color: aqua;">
-            <ul  >
-                <li class="g" data-active="1">Activado</li>
-                <li class="g" data-active="1">Activado</li>
-                <li class="g" data-active="1">Activado</li>
-                <li class="g" data-active="1">Activado</li>
-                <li class="g" data-active="1">Activado</li>
-            </ul>    
-            </div>
-
-            <div id="userlist">
-            <ul onclick="Activacion()">
-                <li class="l" data-active="0">Desactivado</li>
-                <li class="l" data-active="0">Desactivado</li>
-                <li class="l" data-active="0">Desactivado</li>
-                <li class="l" data-active="0">Desactivado</li>
-                <li class="l" data-active="0">Desactivado</li>
-            </ul>
-            </div>
-            
-        <script type="text/javascript" src="05_Exercise(DOM).js"></script>   
+            <input type="submit" name="Enviar" id="submit">
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>Informacion de Cliente :</h3>
+        <hr>
+        <p id="p_name">
+            Nombre : <span></span>
+        </p>
+        <p id="p_lastname">
+            Apellido : <span></span>
+        </p>
+        <p id="p_age">
+            Edad : <span></span>
+        </p>
+        <p id="p_skill">
+            Profesion : <span></span>
+        </p>
+    </div>
+    <script type="text/javascript" src="05_Exercise(DOM).js"></script>   
 
 </body>
 </html>

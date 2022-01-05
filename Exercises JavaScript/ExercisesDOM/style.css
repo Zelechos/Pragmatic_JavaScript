@@ -1,0 +1,19 @@
+body{
+    background-color: #CACACC;
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 20px;
+}
+
+.dashed{
+    color: #ffffff;
+    border: 3px solid #67585f;
+    padding: 9px;
+    background-color: #005042;
+    border-radius: 5px;
+}
+
