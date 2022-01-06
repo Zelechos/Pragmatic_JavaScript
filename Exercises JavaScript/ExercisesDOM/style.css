@@ -10,16 +10,19 @@ body{
 }
 
 .dashed{
+    width: 20%;
     color: #ffffff;
     border: 3px solid #67585f;
     padding: 9px;
     background-color: #005042;
     border-radius: 5px;
+
 }
 
 .btn { 
-    margin-left: 43%;
     width: 10%;
+    margin-left: 43%;
+    margin-bottom: 10px;
     display:inline-block ; 
     text-align:center ; 
     vertical-align:middle ; 
