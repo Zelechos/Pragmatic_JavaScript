@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
-    <script type="text/javascript" src="./03_Atributos_DataAtributos.js"></script>
+    <script type="text/javascript" src="./04_Estilos_VariablesCSS.js"></script>
 </head>
 <body>
     <style>
         body{
-            background-color: #000;
+            background-color: rgb(78, 77, 77);
             color: white;
         }
 
@@ -26,7 +26,11 @@
             display: block;
         }
 
+        :root{
+            --green-color: #008F4C;
+            --dark-color: #0d1117;
 
+        }
     </style>
     <h1>
         DOM (Document Object Model)
@@ -56,7 +60,7 @@
         <input type="text" name="name" placeholder="Name">
         
         <br><br>
-        <a class="link-dom" href="index.html" data-ssh="dfbqvw4b57pgw47543hf0534f5" data-description="Document Object Model">DOM</a>
+        <a class="link-dom" href="index.html" data-ssh="dfbqvw4b57pgw47543hf0534f5" data-description="Document Object Model" style="color:gray;">DOM</a>
         <br><br>
 
         <section class="cards">
