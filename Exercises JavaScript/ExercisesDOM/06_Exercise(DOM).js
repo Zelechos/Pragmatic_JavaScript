@@ -6,7 +6,7 @@ const $linkButton = document.querySelectorAll(".btn");
 const $labelName = document.querySelectorAll(".text");
 
 
-// Creamos el map donde manejaremos los datos
+// Creamos el map donde manejaremos los links
 const links = new Map([
     ["github", "https://github.com/Zelechos"],
     ["linkedin", "https://www.linkedin.com/in/alex-tumiri-huanca-6234b3195/"],
@@ -24,6 +24,7 @@ const showData = (button, label, data, index) => {
     button[index].setAttribute("href", data.get(keys[numberAleatorio]))
 }
 
+// Aqui renderiazor la rutina showData() y los eventos de Click!!
 const main = ()=>{
     showData($linkButton, $labelName, links, 0);
     showData($linkButton, $labelName, links, 1);
