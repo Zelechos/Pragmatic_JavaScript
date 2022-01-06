@@ -54,5 +54,6 @@ window.addEventListener('load', ()=> {
     console.log(greenColor);
 
     $body.style.backgroundColor = darkColor;
+
     
 });
