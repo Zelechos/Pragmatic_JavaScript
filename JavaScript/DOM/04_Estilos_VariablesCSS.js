@@ -37,6 +37,7 @@ window.addEventListener('load', ()=> {
     $link.style.marginRight = "auto";
     $link.style.padding = "1rem";
     $link.style.borderRadius = "5rem";
+    $link.style.setProperty("font-size", "25px");
 
     console.log($link.style);
 
@@ -55,5 +56,33 @@ window.addEventListener('load', ()=> {
 
     $body.style.backgroundColor = darkColor;
 
-    
+
+    // ahora cambiaremos de color a las cards 
+    const $cards = document.querySelectorAll(".card");
+    const $textCards = document.querySelectorAll(".card figcaption");
+
+    console.log($cards);
+
+    $cards.forEach(card => {
+        card.style.setProperty("background-color", greenColor);
+    });
+
+    $textCards.forEach(text => {
+        text.style.fontSize = "25px";
+    });
+
+
+    // tambien podemos cambiar el color de la lista
+    const $list = document.querySelectorAll("#menu ul li a");
+    console.log($list);
+
+    $list.forEach(link => {
+        // Primero usamos el metodo setProperty()
+        link.style.setProperty("text-decoration", "none");
+        link.style.setProperty("color", greenColor);
+
+        // ahora tambien podemos usar la notacion del punto es lo mismo
+        link.style.fontSize = "25px";
+    });
+
 });
