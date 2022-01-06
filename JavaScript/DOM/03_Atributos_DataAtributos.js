@@ -1,12 +1,9 @@
 'use strict'
 
+// Accedermos con el DOM a los Atributos y Data Atributos de las etiquetas HTML
 window.addEventListener('load', ()=> {
-    
-    
-    // Accedermos con el DOM a los Atributos y Data Atributos de las etiquetas HTML
 
-    // ATRIBUTOS
-    
+    //------------------------------- ATRIBUTOS-------------------------------
     // traemos el valor del atributo de nuestra etiqueta HTML (NO ES RECOMENDABLE)
     console.warn(`traemos el valor del atributo de nuestra etiqueta HTML `);
     console.log(document.documentElement.lang);
@@ -24,8 +21,6 @@ window.addEventListener('load', ()=> {
     console.log(document.querySelector(".link-dom").getAttribute("href"));
 
     // tambien podemos establecer los valores de los atributos de una etiqueta de las siguientes 2 maneras:
-
-    
     console.warn(`cambiando los valores de los atributos`);
     // Notacion de Punto 
 
@@ -57,7 +52,7 @@ window.addEventListener('load', ()=> {
     console.log($labelLinkDom.hasAttribute("rel"));
 
     
-    // DATA ATRIBUTOS
+    // -------------------------------DATA ATRIBUTOS-------------------------------
     // Vamos a obtener el data-description atributo que creamos para este ejemplo 
     console.warn(`Vamos a obtener el data-description atributo que creamos para este ejemplo `);
     console.log($labelLinkDom.getAttribute("data-description"));

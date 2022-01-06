@@ -3,7 +3,7 @@ body{
 }
 
 .box{
-    width: 250px;
+    width: 99%;
     height: 250px;
     float: left;
     margin: 20px;
@@ -17,3 +17,20 @@ body{
     border-radius: 5px;
 }
 
+.btn { 
+    margin-left: 43%;
+    width: 10%;
+    display:inline-block ; 
+    text-align:center ; 
+    vertical-align:middle ; 
+    padding:16px 24px ; 
+    border:1px solid #95D535 ; 
+    border-radius:8px ; 
+    background:#26435A ; 
+    background:-webkit-gradient(linear,left top,left bottom,from(#080515),to(#772989)) ;
+    background:-moz-linear-gradient(top,#5CB4CD,#A2C971) ; background:linear-gradient(to bottom,#A31996,#711BA9) ;
+    -webkit-box-shadow:#B060CC 0 0 0 0 ; -moz-box-shadow:#005170 0 0 0 0 ; box-shadow:#351B58 0 0 0 0 ; text-shadow:#C58DD4 1px 1px 1px ; 
+    font:normal normal bold 22px verdana ; 
+    color:#fff ; 
+    text-decoration:none ;
+}
