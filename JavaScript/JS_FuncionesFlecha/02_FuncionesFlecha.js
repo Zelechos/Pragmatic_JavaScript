@@ -1,6 +1,6 @@
 'use strict'
 
-var Operacion = (Menu, Raiz, Factorial, Fibonacci, FuncionesTrigononmetricas, Binario)=>{
+let Operacion = (Menu, Raiz, Factorial, Fibonacci, FuncionesTrigononmetricas, Binario)=>{
     switch(Menu()){
         case 0:
             Raiz();
@@ -28,7 +28,7 @@ var Operacion = (Menu, Raiz, Factorial, Fibonacci, FuncionesTrigononmetricas, Bi
 
 Operacion(
     () =>{
-        var Opcion = parseInt(prompt("-----------MENU------------\n"+
+        let Opcion = parseInt(prompt("-----------MENU------------\n"+
         "0. Raiz Cuadrada\n"+
         "1. Factorial\n"+
         "2. Fibonacci\n"+
@@ -39,12 +39,12 @@ Operacion(
     }
 
     ,()=>{
-        var Numero = parseInt(prompt("Digite un Numero : "));
+        let Numero = parseInt(prompt("Digite un Numero : "));
         document.write("La Raiz cuadrada de "+Numero+" es:"+ Math.sqrt(Numero));
     }
 
     ,()=>{
-        var Numero = parseInt(prompt("Digite un Numero : "));
+        let Numero = parseInt(prompt("Digite un Numero : "));
         function Factorial(Numero){
             if(Numero < 1){
                 return 1;
@@ -55,8 +55,8 @@ Operacion(
     }
 
     ,()=>{
-        var Numero = parseInt(prompt("Digite un Numero : "));
-        var Antecesor = 0 , Actual=0 , Fib = 1;
+        let Numero = parseInt(prompt("Digite un Numero : "));
+        let Antecesor = 0 , Actual=0 , Fib = 1;
 
         while(Numero > 0 ){
             document.write("["+Fib+"] - "); 
@@ -71,8 +71,8 @@ Operacion(
 
     ,()=>{
         
-        var FuncionTrigonometrica = (SubMenu, Numero)=>{
-            var Numero = Numero();
+        let FuncionTrigonometrica = (SubMenu, Numero)=>{
+            let Numero = Numero();
             switch(SubMenu()){
                 case 1:
                     document.write("El Sen("+Numero+") es:"+Math.sin(Numero));
@@ -100,7 +100,7 @@ Operacion(
 
         FuncionTrigonometrica(
         ()=>{
-                    var Opcion = parseInt(prompt("---------MENU---------\n"+
+                    let Opcion = parseInt(prompt("---------MENU---------\n"+
                     "1 . Sen(x)\n"+
                     "2 . Cos(x)\n"+
                     "3 . Tan(x)\n"+
@@ -113,18 +113,18 @@ Operacion(
         }
         ,
         ()=>{
-            var Numero = parseInt(prompt("Digite un Numero : "));
+            let Numero = parseInt(prompt("Digite un Numero : "));
             return Numero;
         }
         );
     }
 
     ,()=>{
-        var Numero = parseInt(prompt("Digite un Numero : "));
-        var Longitud = (''+Numero).length;
+        let Numero = parseInt(prompt("Digite un Numero : "));
+        let Longitud = (''+Numero).length;
         console.log(Longitud);
         
-        var NumeroBinario = [];
+        let NumeroBinario = [];
         
         while(Numero > 0){
             console.log(Numero/2);

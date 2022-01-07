@@ -11,6 +11,6 @@ console.log("Parametros REST");
 LenguajesProgramacion("JavaScript" , "TypeScript", "Python" , "Java", "Go");
 
 //Parametros SPREAD
-var Lenguajes = ['C++','C','Scala','R'];
+let Lenguajes = ['C++','C','Scala','R'];
 console.log("Parametros SPREAD");
 LenguajesProgramacion(...Lenguajes,"JavaScript" , "TypeScript", "Python" , "Java", "Go");

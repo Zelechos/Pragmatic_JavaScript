@@ -1,8 +1,8 @@
 'use strict'
 
 //Funciones Anonimas SON FUNCIONES SIN NOMBRE
-var Nombre = prompt("Digite el Nombre de la Pelicula:");
-var Pelicula = function(Nombre){
+let Nombre = prompt("Digite el Nombre de la Pelicula:");
+let Pelicula = function(Nombre){
     return "La pelicula es : "+Nombre;
 }
 
@@ -12,7 +12,7 @@ document.write(Pelicula(Nombre));
 //CALLBACKS
 
 function Sumame(Number1,Number2,Mostrar,PorDOS,Pensamiento,MostrandoPensameinto){
-        var Suma =  Number1() + Number2();
+        let Suma =  Number1() + Number2();
         MostrandoPensameinto(Pensamiento());
         Mostrar(Suma);
         PorDOS(Suma);
@@ -26,12 +26,12 @@ Funcion ha Invocar
 */
 Sumame(
     function(){
-        var Number1 = parseInt(prompt("Digite Otro Numero :",0));
+        let Number1 = parseInt(prompt("Digite Otro Numero :",0));
         return Number1;
     }
 
     ,function(){
-        var Number2 = parseInt(prompt("Digite Otro Numero :",0));
+        let Number2 = parseInt(prompt("Digite Otro Numero :",0));
         return Number2;
     }
 
@@ -44,7 +44,7 @@ Sumame(
     }
 
     ,function(){
-        var Pensamiento = String(prompt("Escribe Un Pensamiento De Tu Autoria : "));
+        let Pensamiento = String(prompt("Escribe Un Pensamiento De Tu Autoria : "));
         return Pensamiento;
     }
 

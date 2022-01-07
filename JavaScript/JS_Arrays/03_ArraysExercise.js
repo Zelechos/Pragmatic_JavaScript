@@ -1,14 +1,15 @@
 'use strict'
 
 function Menu(Numeros, Mostrar, Ordenados, Reversa ,Longitud, Encontrar){
-    var Nubers =Numeros();
-    Mostrar(Nubers);
-    var Ordenado = Ordenados(Nubers);
+    let numbers = Numeros();
+    Mostrar(numbers);
+    let Ordenado = Ordenados(numbers);
     Reversa(Ordenado);
-    Longitud(Nubers);
-    Encontrar(Nubers);
+    Longitud(numbers);
+    Encontrar(numbers);
 }
 
+// Aqui se esta usando el Arrow Function Hell no recomendable
 Menu(
     ()=>{
         var Numeros = [];

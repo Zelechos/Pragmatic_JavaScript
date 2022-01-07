@@ -18,7 +18,7 @@ document.querySelector('#Series').innerHTML = "<h1>"+localStorage.getItem("Titul
 
 //Guardar Objetos en el Local Storage
 
-var Usuario = {
+let Usuario = {
     Login: "zelechos@hotmail.com",
     Password: "etherias"
 }
@@ -27,7 +27,7 @@ localStorage.setItem("usuario", JSON.stringify(Usuario));
 
 //Recuperar Objetos JSON mediante el Local Storage
 
-var userObject = JSON.parse(localStorage.getItem("usuario"));
+let userObject = JSON.parse(localStorage.getItem("usuario"));
 document.querySelector('#Series').innerHTML = "Login : "+userObject.Login+"<br>"+"Password : "+userObject.Password ;
 console.log(userObject);
 

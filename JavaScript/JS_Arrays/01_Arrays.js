@@ -86,10 +86,11 @@ renderLenguagesForEach();
 
 const renderLenguagesForIn = () => {
 
-    document.write(`
-    <h1 style='background:#58a6ff;'>Show with loop FOR IN</h1>
+    let template = `
+        <h1 style='background:#58a6ff;'>Show with loop FOR IN</h1>
         <ul>
-    `);
+    `;
+    document.write(template);
     //en teoria la variable que declaramos en Leguajes en esta caso Lenguaje
     //recorre desde 0 la longitud del array que le pongamos 
     for(let lenguage in lenguages){//Donde Lenguaje es el index

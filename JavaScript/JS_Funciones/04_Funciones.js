@@ -1,11 +1,11 @@
 'use strict'
 
-//El ambito de las Variables
+//El ambito de las letiables
 
 
 function Hola(texto){
 
-    var Mensaje = "Voy pot ti ReactJS";//variable local de la funcion Hola()
+    let Mensaje = "Voy pot ti ReactJS";//letiable local de la funcion Hola()
     console.log(Texto);
     //metodo toString() para convetir cualquier tipo de dato a texto
     //metodo typeof() para ver que tipo de dato es
@@ -13,9 +13,9 @@ function Hola(texto){
     console.log(Mensaje);
 }
 
-var Num = 90;
-var Texto = "Hola Soy Variable Global";
+let Num = 90;
+let Texto = "Hola Soy letiable Global";
 
-//no podemos utilizar la variable Mensaje por que es una variable local no global
+//no podemos utilizar la letiable Mensaje por que es una letiable local no global
 //console.log(Mensaje);
 Hola(Texto);

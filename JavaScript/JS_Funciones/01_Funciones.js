@@ -6,8 +6,8 @@
             alert("Adios no te mostrare nada");
         }else{
             do{
-                var Number1 = parseInt(prompt("Digite Un Numero :",0));
-                var Number2 = parseInt(prompt("Digite Otro Numero :",0));
+                let Number1 = parseInt(prompt("Digite Un Numero :",0));
+                let Number2 = parseInt(prompt("Digite Otro Numero :",0));
                     if (isNaN(Number1) || isNaN(Number2)){
                         alert("No Introdujo Numeros Por Favor hagalo . . .");
                     }
@@ -18,13 +18,13 @@
 //Funciones 
     function Calculadora(Number1,Number2){
         do{
-            var Opcion = Menu();
+            let Opcion = Menu();
             Buscador(Opcion, Number1,Number2);   
         }while(Opcion != 5);
     }
 
     function Menu(){
-        var Opcion = parseInt(prompt("******Menu******\n"+
+        let Opcion = parseInt(prompt("******Menu******\n"+
                 "1. Sumar\n"+
                 "2. Restar\n"+
                 "3. Multiplicar\n"+
@@ -74,7 +74,7 @@
     }
 
     function Validacion(){
-    var Decision = String(prompt("Digite Elija Una Opcion (True = T/t) o (False = F/f) :"));
+    let Decision = String(prompt("Digite Elija Una Opcion (True = T/t) o (False = F/f) :"));
         switch(Decision){
             case 'T' :
                 Verificacion(true);
