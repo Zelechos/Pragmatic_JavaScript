@@ -12,9 +12,10 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= btnShadow(30);
+    styleArea.innerHTML= headerListLinks(15);
 }
 
+// Subrutina para generar los colores CSS
 const generatorColors = () =>{
     const digitColors = "01234565789ABCDEF";
     let color = "#";
@@ -77,3 +78,83 @@ const btnShadow = labels =>{
 
     return btnShadowLabel;
 }
+
+
+// etiqueta div checkboard style
+const checkerboard = labels =>{
+    let checkerboardLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-200)+200)
+        let randomFontSize = Math.floor(Math.random() * (60-50)+50)
+        checkerboardLabel += `
+        { 
+        "style" : ".checkerboard { width:${randomFont}px ; height:${randomFont}px ; background-color:${generatorColors()} ; background-image:linear-gradient(45deg,${generatorColors()} 25%,transparent 25%,transparent 75%,${generatorColors()} 75%,${generatorColors()}),linear-gradient(-45deg,${generatorColors()} 25%,transparent 25%,transparent 75%,${generatorColors()} 75%,${generatorColors()}) ; background-size:${randomFontSize}px ${randomFontSize}px ; background-repeat:repeat ; } ",
+        "selector" : ".checkerboard"
+      } ,`;
+    }
+
+    return checkerboardLabel;
+}
+
+
+//=========================== Para generar estilos de una barra de navegacion===========================
+// etiqueta header
+const header = labels =>{
+    let headerLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let heightHeader = Math.floor(Math.random() * (100-80)+80)
+        headerLabel += `
+        { 
+        "style" : "header { background-color:${generatorColors()} ; position:fixed ; top:0 ; left:0 ; right:0 ; height:${heightHeader}px ; display:flex ; align-items:center ; box-shadow: 0 0 25px 0 black ; } ",
+        "selector" : "header"
+      } ,`;
+    }
+
+    return headerLabel;
+}
+
+
+// etiqueta header *
+const headerGlobal = labels =>{
+    let headerLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let heightHeader = Math.floor(Math.random() * (100-80)+80)
+        headerLabel += `
+        { 
+        "style" : "header * { display:inline ; } ",
+        "selector" : "header *"
+      } ,`;
+    }
+}
+
+// etiqueta header li
+const headerList = labels =>{
+    let headerLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let heightHeader = Math.floor(Math.random() * (25-20)+20)
+        headerLabel += `
+        { 
+        "style" : "header li { margin:${heightHeader}px ; }",
+        "selector" : "header li"
+      } ,`;
+    }
+
+    return headerLabel;
+}
+
+// etiqueta header li a
+const headerListLinks = labels =>{
+    let headerLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let heightHeader = Math.floor(Math.random() * (25-20)+20)
+        headerLabel += `
+        { 
+        "style" : "header li a { color:${generatorColors()} ; text-decoration:none ; }",
+        "selector" : "header li a"
+      } ,`;
+    }
+
+    return headerLabel;
+}
+
+//============================Se terminaron los estilos necesario para la barra de navegacion ===========================
