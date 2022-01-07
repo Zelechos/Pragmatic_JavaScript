@@ -4,9 +4,9 @@
 
 //fetch('https://jsonplaceholder.typicode.com/users')
 
-var usuarios = document.querySelector('#users');
-var janete = document.querySelector('#Janet');
-var profesor = document.querySelector('#prof');
+let usuarios = document.querySelector('#users');
+let janete = document.querySelector('#Janet');
+let profesor = document.querySelector('#prof');
     
     getUsuarios()
     .then(data => data.json())
