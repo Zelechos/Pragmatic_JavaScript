@@ -79,7 +79,6 @@ const btnShadow = labels =>{
     return btnShadowLabel;
 }
 
-
 // etiqueta div checkboard style
 const checkerboard = labels =>{
     let checkerboardLabel = ``;
@@ -98,6 +97,7 @@ const checkerboard = labels =>{
 
 
 //=========================== Para generar estilos de una barra de navegacion===========================
+
 // etiqueta header
 const header = labels =>{
     let headerLabel = ``;
@@ -158,7 +158,6 @@ const headerListLinks = labels =>{
 }
 
 //============================Se terminaron los estilos necesario para la barra de navegacion ===========================
-
 
 // etiqueta div para crear una tarjeta
 const cardStyle = labels =>{
