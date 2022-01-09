@@ -17,13 +17,13 @@ window.addEventListener('load', () => {
 
     //Evento Keydown
     form.addEventListener('keydown',(event)=>{
-            // fromCharCode(event.keyCode) para capturar que tecla se esta pulsando
+        // fromCharCode(event.keyCode) para capturar que tecla se esta pulsando
         console.log('[Keydown] Estas Pulsando esta Tecla :',String.fromCharCode(event.keyCode));
     });
 
     //Evento Keypress
     form.addEventListener('keypress',(event)=>{
-            // fromCharCode(event.keyCode) para capturar que tecla se esta pulsando
+        // fromCharCode(event.keyCode) para capturar que tecla se esta pulsando
         console.log('[Keypress] Tecla presionada :',String.fromCharCode(event.keyCode));
     });
     

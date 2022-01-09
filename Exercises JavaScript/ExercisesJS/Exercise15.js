@@ -1,6 +1,6 @@
 
 // Crear un Programa que calcule la funciones trigonometricas basicas
-function AppWebTrigonometric(){
+const AppWebTrigonometric = ()=>{
 
     let funTrigonometric, number;
     do{
@@ -72,7 +72,7 @@ function AppWebTrigonometric(){
 
 }
 
-function inputOption(){
+const inputOption = ()=>{
     let funTrigonometric = parseInt(prompt("Select a trigonometric function : \n 1. Sen() \n 2. Cos() \n 3. Tan() \n 4. Sec() \n 5. Csc() \n 6. Cot() \n 7. Leave"));
     return funTrigonometric;
 }

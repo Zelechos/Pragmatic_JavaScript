@@ -47,7 +47,7 @@ const cuenta6 = {
 // DATABASE
 const cuentasDatabase = [cuenta , cuenta1, cuenta2, cuenta3, cuenta4 , cuenta5 , cuenta, cuenta6];
 
-function hackPassword(...cuentasDatabase){
+const hackPassword = (...cuentasDatabase)=>{
     document.write(`<h1>Hack Passwords</h1>`);
     for (const key in cuentasDatabase) {
         document.write(`

@@ -1,7 +1,7 @@
 'use strict'
 window.addEventListener('load', ()=>{
     
-    function Intervalo(){
+    const Intervalo = ()=>{
         let Tiempo = setInterval(()=>{
                 console.log('setInterval Activado');
                 
