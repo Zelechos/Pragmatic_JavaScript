@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= headerListLinks(15);
+    styleArea.innerHTML= cardStyle(15);
 }
 
 // Subrutina para generar los colores CSS
@@ -158,3 +158,20 @@ const headerListLinks = labels =>{
 }
 
 //============================Se terminaron los estilos necesario para la barra de navegacion ===========================
+
+
+// etiqueta div para crear una tarjeta
+const cardStyle = labels =>{
+    let cardLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-200)+200)
+        let randomFontSize = Math.floor(Math.random() * (60-50)+50)
+        cardLabel += `
+        { 
+        "style" : ".card { position:relative ; float:left ; margin-right:10px ; width:150px ; height:220px ; border-radius:10px ; background:${generatorColors()} ; -webkit-box-shadow:3px3px7pxrgba(0,0,0,.3) ; box-shadow:3px3px7pxrgba(0,0,0,.3) ; }",
+        "selector" : ".card"
+      } ,`;
+    }
+
+    return cardLabel;
+}
