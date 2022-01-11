@@ -16,10 +16,11 @@ body {
 
 .content{
     position: absolute;
-    margin-bottom: 350px;
+    align-items: center;
 }
 
-.content h1 {
+.content h1, h2 {
+    text-align: center;
     font-size: 90px;
 }
 

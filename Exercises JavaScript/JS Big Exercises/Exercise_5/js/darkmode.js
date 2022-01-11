@@ -11,6 +11,7 @@ const darkMode = ()=>{
     
     $button.addEventListener('click', ()=>{
         $body.classList.toggle("dark");
+        $ball.classList.toggle("ball");
         $ball.classList.toggle("darkball");
     });
 }
