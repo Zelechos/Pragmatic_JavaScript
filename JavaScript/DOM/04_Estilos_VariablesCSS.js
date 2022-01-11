@@ -10,7 +10,7 @@ window.addEventListener('load', ()=> {
     // podemos llamarlo con la notacion del punto atributo style
     console.log($link.style);
 
-    // o tambien podemos usar getAttribute(); NO RECOMENDABLE EN ESTE CADO EN PARTICULAR
+    // o tambien podemos usar getAttribute(); NO RECOMENDABLE EN ESTE CASO EN PARTICULAR
     console.log($link.getAttribute("style"));
     
     // podemos mostrar los estilos que tiene nuestro atributo de la siguiente manera
@@ -82,7 +82,7 @@ window.addEventListener('load', ()=> {
         link.style.setProperty("color", greenColor);
 
         // ahora tambien podemos usar la notacion del punto es lo mismo
-        link.style.fontSize = "25px";
+        link.style.fontSize = "20px";
     });
 
 });
