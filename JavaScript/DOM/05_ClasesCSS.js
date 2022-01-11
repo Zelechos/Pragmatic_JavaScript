@@ -33,14 +33,14 @@ window.addEventListener('load', ()=> {
     // usando el metodo toggle() podemos quitar o agregar clases dependiendo si esta existe o no!
     console.warn(`usando el metodo toggle() podemos quitar o agregar clases dependiendo si esta existe o no!`);
     
-    // en este caso como tiene la clase se agrego
-    console.warn(`en este caso como tiene la clase se agrego`);
+    // en este caso como no tiene la clase se agrego
+    console.warn(`en este caso como no tiene la clase se agrego`);
     $card.classList.toggle("rotate-45");
     console.log(`se agrego rotate-45 =>`,$card.className);
     console.log($card.classList);
 
-    // ahora si ejecutamos el mismo metodo toggle va a quitar la clase agregado siempre y cuando exista
-    console.warn(`ahora si ejecutamos el mismo metodo toggle va a quitar la clase agregado siempre y cuando exista`);
+    // ahora si ejecutamos el mismo metodo toggle va a quitar la clase agregada siempre y cuando exista
+    console.warn(`ahora si ejecutamos el mismo metodo toggle va a quitar la clase agregada siempre y cuando exista`);
     $card.classList.toggle("rotate-45");
     console.log(`se elimino rotate-45 =>`,$card.className);
     console.log($card.classList);
