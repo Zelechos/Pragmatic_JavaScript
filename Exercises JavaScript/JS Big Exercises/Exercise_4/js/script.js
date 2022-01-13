@@ -174,3 +174,5 @@ const cardStyle = labels =>{
 
     return cardLabel;
 }
+
+// etiqueta para tablas
