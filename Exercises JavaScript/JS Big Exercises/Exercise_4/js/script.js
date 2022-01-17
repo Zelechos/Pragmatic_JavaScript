@@ -142,6 +142,62 @@ const headerList = labels =>{
     return headerLabel;
 }
 
++//============================Boton Hamburguesa ===========================
+/* 
+    Etiquetas de Boton Hamburguesa
+    <div class="hamburger-menu">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+    </div> 
+*/
+
+const hamburgerButton = labels =>{
+    let buttonLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-200)+200)
+        let randomSize = Math.floor(Math.random() * (5-1)+1)
+        buttonLabel += `
+        { 
+        "style" : ".hamburger-menu { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:${randomSize}.5rem ; width:${randomSize}.5rem ; cursor:pointer } .hamburger-menu.bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .hamburger-menu:hover .top { transform:rotate(45deg) } .hamburger-menu:hover .middle { opacity:0 } .hamburger-menu:hover .bottom { transform:rotate(-45deg) }",
+        "selector" : ".hamburger-menu"
+      } ,`;
+    }
+
+    return buttonLabel;
+}
+
+
+const hamburgerBtn = labels =>{
+    let buttonLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-200)+200)
+        let randomSize = Math.floor(Math.random() * (5-1)+1)
+        buttonLabel += `
+        { 
+        "style" : ".btn-menu { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:${randomSize}.5rem ; width:${randomSize}.5rem ; cursor:pointer } .btn-menu.bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .btn-menu:hover .top { transform:rotate(45deg) } .btn-menu:hover .middle { opacity:0 } .btn-menu:hover .bottom { transform:rotate(-45deg) }",
+        "selector" : ".btn-menu"
+      } ,`;
+    }
+
+    return buttonLabel;
+}
+
+const btnHamburger = labels =>{
+    let buttonLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-200)+200)
+        let randomSize = Math.floor(Math.random() * (5-1)+1)
+        buttonLabel += `
+        { 
+        "style" : ".btn-hamburger { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:${randomSize}.5rem ; width:${randomSize}.5rem ; cursor:pointer } .btn-hamburger.bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .btn-hamburger:hover .top { transform:rotate(45deg) } .btn-hamburger:hover .middle { opacity:0 } .btn-hamburger:hover .bottom { transform:rotate(-45deg) }",
+        "selector" : ".btn-hamburger"
+      } ,`;
+    }
+
+    return buttonLabel;
+}
+
 // etiqueta header li a
 const headerListLinks = labels =>{
     let headerLabel = ``;
