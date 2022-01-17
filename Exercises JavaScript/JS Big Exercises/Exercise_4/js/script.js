@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= cardStyle(15);
+    styleArea.innerHTML= isometricCard(80);
 }
 
 // Subrutina para generar los colores CSS
@@ -143,7 +143,6 @@ const headerList = labels =>{
 }
 
 
-
 // etiqueta header li a
 const headerListLinks = labels =>{
     let headerLabel = ``;
@@ -151,8 +150,23 @@ const headerListLinks = labels =>{
         let heightHeader = Math.floor(Math.random() * (25-20)+20)
         headerLabel += `
         { 
-        "style" : "header li a { color:${generatorColors()} ; text-decoration:none ; }",
-        "selector" : "header li a"
+            "style" : "header li a { color:${generatorColors()} ; text-decoration:none ; }",
+            "selector" : "header li a"
+        } ,`;
+    }
+    
+    return headerLabel;
+}
+
+// etiqueta header completa
+const headerComplete = labels =>{
+    let headerLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let heightHeader = Math.floor(Math.random() * (100-80)+80)
+        headerLabel += `
+        { 
+        "style" : "header { background-color:${generatorColors()} ; position:fixed ; top:0 ; left:0 ; right:0 ; height:${heightHeader}px ; display:flex ; align-items:center ; box-shadow: 0 0 25px 0 black ; } header * { display:inline ; } header li { margin:${heightHeader}px ; } header li a { color:${generatorColors()} ; text-decoration:none ; }",
+        "selector" : "header"
       } ,`;
     }
 
@@ -177,7 +191,7 @@ const cardStyle = labels =>{
     return cardLabel;
 }
 
-+//============================Boton Hamburguesa ===========================
+//============================Boton Hamburguesa ========================
 /* 
     Etiquetas de Boton Hamburguesa
     <div class="hamburger-menu">
@@ -186,7 +200,6 @@ const cardStyle = labels =>{
         <div class="bar bottom"></div>
     </div> 
 */
-
 const hamburgerButton = labels =>{
     let buttonLabel = ``;
     for (let index = 0; index < labels; index++) {
@@ -232,3 +245,50 @@ const btnHamburger = labels =>{
 
     return buttonLabel;
 }
+
+
+//============================Boton Switch ========================
+
+/*
+    Switch Button
+<input type="checkbox" id="toggle" class="offscreen" />
+<label for="toggle" class="switch"></label> 
+*/
+const btnSwitch = labels =>{
+    let buttonLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomWidth = Math.floor(Math.random() * (50-40)+40)
+        let randomHeight = Math.floor(Math.random() * (25-20)+20)
+        buttonLabel += `
+        { 
+        "style" : ".switch { position:relative ; display:inline-block ; width:${randomWidth}px ; height:${randomHeight}px ; background-color:${generatorColors()} ; border-radius:20px ; transition:all 0.3s } .switch:after { content:'' ; position:absolute ; width:${randomHeight-2}px ; height:${randomHeight-2}px ; border-radius:20px ; background-color:${generatorColors()} ; top:1px ; left:1px ; transition:all 0.3s } input[type='checkbox']:checked+.switch:after { transform:translateX(${randomWidth/2}px) } input[type='checkbox']:checked+.switch{ background-color:${generatorColors()} } .offscreen { position:absolute ; left:-9999px }",
+        "selector" : ".switch"
+      } ,`;
+    }
+
+    return buttonLabel;
+}
+
+//============================isometrica Tarjeta ========================
+
+/* 
+    Isometric Card
+    <div class="isometric-card"></div>
+*/
+
+const isometricCard = labels =>{
+    let isometric = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomWidth = Math.floor(Math.random() * (300-240)+240)
+        let randomHeight = Math.floor(Math.random() * (425-320)+320)
+        isometric += `
+        { 
+        "style" : ".isometric-card { margin:auto ; transform:rotateX(51deg) rotateZ(43deg) ; transform-style:preserve-3d ; background-color:${generatorColors()} ; will-change:transform ; width:${randomWidth}px ; height:${randomHeight}px ; border-radius:2rem ; box-shadow:1px 1px 0 1px ${generatorColors()},-1px 0 28px 0 ${generatorColors()},28px 28px 28px 0 rgba(34,33,81,.25) ; transition:0.4s ease-in-out transform,0.3s ease-in-out box-shadow } .isometric-card:hover { transform:translate3d(0,-16px,0) rotateX(51deg) rotateZ(43deg) ; box-shadow:1px 1px 0 1px ${generatorColors()},-1px 0 28px 0 ${generatorColors()},54px 54px 28px -10px rgba(34,33,81,.15) } ",
+        "selector" : ".isometric-card"
+      } ,`;
+    }
+
+    return isometric;
+}
+
+
