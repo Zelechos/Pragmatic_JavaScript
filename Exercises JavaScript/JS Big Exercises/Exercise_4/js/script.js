@@ -142,6 +142,41 @@ const headerList = labels =>{
     return headerLabel;
 }
 
+
+
+// etiqueta header li a
+const headerListLinks = labels =>{
+    let headerLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let heightHeader = Math.floor(Math.random() * (25-20)+20)
+        headerLabel += `
+        { 
+        "style" : "header li a { color:${generatorColors()} ; text-decoration:none ; }",
+        "selector" : "header li a"
+      } ,`;
+    }
+
+    return headerLabel;
+}
+
+//============================Se terminaron los estilos necesario para la barra de navegacion ===========================
+
+// etiqueta div para crear una tarjeta
+const cardStyle = labels =>{
+    let cardLabel = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomFont = Math.floor(Math.random() * (300-200)+200)
+        let randomFontSize = Math.floor(Math.random() * (60-50)+50)
+        cardLabel += `
+        { 
+        "style" : ".card { position:relative ; float:left ; margin-right:10px ; width:150px ; height:220px ; border-radius:10px ; background:${generatorColors()} ; -webkit-box-shadow:3px3px7pxrgba(0,0,0,.3) ; box-shadow:3px3px7pxrgba(0,0,0,.3) ; }",
+        "selector" : ".card"
+      } ,`;
+    }
+
+    return cardLabel;
+}
+
 +//============================Boton Hamburguesa ===========================
 /* 
     Etiquetas de Boton Hamburguesa
@@ -197,38 +232,3 @@ const btnHamburger = labels =>{
 
     return buttonLabel;
 }
-
-// etiqueta header li a
-const headerListLinks = labels =>{
-    let headerLabel = ``;
-    for (let index = 0; index < labels; index++) {
-        let heightHeader = Math.floor(Math.random() * (25-20)+20)
-        headerLabel += `
-        { 
-        "style" : "header li a { color:${generatorColors()} ; text-decoration:none ; }",
-        "selector" : "header li a"
-      } ,`;
-    }
-
-    return headerLabel;
-}
-
-//============================Se terminaron los estilos necesario para la barra de navegacion ===========================
-
-// etiqueta div para crear una tarjeta
-const cardStyle = labels =>{
-    let cardLabel = ``;
-    for (let index = 0; index < labels; index++) {
-        let randomFont = Math.floor(Math.random() * (300-200)+200)
-        let randomFontSize = Math.floor(Math.random() * (60-50)+50)
-        cardLabel += `
-        { 
-        "style" : ".card { position:relative ; float:left ; margin-right:10px ; width:150px ; height:220px ; border-radius:10px ; background:${generatorColors()} ; -webkit-box-shadow:3px3px7pxrgba(0,0,0,.3) ; box-shadow:3px3px7pxrgba(0,0,0,.3) ; }",
-        "selector" : ".card"
-      } ,`;
-    }
-
-    return cardLabel;
-}
-
-// etiqueta para tablas
