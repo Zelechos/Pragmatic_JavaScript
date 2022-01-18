@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= isometricCard(80);
+    styleArea.innerHTML= rotatingCard(90);
 }
 
 // Subrutina para generar los colores CSS
@@ -291,4 +291,31 @@ const isometricCard = labels =>{
     return isometric;
 }
 
+//============================Tarjeta giratoria========================
 
+/*
+    Tarjeta giratoria
+    <div class="rotating-card">
+        <div class="rotating-card-side front">
+            <div>Front Side</div>
+        </div>
+        <div class="rotating-card-side back">
+            <div>Back Side</div>
+        </div>
+    </div>
+*/
+
+const rotatingCard = labels =>{
+    let rotating = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomWidth = Math.floor(Math.random() * (500-350)+350)
+        let randomHeight = Math.floor(Math.random() * (50-30)+30)
+        rotating += `
+        { 
+        "style" : ".rotating-card { perspective:150rem ; position:relative ; height:${randomHeight}rem ; max-width:${randomWidth}px ; margin:2rem ; box-shadow:none ; background:none } .rotating-card-side { height:35rem ; border-radius:15px ; transition:all 0.8s ease ; backface-visibility:hidden ; position:absolute ; top:0 ; left:0 ; width:80% ; padding:2rem ; color:#fff } .rotating-card-side.back { transform:rotateY(-180deg) ; background-color:${generatorColors()} ; background-image:linear-gradient(43deg,${generatorColors()} 0%,${generatorColors()} 46%,${generatorColors()} 100%) } .rotating-card-side.front { background-color:${generatorColors()} ; background-image:linear-gradient(160deg,${generatorColors()} 0%,${generatorColors()} 100%) } .rotating-card:hover .rotating-card-side.front { transform:rotateY(180deg) } .rotating-card:hover .rotating-card-side.back { transform:rotateY(0deg) } ",
+        "selector" : ".rotating-card"
+      } ,`;
+    }
+
+    return rotating;
+}
