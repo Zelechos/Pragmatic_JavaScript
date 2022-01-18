@@ -7,7 +7,7 @@ window.addEventListener('load',()=>{
     
 });
 
-
+// AQUI ES DONE PONEMOS LAS SUBRUTINAS DE ESTILOS
 const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
