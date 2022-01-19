@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= rotatingCard(90);
+    styleArea.innerHTML= twoGrid(20);
 }
 
 // Subrutina para generar los colores CSS
@@ -318,4 +318,35 @@ const rotatingCard = labels =>{
     }
 
     return rotating;
+}
+
+
+//============================Dos Grillas========================
+/*
+dos grillas
+<div class="grid-aside">
+    <main>
+        This element is 1fr large.
+    </main>
+    <aside>
+        Min: 150px / Max: 20%
+    </aside>
+</div>
+*/
+
+const twoGrid = labels =>{
+    let twogrid = ``;
+    for (let index = 0; index < labels; index++) {
+        let randomWidth = Math.floor(Math.random() * (500-150)+150)
+        let randomHeight = Math.floor(Math.random() * (150-100)+100)
+        let porcentual = Math.floor(Math.random() * (70-20)+20)
+
+        twogrid += `
+        { 
+        "style" : ".grid-aside { display:grid ; grid-template-columns:1fr minmax(${randomWidth}px,${porcentual}%) ; height:${randomHeight}px } main,aside { padding:12px ; text-align:center } main { background:${generatorColors()} ; } aside { background:${generatorColors()} ; } ",
+        "selector" : ".grid-aside"
+      } ,`;
+    }
+
+    return twogrid;
 }
