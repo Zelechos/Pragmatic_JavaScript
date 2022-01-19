@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= twoGrid(20);
+    styleArea.innerHTML= twoGrid(50);
 }
 
 // Subrutina para generar los colores CSS
