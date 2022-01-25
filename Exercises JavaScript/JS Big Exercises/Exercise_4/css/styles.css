@@ -12,7 +12,7 @@ body{
     margin-right:auto ;
 }
 
-#code{
+.code-to-copy{
     width: 70%;
     height: 60vh;
     border: 5px solid #004f54 ;
@@ -21,9 +21,17 @@ body{
     color: #004f54;
     font-size: 17px;
     padding: 10px;
+    transition:all 0.3s ease-in-out ;
+
+}
+/* ease-in-out */
+.animation{
+    transform:scale(.9) ;
 }
 
-#btnCopy{
+
+
+.btn-copy{
     background-color: #Ffddee;
     width: 200px;
     height: 50px;
@@ -31,5 +39,11 @@ body{
     color: #0e1d32;
     border: 3px solid #ffeeaa;
     border-radius: 5px;
+    cursor:pointer;
+    transition:all 0.3s ease-in-out ;
 }
 
+    
+.btn-copy:hover { 
+    transform:scale(.8);
+} 

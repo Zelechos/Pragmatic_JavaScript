@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= twoGrid(50);
+    styleArea.innerHTML= btnTransparent(30);
 }
 
 // Subrutina para generar los colores CSS
@@ -33,12 +33,15 @@ const copyStyle = () => {
     const input = document.querySelector('#code');
     
     button.addEventListener('click',()=>{
+        input.classList.toggle('animation');
         input.focus();
         document.execCommand('selectAll');
         document.execCommand('copy');
         alert.innerHTML = "Codigo Copiado";
         setTimeout(()=> alert.innerHTML = "" , 4000);
     });
+    input.classList.toggle('animation');
+
 }
 
 // --------------------------------------------------------------------------
@@ -349,4 +352,23 @@ const twoGrid = labels =>{
     }
 
     return twogrid;
+}
+
+
+// <button class="button-transparent">Submit</button>
+const btnTransparent = labels =>{
+    let btn = ``;
+    for (let index = 0; index < labels; index++) {
+        let padding = Math.floor(Math.random() * (20-16)+16)
+        let randomHeight = Math.floor(Math.random() * (150-100)+100)
+        let border = Math.floor(Math.random() * (6-4)+4)
+        
+        btn += `
+        { 
+        "style" : ".button-transparent { color:${generatorColors()} ; border:1px solid ${generatorColors()} ; background-color:transparent ; border-radius:${border}px ; padding:0 ${padding}px ; cursor:pointer ; transition:all 0.3s ease-in-out ; } .button-transparent:hover { transform:scale(.8) } ",
+        "selector" : ".button-transparent"
+      } ,`;
+    }
+
+    return btn;
 }
