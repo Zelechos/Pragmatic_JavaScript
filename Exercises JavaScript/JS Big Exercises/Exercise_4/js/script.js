@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= btnTransparent(30);
+    styleArea.innerHTML= navBarVertical(50);
 }
 
 // Subrutina para generar los colores CSS
@@ -372,3 +372,45 @@ const btnTransparent = labels =>{
 
     return btn;
 }
+
+
+// barra de navegacion vertical
+
+/* <nav class="sidebar-navigation">
+	<ul>
+		<li class="active">
+			<i class="fa fa-share-alt"></i>
+			<span class="tooltip">Connections</span>
+		</li>
+		<li>
+			<i class="fa fa-hdd-o"></i>
+			<span class="tooltip">Devices</span>
+		</li>
+		<li>
+			<i class="fa fa-newspaper-o"></i>
+			<span class="tooltip">Contacts</span>
+		</li>
+		<li>
+			<i class="fa fa-print"></i>
+			<span class="tooltip">Fax</span>
+		</li>
+		<li>
+			<i class="fa fa-sliders"></i>
+			<span class="tooltip">Settings</span>
+		</li>
+	</ul>
+</nav> */
+const navBarVertical = labels =>{
+    let navBar = ``;
+    for (let index = 0; index < labels; index++) {
+        navBar += `
+        { 
+        "style" : ".sidebar-navigation { display:inline-block ; min-height:100vh ; width:80px ; background-color:${generatorColors()} ; float:left ; ul { text-align:center ; color:#fff ; li { padding:28px 0 ; cursor:pointer ; transition:all ease-out 120ms ; i { display:block ; font-size:24px ; transition:all ease 450ms } .tooltip { display:inline-block ; position:absolute ; background-color:${generatorColors()} ; padding:8px 15px ; border-radius:3px ; margin-top:-26px ; left:90px ; opacity:0 ; visibility:hidden ; font-size:13px ; letter-spacing:.5px ; &:before { content:'' ; display:block ; position:absolute ; left:-4px ; top:10px ; transform:rotate(45deg) ; width:10px ; height:10px ; background-color:inherit } } &:hover { background-color:${generatorColors()} ; .tooltip { visibility:visible ; opacity:1 } } &.active { background-color:${generatorColors()} ; i{ color:${generatorColors()} } } } } } ",
+        "selector" : ".sidebar-navigation"
+      } ,`;
+    }
+
+    return navBar;
+}
+
+
