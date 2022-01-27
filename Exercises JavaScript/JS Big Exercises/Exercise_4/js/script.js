@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= navBarVertical(50);
+    styleArea.innerHTML= btnHamburger(50);
 }
 
 // Subrutina para generar los colores CSS
@@ -210,7 +210,7 @@ const hamburgerButton = labels =>{
         let randomSize = Math.floor(Math.random() * (5-1)+1)
         buttonLabel += `
         { 
-        "style" : ".hamburger-menu { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:${randomSize}.5rem ; width:${randomSize}.5rem ; cursor:pointer } .hamburger-menu.bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .hamburger-menu:hover .top { transform:rotate(45deg) } .hamburger-menu:hover .middle { opacity:0 } .hamburger-menu:hover .bottom { transform:rotate(-45deg) }",
+        "style" : ".hamburger-menu { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:2.5rem ; width:2.5rem ; cursor:pointer } .hamburger-menu .bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .hamburger-menu:hover .top { transform:rotate(45deg) } .hamburger-menu:hover .middle { opacity:0 } .hamburger-menu:hover .bottom { transform:rotate(-45deg) }",
         "selector" : ".hamburger-menu"
       } ,`;
     }
@@ -226,7 +226,7 @@ const hamburgerBtn = labels =>{
         let randomSize = Math.floor(Math.random() * (5-1)+1)
         buttonLabel += `
         { 
-        "style" : ".btn-menu { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:${randomSize}.5rem ; width:${randomSize}.5rem ; cursor:pointer } .btn-menu.bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .btn-menu:hover .top { transform:rotate(45deg) } .btn-menu:hover .middle { opacity:0 } .btn-menu:hover .bottom { transform:rotate(-45deg) }",
+        "style" : ".btn-menu { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:2.5rem ; width:2.5rem ; cursor:pointer } .btn-menu .bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .btn-menu:hover .top { transform:rotate(45deg) } .btn-menu:hover .middle { opacity:0 } .btn-menu:hover .bottom { transform:rotate(-45deg) }",
         "selector" : ".btn-menu"
       } ,`;
     }
@@ -241,7 +241,7 @@ const btnHamburger = labels =>{
         let randomSize = Math.floor(Math.random() * (5-1)+1)
         buttonLabel += `
         { 
-        "style" : ".btn-hamburger { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:${randomSize}.5rem ; width:${randomSize}.5rem ; cursor:pointer } .btn-hamburger.bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .btn-hamburger:hover .top { transform:rotate(45deg) } .btn-hamburger:hover .middle { opacity:0 } .btn-hamburger:hover .bottom { transform:rotate(-45deg) }",
+        "style" : ".btn-hamburger { display:flex ; flex-flow:column wrap ; justify-content:space-between ; height:2.5rem ; width:2.5rem ; cursor:pointer } .btn-hamburger .bar { height:5px ; background:${generatorColors()} ; border-radius:5px ; margin:3px 0 ; transform-origin:left ; transition:all 0.5s } .btn-hamburger:hover .top { transform:rotate(45deg) } .btn-hamburger:hover .middle { opacity:0 } .btn-hamburger:hover .bottom { transform:rotate(-45deg) }",
         "selector" : ".btn-hamburger"
       } ,`;
     }
@@ -405,12 +405,14 @@ const navBarVertical = labels =>{
     for (let index = 0; index < labels; index++) {
         navBar += `
         { 
-        "style" : ".sidebar-navigation { display:inline-block ; min-height:100vh ; width:80px ; background-color:${generatorColors()} ; float:left ; ul { text-align:center ; color:#fff ; li { padding:28px 0 ; cursor:pointer ; transition:all ease-out 120ms ; i { display:block ; font-size:24px ; transition:all ease 450ms } .tooltip { display:inline-block ; position:absolute ; background-color:${generatorColors()} ; padding:8px 15px ; border-radius:3px ; margin-top:-26px ; left:90px ; opacity:0 ; visibility:hidden ; font-size:13px ; letter-spacing:.5px ; &:before { content:'' ; display:block ; position:absolute ; left:-4px ; top:10px ; transform:rotate(45deg) ; width:10px ; height:10px ; background-color:inherit } } &:hover { background-color:${generatorColors()} ; .tooltip { visibility:visible ; opacity:1 } } &.active { background-color:${generatorColors()} ; i{ color:${generatorColors()} } } } } } ",
-        "selector" : ".sidebar-navigation"
+        "style" : "",
+        "selector" : ""
       } ,`;
     }
 
     return navBar;
 }
+
+// Realizar estilos de h1, h2 , h3 , h4
 
 
