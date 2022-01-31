@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= btnHamburger(50);
+    styleArea.innerHTML= centerDiv(40);
 }
 
 // Subrutina para generar los colores CSS
@@ -413,6 +413,26 @@ const navBarVertical = labels =>{
     return navBar;
 }
 
+
+//Centrar un div
+/* 
+<div class="parent">
+    <div class="child">Centered content</div>
+</div>
+*/
+
+const centerDiv = labels =>{
+    let div = ``;
+    for (let index = 0; index < labels; index++) {
+
+        div += `
+        { 
+        "style" : ".parent { border:1px solid ${generatorColors()} ; height:250px ; position:relative ; width:250px ; } .child { left:50% ; position:absolute ; top:50% ; transform:translate(-50%,-50%) ; text-align:center ; } ",
+        "selector" : ".parent"
+      } ,`;
+    }
+
+    return div;
+}
+
 // Realizar estilos de h1, h2 , h3 , h4
-
-
