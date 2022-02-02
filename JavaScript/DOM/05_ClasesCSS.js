@@ -3,7 +3,7 @@
 // Trabajando con las Clases CSS
 window.addEventListener('load', ()=> {
 
-    const $card = document.querySelector(".card");
+    const $card = document.querySelector(".card-content");
     console.log($card);
 
     // ahora accedemos a la clase de nuestra estiqueta para manipular la clase que tenga nuestra estiqueta

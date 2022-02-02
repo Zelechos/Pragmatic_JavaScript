@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= imagesWithText(50);
+    styleArea.innerHTML= tableOfPromos(50);
 }
 
 // Subrutina para generar los colores CSS
@@ -186,8 +186,8 @@ const cardStyle = labels =>{
         let randomFontSize = Math.floor(Math.random() * (60-50)+50)
         cardLabel += `
         { 
-        "style" : ".card { position:relative ; float:left ; margin-right:10px ; width:150px ; height:220px ; border-radius:10px ; background:${generatorColors()} ; -webkit-box-shadow:3px3px7pxrgba(0,0,0,.3) ; box-shadow:3px3px7pxrgba(0,0,0,.3) ; }",
-        "selector" : ".card"
+        "style" : ".card-content { position:relative ; float:left ; margin-right:10px ; width:150px ; height:220px ; border-radius:10px ; background:${generatorColors()} ; -webkit-box-shadow:3px3px7pxrgba(0,0,0,.3) ; box-shadow:3px3px7pxrgba(0,0,0,.3) ; }",
+        "selector" : ".card-content"
       } ,`;
     }
 
@@ -455,7 +455,7 @@ const imagesMosaic = labels =>{
     for (let index = 0; index < labels; index++) {
         mosaic += `
         { 
-        "style" : ".image-mosaic { display:grid ; gap:1rem ; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) ; grid-auto-rows:240px ; } .card { display:flex ; flex-direction:column ; justify-content:center ; align-items:center ; background:${generatorColors()} ; font-size:3rem ; color:${generatorColors()} ; box-shadow:rgba(3,8,20,.1) 0 .15rem .5rem,rgba(2,8,20,.1) 0 .075rem .175rem ; height:100% ; width:100% ; border-radius:4px ; transition:all 500ms ; overflow:hidden ; background-size:cover ; background-position:center ; background-repeat:no-repeat ; padding:0 ; margin:0 } @media screen and (min-width:600px) { .card-tall { grid-row:span 2/auto ; } .card-wide { grid-column:span 2/auto ; } } ",
+        "style" : ".image-mosaic { display:grid ; gap:1rem ; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) ; grid-auto-rows:240px ; } .card-content { display:flex ; flex-direction:column ; justify-content:center ; align-items:center ; background:${generatorColors()} ; font-size:3rem ; color:${generatorColors()} ; box-shadow:rgba(3,8,20,.1) 0 .15rem .5rem,rgba(2,8,20,.1) 0 .075rem .175rem ; height:100% ; width:100% ; border-radius:4px ; transition:all 500ms ; overflow:hidden ; background-size:cover ; background-position:center ; background-repeat:no-repeat ; padding:0 ; margin:0 } @media screen and (min-width:600px) { .card-content-tall { grid-row:span 2/auto ; } .card-content-wide { grid-column:span 2/auto ; } } ",
         "selector" : ".image-mosaic"
       } ,`;
     }
@@ -527,3 +527,157 @@ const imagesWithText = labels =>{
 
   return img;
 }
+
+// Barra de navegacion con animacion en las opciones del menu
+/*
+<nav class="hover-nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+*/
+const navigationWithAnimation = labels =>{
+  let nav = ``;
+  for (let index = 0; index < labels; index++) {
+    nav += `
+      { 
+      "style" : ".hover-nav ul { list-style:none ; margin:0 ; padding:0 ; overflow:hidden ; } .hover-nav li { float:left ; } .hover-nav li a { position:relative ; display:block ; color:#fff ; text-align:center ; padding:8px 12px ; text-decoration:none ; z-index:0 ; } li a:before { position:absolute ; content:'' ; width:100% ; height:100% ; bottom:0 ; left:0 ; background-color:${generatorColors()} ; z-index:-1 ; transform:scale(0) ; transition:transform 0.5s ease-in-out ; } li a:hover:before,li a:focus:before { transform:scale(1) ; }",
+      "selector" : ".hover-nav"
+    } ,`;
+  }
+
+  return nav;
+}
+
+/*
+<nav class="navbar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+*/
+const navbarAnimationHover = labels =>{
+  let nav = ``;
+  for (let index = 0; index < labels; index++) {
+    nav += `
+      { 
+      "style" : ".navbar ul { list-style:none ; margin:0 ; padding:0 ; overflow:hidden ; } .navbar li { float:left ; } .navbar li a { position:relative ; display:block ; color:#fff ; text-align:center ; padding:8px 12px ; text-decoration:none ; z-index:0 ; } li a:before { position:absolute ; content:'' ; width:100% ; height:100% ; bottom:0 ; left:0 ; background-color:${generatorColors()} ; border-radius:10px ; z-index:-1 ; transform:scale(0) ; transition:transform 0.5s ease-in-out ; } li a:hover:before,li a:focus:before { transform:scale(1) ; }",
+      "selector" : ".navbar ul"
+    } ,`;
+  }
+
+  return nav;
+}
+
+// registro de usuario & password
+/*
+<form>
+        <label for="username">Username:</label>
+        <input id="username" type="text" />
+        <br />
+        <label for="password">Password:</label>
+        <input id="password" type="text" />
+</form>
+*/
+
+const formForUser = labels =>{
+  let form = ``;
+  for (let index = 0; index < labels; index++) {
+    form += `
+      { 
+      "style" : "form { border:2px solid ${generatorColors()} ; border-radius:10px ; padding:8px ; border-radius:2px ; } form:focus-within { background:${generatorColors()} ; } label { display:inline-block ; width:72px ; } input { margin:4px 12px ; }",
+      "selector" : "form"
+    } ,`;
+  }
+
+  return form;
+}
+
+
+// tarjeta con contenido y imagen
+/*
+<div class="card-content">
+        <img src="https://picsum.photos/id/404/367/267"/>
+        <h3>Lorem ipsum</h3>
+        <div class="focus-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#">Link to source</a>
+          </p>
+        </div>
+    </div>
+*/
+const cardWithContent = labels =>{
+  let card = ``;
+  for (let index = 0; index < labels; index++) {
+    card += `
+      { 
+      "style" : ".card-content { width:300px ; height:280px ; padding:0 ; box-shadow:0 2px 4px 0 rgba(0,0,0,.1);border-radius:8px ; box-sizing:border-box ; overflow:hidden ; } .card-content * { transition:0.3s ease all ; } .card-content img { margin:0 ; width:300px ; height:224px ; object-fit:cover ; display:block ; } .card-content h3 { margin:0 ; padding:12px 12px 48px ; line-height:32px ; font-weight:500 ; font-size:20px ; } .card-content .focus-content { display:block ; padding:8px 12px ; } .card-content p { margin:0 ; line-height:1.5 ; } .card-content:hover img,.card-content:focus-within img { margin-top:-80px ; } .card-content:hover h3,.card-content:focus-within h3 { padding:8px 12px 0 ; }",
+      "selector" : ".card-content"
+    } ,`;
+  }
+
+  return card;
+}
+
+
+// Tabla de Promociones para ventas de productos
+/*
+    <div class="promos">  
+        <div class="promo">
+          <div class="deal">
+            <span>Premium</span>
+            <span>This is really a good deal!</span>
+          </div>
+          <span class="price">$79</span>
+          <ul class="features">
+            <li>Some great feature</li>
+            <li>Another super feature</li>
+            <li>And more...</li>   
+          </ul>
+          <button>Sign up</button>
+        </div>
+        <div class="promo scale">
+          <div class="deal">
+            <span>Plus</span>
+            <span>This is really a good deal!</span>
+          </div>
+          <span class="price">$89</span>
+          <ul class="features">
+            <li>Some great feature</li>
+            <li>Another super feature</li>
+            <li>And more...</li>   
+          </ul>
+          <button>Sign up</button>
+        </div>
+        <div class="promo">
+          <div class="deal">
+            <span>Basic</span>
+            <span>Basic membership</span>
+          </div>
+          <span class="price">$69</span>
+          <ul class="features">
+            <li>Choose the one on the left</li>
+            <li>We need moneyy</li>
+            <li>And more...</li>   
+          </ul>
+          <button>Sign up</button>
+        </div>
+        </div>
+*/
+
+const tableOfPromos = labels =>{
+  let table = ``;
+  for (let index = 0; index < labels; index++) {
+    table += `
+      { 
+      "style" : ".promos { width:800px ; margin:0 auto ; margin-top:50px ; } .promo { width:250px ; background:${generatorColors()} ; color:#f9f9f9 ; float:left ; } .deal{ padding:10px 0 0 0 ; } .deal span { display:block ; text-align:center ; } .deal span:first-of-type { font-size:23px ; } .deal span:last-of-type { font-size:13px ; } .promo .price { display:block ; width:250px ; background:#292b2e ; margin:15px 0 10px 0 ; text-align:center ; font-size:23px ; padding:17px 0 17px 0 ; } ul { display:block ; margin:20px 0 10px 0 ; padding:0 ; list-style-type:none ; text-align:center ; color:#999; } li { display:block ; margin:10px 0 0 0 ; } button { border:none ; border-radius:40px ; background:#292b2e ; color:#f9f9f9 ; padding:10px 37px ; margin:10px 0 20px 10px ; } .scale { transform:scale(1.2) ; box-shadow:0 0 4px 1px rgba(20,20,20,.8) ; } .scale button { background:${generatorColors()} ; } .scale .price { color:${generatorColors()} ; } ",
+      "selector" : ".promos"
+    } ,`;
+  }
+
+  return table;
+}
+

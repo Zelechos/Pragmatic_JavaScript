@@ -71,11 +71,11 @@ window.addEventListener('load', ()=> {
 
     // ahora usaremos el metodo querySelectorAll() para llamar a las clases
     console.warn(`ahora usaremos el metodo querySelectorAll() para llamar a las clases`);
-    console.log(document.querySelectorAll(".card"));
+    console.log(document.querySelectorAll(".card-content"));
 
     // al igual que los arrays tambien se puede usar la nomenclatura para llamar a un solo elemento
     console.warn(`al igual que los arrays tambien se puede usar la nomenclatura para llamar a un solo elemento`);
-    console.log(document.querySelectorAll(".card")[0]);
+    console.log(document.querySelectorAll(".card-content")[0]);
 
     // tambien podemos traer a hijo de elementos seleccionadas 
     console.warn(`tambien podemos traer a hijo de elementos seleccionadas `);

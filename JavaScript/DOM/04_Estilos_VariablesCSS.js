@@ -58,8 +58,8 @@ window.addEventListener('load', ()=> {
 
 
     // ahora cambiaremos de color a las cards 
-    const $cards = document.querySelectorAll(".card");
-    const $textCards = document.querySelectorAll(".card figcaption");
+    const $cards = document.querySelectorAll(".card-content");
+    const $textCards = document.querySelectorAll(".card-content figcaption");
 
     console.log($cards);
 
