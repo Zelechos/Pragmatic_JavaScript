@@ -1,6 +1,6 @@
 'use strict'
 
-// Accedermos con el DOM a los Atributos y Data Atributos de las etiquetas HTML
+// Accedemos con el DOM a los Atributos y Data Atributos de las etiquetas HTML
 window.addEventListener('load', ()=> {
 
     //------------------------------- ATRIBUTOS-------------------------------
@@ -14,10 +14,10 @@ window.addEventListener('load', ()=> {
     // ahora capturamos un enlace para demostrar que es recomendable usar el metodo getAttribute()
     console.warn(`ahora capturamos un enlace para demostrar que es recomendable usar el metodo getAttribute()`);
 
-    console.warn(`si usar el metodo getAttribute() `);
+    console.warn(`sin usar el metodo getAttribute()`);
     console.log(document.querySelector(".link-dom").href);
     
-    console.warn(`usando el metod getAttribute()`);
+    console.warn(`usando el metodo getAttribute()`);
     console.log(document.querySelector(".link-dom").getAttribute("href"));
 
     // tambien podemos establecer los valores de los atributos de una etiqueta de las siguientes 2 maneras:
