@@ -66,5 +66,3 @@ cardContent.forEach(data =>{
 });
 
 $cards.appendChild($fragment);
-
-
