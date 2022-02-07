@@ -37,3 +37,45 @@ body{
     color:#fff ; 
     text-decoration:none ;
 }
+
+
+.rotating-card { 
+    float: right;
+    height: 400px;
+    perspective:50rem ; 
+    width:400px ;
+    box-shadow:none ;
+    background:none ;
+} 
+
+.rotating-card-side {
+    height:20rem ;
+    border-radius:15px ;
+    transition:all 0.8s ease ;
+    backface-visibility:hidden ;
+    position:absolute ;
+    top:0 ;
+    left:0 ;
+    width:50% ;
+    padding:1rem ;
+    color:#fff ;
+} 
+
+.rotating-card-side.back {
+    transform:rotateY(-180deg) ;
+    background-color:#D55C27 ;
+    background-image:linear-gradient(43deg,#295112 0%,#161D30 46%,#929B5C 100%) ;
+} 
+
+.rotating-card-side.front { 
+    background-color:#D1B991 ;
+    background-image:linear-gradient(160deg,#71B568 0%,#5D6290 100%);
+} 
+
+.rotating-card:hover .rotating-card-side.front { 
+    transform:rotateY(180deg) ;
+} 
+
+.rotating-card:hover .rotating-card-side.back { 
+    transform:rotateY(0deg) ;
+} 

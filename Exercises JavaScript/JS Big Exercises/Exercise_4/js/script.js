@@ -12,7 +12,7 @@ const generatorDataset = ()=>{
     const styleArea = document.querySelector('#code');
 
     // Aqui le pasamos la etiqueta queramos
-    styleArea.innerHTML= tableOfPromos(50);
+    styleArea.innerHTML= rotatingCard(50);
 }
 
 // Subrutina para generar los colores CSS
