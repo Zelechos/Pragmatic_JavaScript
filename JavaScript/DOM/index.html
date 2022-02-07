@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
-    <script type="text/javascript" src="./04_Estilos_VariablesCSS.js"></script>
+    <script type="text/javascript" src="./09_TemplatesHTML.js"></script>
 </head>
 <body>
     <style>
@@ -14,7 +14,7 @@
             color: #FAFAFA;
         }
 
-        .card-content{
+        .card{
             float: left;
             border-radius: 5px;
             text-align: center;
@@ -22,7 +22,7 @@
             width: 215px;
         }
 
-        .card-content figcaption{
+        .card figcaption{
             padding: 1rem;
         }
 
@@ -108,7 +108,18 @@
                 <figcaption>Nature</figcaption>
             </figure>
         </section>
+
     </fieldset>
+
+    <!-- Creamos un Template HTML -->
+    <template id="template-card">
+        <figure class="card">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
+
+    <footer>hola</footer>
 
 
 </body>

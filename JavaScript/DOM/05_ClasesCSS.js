@@ -3,7 +3,7 @@
 // Trabajando con las Clases CSS
 window.addEventListener('load', ()=> {
 
-    const $card = document.querySelector(".card-content");
+    const $card = document.querySelector(".card");
     console.log($card);
 
     // ahora accedemos a la clase de nuestra estiqueta para manipular la clase que tenga nuestra estiqueta
@@ -23,12 +23,15 @@ window.addEventListener('load', ()=> {
     $card.classList.add("rotate-45");
     console.log($card.classList);
     console.log($card.className);
+    console.log($card.classList.contains("rotate-45"));
 
     // tambien podemos quitar las clases
     console.warn(`tambien podemos quitar las clases`);
     $card.classList.remove("rotate-45");
     console.log($card.classList);
     console.log($card.className);
+    console.log($card.classList.contains("rotate-45"));
+
 
     // usando el metodo toggle() podemos quitar o agregar clases dependiendo si esta existe o no!
     console.warn(`usando el metodo toggle() podemos quitar o agregar clases dependiendo si esta existe o no!`);

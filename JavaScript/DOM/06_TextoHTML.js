@@ -32,10 +32,8 @@ window.addEventListener('load', ()=> {
     // RECOMENDABLE PARA USAR PORQUE TOMA EN CUENTA LAS ESTIQUETAS HTML
     $whatIsDom.innerHTML = text;
 
-
     // El metodo outerHTML reemplaza la etiqueta con el texto que le introducimos
     $whatIsDom.outerHTML = text;
-
     
 });
 
