@@ -34,7 +34,7 @@ JavaScript usa un modelo asincrono y no bloqueante con un loop de eventos implem
 
 console.error(`______________________________________________________________________`);
 
-// Codigo Asincrono No Bloqueante
+//-------- Codigo Asincrono No Bloqueante--------
 ((()=>{
 
     console.log(`Asynchronous Code!!!`);

@@ -7,7 +7,11 @@ export default class Postgraduates {
         let links = [];
 
         for (const key in postgraduates.masters) {
-            let labelLink = `<a href="./routes/${postgraduates.masters[key].url}" target="_blank">${postgraduates.masters[key].name}</a> `;
+            let labelLink = `
+            <a href="./routes/${postgraduates.masters[key].url}" target="_blank">
+                ${postgraduates.masters[key].name}
+            </a>
+            `;
             links.push(labelLink);
         }
 
@@ -41,5 +45,10 @@ export default class Postgraduates {
             }
         }
     }
+
+    // Eventos
+    // static events(link){
+
+    // }
 
 }

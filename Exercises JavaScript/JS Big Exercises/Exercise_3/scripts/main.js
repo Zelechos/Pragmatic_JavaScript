@@ -1,3 +1,4 @@
+import postgraduates from "./data.js";
 import Postgraduates from "./postgraduates.js";
 window.addEventListener('load', ()=> {
     'use strict'
@@ -11,7 +12,6 @@ window.addEventListener('load', ()=> {
             let labelMain = document.getElementById('content-main');
             let data = labelData(links);
             labelMain.innerHTML = data;
-            
         }else if(file === data[0][1]){//Verificamos que la url sea la del postgrado correcto
             let mainLabel = document.getElementById('content-main');
             mainLabel.innerHTML = data[0][0];
@@ -21,7 +21,7 @@ window.addEventListener('load', ()=> {
     const labelData = (links)=>{
         let text = `<ul>` ;
         for (let index = 0; index < links.length; index++) {
-                text += `<li>${links[index]} </li>`;
+            text += `<li>${links[index]} </li>`;
         }
         text += `</ul>`;
         return text;
