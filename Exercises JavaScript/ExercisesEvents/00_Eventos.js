@@ -2,21 +2,7 @@
 
 window.addEventListener('load', ()=>{
 
-function CambioColor(){
-    
-    let bg = Boton.style.backgroundColor;
-    
-    if( bg == "green"){
-        Boton.style.backgroundColor = "red";
-    }else{
-        Boton.style.backgroundColor = "green";
-    }
 
-    Boton.style.padding = "10px";
-    Boton.style.border = "1px solid #ccc";
-
-    return true;
-}
 
 const Boton = document.querySelector('#Boton');
 
@@ -67,4 +53,21 @@ function effectTitle (){
     increment++;
 }
 
+function CambioColor(){
+    
+    let bg = Boton.style.backgroundColor;
+    
+    if( bg == "green"){
+        Boton.style.backgroundColor = "red";
+    }else{
+        Boton.style.backgroundColor = "green";
+    }
+
+    Boton.style.padding = "10px";
+    Boton.style.border = "1px solid #ccc";
+
+    return true;
+}
+
 });
+
