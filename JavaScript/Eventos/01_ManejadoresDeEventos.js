@@ -43,7 +43,6 @@ $buttonFirst.addEventListener("click", e =>{
     console.warn(e);
     console.log("tipo de evento => ", e.type);
     console.log("objeto que origina el evento => ", e.target);
-
 });
 
 
