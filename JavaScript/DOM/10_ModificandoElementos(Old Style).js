@@ -1,5 +1,7 @@
 'use strict'
 
+// ATENCION TODO EL CONTENIDO DE ESTE SCRIPT ES UN EJEMPLO DE COMO SE HACIA ANTES LA MODIFICACION DE ELEMENTOS OJO ESO NO SIGNIFICA QUE NO SE PUEDA USAR O QUE SEA MALA PRACTICA USAR DICHOS METODOS.
+
 window.addEventListener('load', ()=> {
     
     const $cards = document.querySelector(".cards");
@@ -53,8 +55,10 @@ window.addEventListener('load', ()=> {
 
     $fragment.appendChild($clone);
 
+
+    // --------------- OTROS METODOS PARA AGREGAR LOS ELEMENTOS DINAMICOS -----------------------
     // Usamos el metodo replaceChild() para reemplazar un valor de un etiquetas HTML
-    console.warn("Usamos el metodo replaceChild() para reemplazar un valor de un etiquetas HTML");
+    console.warn("Usamos el metodo replaceChild() para reemplazar el elemento dinamico HTML");
     // $cards.replaceChild($fragment, $cards.children[3]);
 
     // Tambien podemos usar insertar el elemento antes de otro elemento para eso usamos el metodo insertBefore();
