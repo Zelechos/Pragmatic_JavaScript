@@ -1,6 +1,5 @@
 'use strict'
 
-
 const eventMultiple = ()=>{
     alert("Mi manejador de eventos Multiples");
     console.log(event);
@@ -23,7 +22,7 @@ $button.addEventListener('click', e => {
 
 // ------------------ Eventos con Parametros ------------------
 
-// Para pasarle parametros a un eventro simplemente hacemos que nuestro manejador sea el arrow function con eso ya podemos llamar a las funciones que queramos en nuestro evento con parametros y sin parametros!!!
+// Para pasarle parametros a un evento simplemente hacemos que nuestro manejador sea el arrow function con eso ya podemos llamar a las funciones que queramos en nuestro evento con parametros y sin parametros!!!
 $button.addEventListener('click', ()=>{
     greet();
     greet("Ethernet");
@@ -43,15 +42,13 @@ const $buttonRemove = document.getElementById("remover-evento");
 // });
 
 
-// En la mismas funcion expresada se esta removiendo el evento
+// En la misma funcion expresada se esta removiendo el evento
 const removeEvent = (e)=>{
     alert(`Removiendo el evento de tipo ${e.type}`);
     console.log(e);
-    $buttonRemove.removeEventListener('dblclick', removeEvent);
+    $buttonRemove.removeEventListener("dblclick", removeEvent);
     $buttonRemove.disabled = true;
 }
 
 // Ahora si podemos remover porque la funcion manejadora es una funcion expresada
 $buttonRemove.addEventListener("dblclick", removeEvent);
-
-

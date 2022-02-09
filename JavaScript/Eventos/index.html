@@ -5,10 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos en JavaScript</title>
+
+    <style>
+        .eventos-flujo div{
+            padding:4rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .uno{
+            background-color: yellow;
+        }
+
+        .dos{
+            background-color: gold;
+        }
+
+        .tres{
+            background-color:lightyellow;
+        }
+    </style>
 </head>
 <body>
     <h1>Eventos en JavaScript</h1>
     <h2>Manejadores de Eventos</h2>
+    <hr>
     
     <!-- No Recomendable es un mala Practica -->
     <button onclick="hello();" >
@@ -21,19 +42,33 @@
         Evento con manejador Semantico.
     </button>
 
-    <hr>
 
     <button id="evento-multiple">
         Evento con manejador Multiple.
     </button>
-
 
     <hr>
 
     <button id="remover-evento">
         Removiendo Eventos con manejadores Multiples.
     </button>
-    
-    <script src="./02_EventosConParametros_RemoverEventos.js"></script>
+
+    <hr>
+    <h2>Flujo de eventos</h2>
+    <hr>
+
+    <section class="eventos-flujo">
+        <div class="uno">
+            1
+            <div class="dos">
+                2
+                <div class="tres">
+                    3
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./03_FlujoEvento(Burbuja_Captura).js"></script>
 </body>
 </html>
