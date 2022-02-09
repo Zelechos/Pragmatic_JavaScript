@@ -78,20 +78,7 @@ document.addEventListener('DOMContentLoaded', e =>{
     console.warn(e);
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 // ----- EJEMPLOS SIMILARES QUE TENEMOS EN JQUERY -----
 // $(window).load(()=>{});
 // $(window).ready(()=>{});
 // $(window).on("load", ()=>{});
-
