@@ -4,7 +4,6 @@
 
 // PreventDefault : El método preventDefault() cancela el evento si es cancelable, lo que significa que la acción predeterminada que pertenece al evento no ocurrirá.
 
-
 // -------------------------- StopPropagation --------------------------
 const $divs = document.querySelectorAll(".eventos-flujo div");
 console.log($divs);
