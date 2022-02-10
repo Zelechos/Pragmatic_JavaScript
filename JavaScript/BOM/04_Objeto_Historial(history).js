@@ -19,8 +19,3 @@ console.log(history.forward(3));
 console.log(history.go(3));
 // para ir atras
 console.log(history.go(-3));
-
-
-
-
-
