@@ -1,0 +1,139 @@
+/* ---------- Importamos Fuente ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/* ---------- Reset CSS ---------- */
+
+/* ---- Declaramos variables CSS */
+:root{
+    --main-font: 'Montserrat', sans-serif;;
+    --font-size:16px;
+    --main-color:#161b22;
+    --second-color:#40c463;
+    --main-modal-color:rgb(33, 38, 45, .85);
+    --second-modal-color:rgb(64, 196, 49, .85);
+    --container-width:1200px;
+}
+
+/* ---- Reseteo Basico */
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x:hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Menu Hamburger Styles ---------- */
+
+header{
+    position: sticky;
+    top:0;
+    padding:1rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+header h1{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+
+.panel{
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--main-modal-color);
+    transition: transform .3s ease;
+    
+    /* Panel salga por arriba */
+    transform: translate(0, -100%);
+    /* Panel salga por abajo */
+    transform: translate(0, 100%);
+    /* Panel salga por derecha */
+    transform: translate(100%, 0);
+    /* Panel salga por izquierda */
+    transform: translate(-100%, 0);
+}
+
+.panel.is-active{
+    transform: translate(0, 0);
+}
+
+.panel ul{
+    padding-left: 0;
+    width: 100%;
+}
+
+.panel li {
+    list-style: none;
+}
+
+.panel li a {
+    padding: 2rem;
+    display: block;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--second-color);
+    transition: all 0.3s ease;
+}
+
+.panel li a:hover{
+    font-weight: bold;
+    color: var(--main-color);
+    background-color: var(--second-modal-color);
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color) !important;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
