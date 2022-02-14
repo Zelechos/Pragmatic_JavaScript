@@ -74,6 +74,8 @@ header h1{
     width: 100%;
     background-color: var(--main-modal-color);
     transition: transform .3s ease;
+    opacity: 0;
+    visibility: hidden;
     
     /* Panel salga por arriba */
     transform: translate(0, -100%);
@@ -87,6 +89,8 @@ header h1{
 
 .panel.is-active{
     transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .panel ul{
