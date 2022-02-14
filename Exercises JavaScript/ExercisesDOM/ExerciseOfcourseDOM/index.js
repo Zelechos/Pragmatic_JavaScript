@@ -1,11 +1,8 @@
-'use strict'
-
 'use strict';
 
 // ---------- Imports ----------
 import ButtonHamburger from '../08_Exercise(DOM).js';
 import  ClockAlarm from '../09_Exercise(DOM).js';
-
 
 document.addEventListener('DOMContentLoaded', e=>{
     
