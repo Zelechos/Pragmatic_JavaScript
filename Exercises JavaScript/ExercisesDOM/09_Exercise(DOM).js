@@ -1,5 +1,4 @@
 'use strict'
-
 export default class ClockAlarm {
 
     // --------------- Reloj & Alarma ---------------
@@ -8,6 +7,7 @@ export default class ClockAlarm {
         this.clock = clock;
     }
 
+    // Funcion para el Reloj Digital
     digitalClock(btnPlay, btnStop){
         let catchClock;
         this.d.addEventListener('click', e =>{
@@ -36,14 +36,16 @@ export default class ClockAlarm {
         });
     }
 
+
+    // Funcion para la Alarma Digital
     alarm(btnPlay, btnStop, sound){
         let catchAlarm;
+
         // Creamos una etiqueta de tipo audio para trabajar
         const $audio = this.d.createElement('audio');
         $audio.setAttribute('src', sound);
 
         this.d.addEventListener('click', e=>{
-
             // Evento del Boton Play
             if(e.target.matches(btnPlay)){
                 catchAlarm = setTimeout(()=>{
@@ -52,7 +54,7 @@ export default class ClockAlarm {
                 e.target.disabled = true;
             }
 
-            // Evento del Boton S
+            // Evento del Boton Stop
             if(e.target.matches(btnStop)){
                 clearTimeout(catchAlarm);
                 $audio.pause();
@@ -62,6 +64,5 @@ export default class ClockAlarm {
 
         });
     }
-
 
 }
