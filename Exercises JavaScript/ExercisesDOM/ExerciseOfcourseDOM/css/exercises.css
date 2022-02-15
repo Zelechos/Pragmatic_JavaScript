@@ -141,3 +141,18 @@ header h1{
     text-align: center;
 }
 
+/* ---------- Eventos de Teclado Styles ---------- */
+
+.stage{
+    display:flex;
+    min-height: 50vh;
+    background-color: var(--main-color);
+}
+
+.ball{
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--second-color);
+}
