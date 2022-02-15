@@ -50,7 +50,7 @@ export default class ClockAlarm {
             if(e.target.matches(btnPlay)){
                 catchAlarm = setTimeout(()=>{
                     $audio.play();
-                },1);
+                },1000);
                 e.target.disabled = true;
             }
 
