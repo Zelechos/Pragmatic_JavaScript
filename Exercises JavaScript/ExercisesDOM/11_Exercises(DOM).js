@@ -50,7 +50,7 @@ export default class Ball{
                 }
                 break;
             default:
-                console.log("espersando direccion de movimiento para la bola");
+                console.log("esperando direccion de movimiento para la bola");
                 break;
         }
                 
