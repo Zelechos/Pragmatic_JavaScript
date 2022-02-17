@@ -157,8 +157,7 @@ header h1{
     background-color: var(--second-color);
 }
 
-/* ---------- Top Button ---------- */
-
+/* ---------- Scroll Top Button ---------- */
 
 .scroll-top-btn{
     position: fixed;
@@ -189,4 +188,48 @@ header h1{
 
 .img-top{
     transform: rotate(-92deg);
+}
+
+/* ---------- Dark Theme Button ---------- */
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+    cursor: pointer;
+    border:0;
+    outline:0;
+}
+
+.dark-theme-btn.moon,
+.dark-theme-btn.sun{
+    background-repeat: no-repeat;
+    background-size: 80% , 80%;
+    background-position: 7px;
+}
+.dark-theme-btn.moon{
+    background-image: url(../assets/img/luna.png);
+}
+
+.dark-theme-btn.sun{
+    background-image: url(../assets/img/sol.png);
+}
+
+
+.dark-mode{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-theme{
+    background-color: var(--main-color);
+    color: var(--second-color);
 }

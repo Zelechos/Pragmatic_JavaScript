@@ -2,6 +2,8 @@
 
 export default class Countdown{
 
+    // --------------- Countdown ==> Cuenta regresiva ---------------
+
     constructor(countdown){
         this.counter = document.querySelector(countdown);
     }

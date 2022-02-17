@@ -6,6 +6,8 @@ let coodinateY = 0;
 
 export default class Ball{
     
+    // --------------- Ball ==> Mover un Bola ---------------
+
     constructor(stage, ball){
         this.d = document;
         this.stage = document.querySelector(stage);

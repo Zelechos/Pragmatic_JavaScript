@@ -2,6 +2,8 @@
 
 export default class ScrollTopButton {
 
+    // --------------- ScrollTopButton ==> Boton para Scroll ---------------
+
     constructor(top_buttom){
         this.d = document;
         this.w = window;

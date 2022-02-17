@@ -3,10 +3,11 @@
 // ---------- Imports ----------
 import ButtonHamburger from '../08_Exercise(DOM).js';
 import ClockAlarm from '../09_Exercise(DOM).js';
-import Shortcuts from '../10_Exercises(DOM).js';
-import Ball from '../11_Exercises(DOM).js';
-import Countdown from '../12_Exercises(DOM).js';
-import ScrollTopButton from '../13_Exercises(DOM).js';
+import Shortcuts from '../10_Exercise(DOM).js';
+import Ball from '../11_Exercise(DOM).js';
+import Countdown from '../12_Exercise(DOM).js';
+import ScrollTopButton from '../13_Exercise(DOM).js';
+import DarkTheme from '../14_Exercise(DOM).js';
 
 
 
@@ -29,7 +30,10 @@ document.addEventListener('DOMContentLoaded', e=>{
     const topBtn = new ScrollTopButton('.scroll-top-btn');
     topBtn.scroll();
     topBtn.click();
-    
+
+    // ---------- Instance of DarkTheme ----------
+    const darkTheme = new DarkTheme('.dark-theme-btn', 'dark-mode', 'dark-theme');
+    darkTheme.dark();
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
