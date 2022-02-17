@@ -19,6 +19,7 @@ export default class Countdown{
             let limitTime = countdownDate - now;
             let days, hours, minutes, seconds;
 
+            // Diferentes tranformaciones para la convercion de milisegundos a dias, horas, minutos, segundos
             days = Math.floor(limitTime / (1000 * 60 * 60 * 24));
             hours =('0' + Math.floor(limitTime % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))).slice(-2);
             minutes = ('0' + Math.floor(limitTime % (1000 * 60 * 60) / (1000 * 60))).slice(-2);
@@ -29,6 +30,7 @@ export default class Countdown{
                 Faltan : ${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos 
             </h1>`;
 
+            // Si el tiempo termino simplemente se limpia el Intervalos y pintamos el mensaje en pantalla
             if(limitTime < 0){
                 clearInterval(countdownTempo);
                 this.counter.innerHTML = `<h1>${message}</h1>`;

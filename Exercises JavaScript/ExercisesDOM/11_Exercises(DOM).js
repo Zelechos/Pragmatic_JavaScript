@@ -17,8 +17,6 @@ export default class Ball{
         // Creando la variables para definir los limites con el metodo getBoundingClientRect()
         const $limitsBall = this.ball.getBoundingClientRect();
         const $limitsStage = this.stage.getBoundingClientRect();
-        console.log($limitsStage);
-        console.log($limitsBall);
 
         switch(event.keyCode){
             case 37 : 
@@ -50,7 +48,7 @@ export default class Ball{
                 }
                 break;
             default:
-                console.log("esperando direccion de movimiento para la bola");
+                console.warn("esperando direccion de movimiento para la bola");
                 break;
         }
                 

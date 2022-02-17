@@ -2,10 +2,11 @@
 
 // ---------- Imports ----------
 import ButtonHamburger from '../08_Exercise(DOM).js';
-import  ClockAlarm from '../09_Exercise(DOM).js';
+import ClockAlarm from '../09_Exercise(DOM).js';
 import Shortcuts from '../10_Exercises(DOM).js';
 import Ball from '../11_Exercises(DOM).js';
 import Countdown from '../12_Exercises(DOM).js';
+import ScrollTopButton from '../13_Exercises(DOM).js';
 
 
 
@@ -24,6 +25,11 @@ document.addEventListener('DOMContentLoaded', e=>{
     const count = new Countdown('.countdown');
     count.countDown("Feb 25, 2022 00:00:00", "Feliz Cumple Pragmatic Coder!!!");
 
+    // ---------- Instance of ScrollTopButton ----------
+    const topBtn = new ScrollTopButton('.scroll-top-btn');
+    topBtn.scroll();
+    topBtn.click();
+    
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
