@@ -2,6 +2,8 @@
 
 export default class WebCam{
 
+    // Aqui trabajamos con la camara web del navegador!!!
+    
     constructor(id){
         this.d = document;
         this.w = window;
