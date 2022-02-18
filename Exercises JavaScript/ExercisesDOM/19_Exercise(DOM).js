@@ -12,12 +12,9 @@ export default class WebCam{
 
     action(){
         console.log(this.video);
-
+        //Esta funcion es una promesa
         if(this.n.mediaDevices.getUserMedia){
-            this.n.mediaDevices.getUserMedia({//Esta funcion es una promesa
-                video: true,
-                audio: true,
-            })
+            this.n.mediaDevices.getUserMedia({video: true, audio: false})
             .then(stream => {
                 console.log(stream);
                 this.video.srcObject = stream;
