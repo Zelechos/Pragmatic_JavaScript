@@ -10,6 +10,7 @@ import ScrollTopButton from '../13_Exercise(DOM).js';
 import DarkTheme from '../14_Exercise(DOM).js';
 import ResponsibleJs from '../15_Exercise(DOM).js';
 import ResponsiveTester from '../16_Exercise(DOM).js';
+import UserDeviceInfo from '../17_Exercise(DOM).js';
 
 
 document.addEventListener('DOMContentLoaded', e=>{
@@ -60,6 +61,13 @@ document.addEventListener('DOMContentLoaded', e=>{
 
     const responsiveTester = new ResponsiveTester('form');
     responsiveTester.tester();
+
+    // ---------- Instance of UserDeviceInfo ----------
+    
+    const info = new UserDeviceInfo('user-device');
+    info.detectionDevices();
+
+    
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
