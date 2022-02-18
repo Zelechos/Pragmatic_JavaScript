@@ -11,6 +11,7 @@ import DarkTheme from '../14_Exercise(DOM).js';
 import ResponsibleJs from '../15_Exercise(DOM).js';
 import ResponsiveTester from '../16_Exercise(DOM).js';
 import UserDeviceInfo from '../17_Exercise(DOM).js';
+import WifiConnection from '../18_Exercise(DOM).js';
 
 
 document.addEventListener('DOMContentLoaded', e=>{
@@ -63,11 +64,14 @@ document.addEventListener('DOMContentLoaded', e=>{
     responsiveTester.tester();
 
     // ---------- Instance of UserDeviceInfo ----------
-    
+
     const info = new UserDeviceInfo('user-device');
     info.detectionDevices();
 
+    // ---------- Instance of WifiConnection ----------
     
+    const connection = new WifiConnection('.header');
+    connection.connectionChecker();
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 

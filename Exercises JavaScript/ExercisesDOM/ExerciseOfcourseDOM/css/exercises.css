@@ -233,3 +233,16 @@ header h1{
     background-color: var(--main-color);
     color: var(--second-color);
 }
+
+/* ---------- Deteccion de conexion a la red wifi ---------- */
+.connected{
+    background-color: green;  
+    color: var(--main-color);
+    border-radius: 5px;
+}
+
+.disconnected{
+    background-color: red;  
+    color: var(--main-color);
+    border-radius: 5px;
+}
