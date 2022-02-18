@@ -8,6 +8,7 @@ import Ball from '../11_Exercise(DOM).js';
 import Countdown from '../12_Exercise(DOM).js';
 import ScrollTopButton from '../13_Exercise(DOM).js';
 import DarkTheme from '../14_Exercise(DOM).js';
+import ResponsibleJs from '../15_Exercise(DOM).js';
 
 
 
@@ -30,6 +31,30 @@ document.addEventListener('DOMContentLoaded', e=>{
     const topBtn = new ScrollTopButton('.scroll-top-btn');
     topBtn.scroll();
     topBtn.click();
+
+    // ---------- Instance of ResponsibleJs ----------
+    const responsive = new ResponsibleJs();
+
+    // Creamos las variables y contenidos de escritorio
+    let desktopYoutube = `
+    <iframe width="960" height="415" src="https://www.youtube.com/embed/M5QY2_8704o" id="iframe"></iframe>
+    `;
+    let mobileYoutube = `
+    <a href="https://www.youtube.com/watch?v=M5QY2_8704o&t=2151s" target="_blank" id="link">Link Aqui</a>
+    `;
+
+    let desktopMaps = `
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016713276845!2d-58.383759084776386!3d-34.60373888045951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sbo!4v1645152022969!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    `;
+    let mobileMaps = `
+    <a href="https://goo.gl/maps/XqMMitNWGkPvMYoQA" target="_blank" id="link">Link Aqui</a>
+    `;
+
+    // Youtube
+    responsive.responsible('youtube', '(min-width: 1024px)', mobileYoutube, desktopYoutube);
+
+    // Google maps
+    responsive.responsible('gmaps', '(min-width: 1024px)', mobileMaps, desktopMaps);
 
 });
 
