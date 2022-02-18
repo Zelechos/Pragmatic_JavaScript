@@ -31,21 +31,24 @@ document.addEventListener('DOMContentLoaded', e=>{
     topBtn.scroll();
     topBtn.click();
 
-    // ---------- Instance of DarkTheme ----------
-    const darkTheme = new DarkTheme('.dark-theme-btn', 'dark-mode', 'dark-theme');
-    darkTheme.dark();
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
 // ATENCION !! NO USAR KEYPRESS
 document.addEventListener('keydown', e=>{
-
+    
     // ---------- Instance of Shortcuts ----------
     const keys = new Shortcuts();
     keys.comands(e);
-
+    
     // ---------- Instance of Ball ----------
     const ball = new Ball('.stage', '.ball');
     ball.moveBall(e);
-
+    
 });
+
+// Sacamos nuestra instancia porqque trabajaremos con el mismo evento del DOM y no se puede hacer usar un evento del mismo tipo dentro de otro evento
+
+// ---------- Instance of DarkTheme ----------
+const darkTheme = new DarkTheme('.dark-theme-btn', 'dark-mode', 'dark-theme');
+darkTheme.dark();
