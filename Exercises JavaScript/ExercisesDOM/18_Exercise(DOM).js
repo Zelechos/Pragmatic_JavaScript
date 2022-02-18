@@ -2,13 +2,10 @@
 
 export default class WifiConnection{
 
-    constructor(header){
+    constructor(){
         this.d = document;
         this.w = window;
-        this.container = document.querySelector(header);
-        this.onlineContent = `<div class="connected"><h1>Conectado a la Red</h1></div>`;
-        this.oflineContent = `<div class="disconnected"><h1>Error en la conexion Wifi</h1></div>`;
-        this.defect = `<h1>DOM Exercises in Javascript</h1>`;
+        this.n = navigator;
     }
 
     connectionChecker(){
@@ -17,21 +14,27 @@ export default class WifiConnection{
     }
 
     isLineWeb(){
-        if(navigator.onLine) {
-            this.container.innerHTML += this.onlineContent;
-            setTimeout(()=>{
-                this.container.innerHTML ="";
-                this.container.innerHTML += this.defect;
-            },3000)
+
+        const $div = document.createElement('div');
+        const $message = document.createElement('h1');
+
+        if(this.n.onLine) {
+            $div.classList.add('connected');
+            $div.classList.remove('disconnected');
+            $message.textContent = 'Conectado a la Red';
+            $div.appendChild($message);
             console.log("en linea");
         } else {
-            this.container.innerHTML += this.oflineContent;
-            setTimeout(()=>{
-                this.container.innerHTML ="";
-                this.container.innerHTML += this.defect;
-            },3000)
+            $div.classList.add('disconnected');
+            $div.classList.remove('connected');
+            $message.textContent = 'Error en la conexion Wifi';
+            $div.appendChild($message);
             console.error("fuera de linea");
         }
+
+        this.d.body.prepend($div);
+        setTimeout(()=>this.d.body.removeChild($div),3000);
+
     }
 
     

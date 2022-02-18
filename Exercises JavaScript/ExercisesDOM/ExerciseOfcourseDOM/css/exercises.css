@@ -236,12 +236,14 @@ header h1{
 
 /* ---------- Deteccion de conexion a la red wifi ---------- */
 .connected{
+    position: sticky;
     background-color: green;  
     color: var(--main-color);
     border-radius: 5px;
 }
 
 .disconnected{
+    position: sticky;
     background-color: red;  
     color: var(--main-color);
     border-radius: 5px;

@@ -68,10 +68,7 @@ document.addEventListener('DOMContentLoaded', e=>{
     const info = new UserDeviceInfo('user-device');
     info.detectionDevices();
 
-    // ---------- Instance of WifiConnection ----------
     
-    const connection = new WifiConnection('.header');
-    connection.connectionChecker();
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
@@ -88,8 +85,16 @@ document.addEventListener('keydown', e=>{
     
 });
 
+// ============================ Instancias que no necesitan eventos ============================
+
 // Sacamos nuestra instancia porque trabajaremos con el mismo evento del DOM y no se puede hacer usar un evento del mismo tipo dentro de otro evento
 
 // ---------- Instance of DarkTheme ----------
 const darkTheme = new DarkTheme('.dark-theme-btn', 'dark-mode', 'dark-theme');
 darkTheme.dark();
+
+
+// Dado que tenemos un eventos de conexion de red el cual no tiene necesidad de esperar que el documento cargue
+// ---------- Instance of WifiConnection ----------
+const connection = new WifiConnection();
+connection.connectionChecker();
