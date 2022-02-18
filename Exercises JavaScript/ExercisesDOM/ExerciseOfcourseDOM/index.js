@@ -9,7 +9,7 @@ import Countdown from '../12_Exercise(DOM).js';
 import ScrollTopButton from '../13_Exercise(DOM).js';
 import DarkTheme from '../14_Exercise(DOM).js';
 import ResponsibleJs from '../15_Exercise(DOM).js';
-
+import ResponsiveTester from '../16_Exercise(DOM).js';
 
 
 document.addEventListener('DOMContentLoaded', e=>{
@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', e=>{
     // Google maps
     responsive.responsible('gmaps', '(min-width: 1024px)', mobileMaps, desktopMaps);
 
+    // ---------- Instance of ResponsibleJs ----------
+
+    const responsiveTester = new ResponsiveTester('form');
+    responsiveTester.tester();
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
@@ -72,7 +76,7 @@ document.addEventListener('keydown', e=>{
     
 });
 
-// Sacamos nuestra instancia porqque trabajaremos con el mismo evento del DOM y no se puede hacer usar un evento del mismo tipo dentro de otro evento
+// Sacamos nuestra instancia porque trabajaremos con el mismo evento del DOM y no se puede hacer usar un evento del mismo tipo dentro de otro evento
 
 // ---------- Instance of DarkTheme ----------
 const darkTheme = new DarkTheme('.dark-theme-btn', 'dark-mode', 'dark-theme');
