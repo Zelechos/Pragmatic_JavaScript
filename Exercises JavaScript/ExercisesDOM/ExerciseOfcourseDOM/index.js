@@ -12,6 +12,7 @@ import ResponsibleJs from '../15_Exercise(DOM).js';
 import ResponsiveTester from '../16_Exercise(DOM).js';
 import UserDeviceInfo from '../17_Exercise(DOM).js';
 import WifiConnection from '../18_Exercise(DOM).js';
+import WebCam from '../19_Exercise(DOM).js';
 
 
 document.addEventListener('DOMContentLoaded', e=>{
@@ -67,6 +68,12 @@ document.addEventListener('DOMContentLoaded', e=>{
 
     const info = new UserDeviceInfo('user-device');
     info.detectionDevices();
+
+    // ---------- Instance of WebCam ----------
+    
+    const video = new WebCam('webcam');
+    video.action();
+
 
     
 });
