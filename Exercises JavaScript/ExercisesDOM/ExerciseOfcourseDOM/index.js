@@ -1,6 +1,6 @@
 'use strict';
 
-// ---------- Imports ----------
+// ------------------------------ Imports ------------------------------
 import ButtonHamburger from '../08_Exercise(DOM).js';
 import ClockAlarm from '../09_Exercise(DOM).js';
 import Shortcuts from '../10_Exercise(DOM).js';
@@ -14,6 +14,9 @@ import UserDeviceInfo from '../17_Exercise(DOM).js';
 import WifiConnection from '../18_Exercise(DOM).js';
 import WebCam from '../19_Exercise(DOM).js';
 import GeolocationNow from '../20_Exercise(DOM).js';
+import Filters from '../21_Exercise(DOM).js';
+// ----------------------------------------------------------------------
+
 
 
 document.addEventListener('DOMContentLoaded', e=>{
@@ -80,7 +83,10 @@ document.addEventListener('DOMContentLoaded', e=>{
     const myGeolocation = new GeolocationNow('geolocation');
     myGeolocation.location();
 
-    
+    // ---------- Instance of Filters ----------
+
+    const filter = new Filters('.card', '.card-filter');
+    filter.search();
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
@@ -94,6 +100,7 @@ document.addEventListener('keydown', e=>{
     // ---------- Instance of Ball ----------
     const ball = new Ball('.stage', '.ball');
     ball.moveBall(e);
+
     
 });
 
