@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', e=>{
 
     // ---------- Instance of GeolocationNow ----------
 
-    const geo = new GeolocationNow('geolocation');
-    geo.location();
+    const myGeolocation = new GeolocationNow('geolocation');
+    myGeolocation.location();
 
     
 });
