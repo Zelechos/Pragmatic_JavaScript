@@ -15,6 +15,7 @@ import WifiConnection from '../18_Exercise(DOM).js';
 import WebCam from '../19_Exercise(DOM).js';
 import GeolocationNow from '../20_Exercise(DOM).js';
 import Filters from '../21_Exercise(DOM).js';
+import Draw from '../22_Exercise(DOM).js';
 // ----------------------------------------------------------------------
 
 
@@ -87,6 +88,11 @@ document.addEventListener('DOMContentLoaded', e=>{
 
     const filter = new Filters('.card', '.card-filter');
     filter.search();
+
+    // ---------- Instance of Draw ----------
+    const draw = new Draw('#winner-btn', '.player');
+    draw.winner();
+
 });
 
 // Trabajar con el evento keydown es mas completo dado que reconoce todas las teclas 
