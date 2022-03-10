@@ -340,3 +340,61 @@ header h1{
     background-color: var(--main-color);
     transition: all 0.3s ease;
 }
+
+/* ---------- Scroll Spy ---------- */
+@media screen and (min-width: 1024px){
+    
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header"
+        "main   panel";
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    .panel{
+        grid-area: panel;
+        align-self: start;
+        position: sticky;
+        top: 4rem;
+        opacity: 1;
+        justify-content: flex-start;
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+
+    .panel-btn{
+        display: none !important;
+    }
+
+    .menu{
+        justify-content: start;
+        text-align: right;
+    }
+
+    .panel li a:hover,
+    .panel li a.active{
+        color: var(--main-color);
+        background-color: var(--second-color);
+    }
+
+    .panel li a{
+        font-size: 1.1rem;
+        padding: .75rem;
+    }
+
+    .scroll-top-btn{
+        right: initial;
+        left: calc(5.25rem + 1vw);
+    }
+    
+}
