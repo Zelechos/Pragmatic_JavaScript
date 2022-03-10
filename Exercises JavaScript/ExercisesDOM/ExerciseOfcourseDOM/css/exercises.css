@@ -46,6 +46,7 @@ header{
     padding:1rem;
     background-color: var(--main-color);
     color: var(--second-color);
+    z-index: 10;
 }
 
 header h1{
@@ -280,3 +281,62 @@ header h1{
     order: 1;
 }
 
+/* ---------- Responsive Slider ---------- */
+
+.slider{
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+    border: thin solid var(--second-color);
+}
+
+.slider-slides{
+    position: relative;
+    height: 400px;
+}
+
+.slider-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slider-slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider-btns{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.slider a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: thin solid var(--second-color);
+    text-decoration: none;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
+}

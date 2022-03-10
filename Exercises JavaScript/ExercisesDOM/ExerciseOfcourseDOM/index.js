@@ -16,6 +16,7 @@ import WebCam from '../19_Exercise(DOM).js';
 import GeolocationNow from '../20_Exercise(DOM).js';
 import Filters from '../21_Exercise(DOM).js';
 import Draw from '../22_Exercise(DOM).js';
+import Slider from '../23_Exercise(DOM).js';
 // ----------------------------------------------------------------------
 
 
@@ -92,6 +93,11 @@ document.addEventListener('DOMContentLoaded', e=>{
     // ---------- Instance of Draw ----------
     const draw = new Draw('#winner-btn', '.player');
     draw.winner();
+
+    // ---------- Instance of Slider ----------
+    const slider = new Slider();
+    slider.move();
+
 
 });
 
