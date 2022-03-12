@@ -1,6 +1,7 @@
-'use strict'
+'use strict';
+
 // Debemos crear un sudoku con funcionalidades para testear
-class Sudoku{
+export default class Sudoku{
 
     // 1 area tiene 9 casillas
     getBoxes(){
@@ -22,13 +23,10 @@ class Sudoku{
                 row.push(parseInt(iterator));
                 count++;
             }else{
-
                 sudoku.push(row);
                 this.voidArray(row);
                 count = 0;
             }
-
-
         }
 
         return sudoku;
@@ -42,7 +40,7 @@ class Sudoku{
     }
 }
 
-module.exports = Sudoku;
+// module.exports = Sudoku;
 
 // test code
 let text = '005910308009403060027500100030000201000820007006007004000080000640150700890000420';
