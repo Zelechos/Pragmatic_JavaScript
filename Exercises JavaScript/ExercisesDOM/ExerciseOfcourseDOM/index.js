@@ -18,6 +18,7 @@ import Filters from '../21_Exercise(DOM).js';
 import Draw from '../22_Exercise(DOM).js';
 import Slider from '../23_Exercise(DOM).js';
 import ScrollSpy from '../24_Exercise(DOM).js';
+import SmartVideo from '../25_Exercise(DOM).js';
 // ----------------------------------------------------------------------
 
 
@@ -102,6 +103,11 @@ document.addEventListener('DOMContentLoaded', e=>{
     // ---------- Instance of Scroll Spy ----------
     const spy = new ScrollSpy();
     spy.recognize();
+
+
+    // ---------- Instance of Smart Video ----------
+    const smart = new SmartVideo();
+    smart.play();
 
 
 });

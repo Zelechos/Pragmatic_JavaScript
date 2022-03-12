@@ -17,7 +17,7 @@ export default class ScrollSpy{
     }
 
     callback(entries){
-        console.log(`entries =>`,entries);
+        // console.log(`entries =>`,entries);
 
         entries.forEach(entry =>{
             // console.log("entry", entry);
@@ -27,6 +27,7 @@ export default class ScrollSpy{
             }else{
                 document.querySelector(`a[data-scroll-spy][href="#${id}"]`).classList.remove('active');
             }
+
         })
     }
 }
