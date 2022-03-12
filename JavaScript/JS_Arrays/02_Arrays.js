@@ -1,42 +1,42 @@
 'use strict'
 
-let Generos = ['Terror','Comedia','Romance'];
-let Peliculas = ['Gray','100 days','Argo'];
+let genders = ['Terror','Comedia','Romance'];
+let movies = ['Gray','100 days','Argo'];
 
-let Cine = [Generos , Peliculas];
+let cine = [genders , movies];
 
 do{
-    let Elemento = prompt('Digite una Pelicula : ');
-    if(Elemento != 'x'){
-        Peliculas.push(Elemento);
+    let element = prompt('Digite una Pelicula : ');
+    if(element !== 'x'){
+        movies.push(element);
     }
-}while(Elemento != 'x');
+}while(element !== 'x');
 
-console.log(Peliculas);
+console.log(movies);
 
-let indice = Peliculas.indexOf('100 days');
+let indice = movies.indexOf('100 days');
 if (indice > -1){
-    Peliculas.splice(indice,1);
+    movies.splice(indice,1);
 }
 
-console.log(Peliculas);
+console.log(movies);
 
-console.log(Peliculas.join());//Para convertir un array a texto
-let pel =Peliculas.join();
+console.log(movies.join());//Para convertir un array a texto
+let pel =movies.join();
 console.log(pel.split(","));//Para convertir un texto a array
 
 //Ordenando el Arreglo
-console.log("El Arreglo ordenando Alfabeticamente es : "+Peliculas.sort());
+console.log("El Arreglo ordenando Alfabeticamente es : "+movies.sort());
 
 //Para Invertir un Array 
-console.log(Generos);
-console.log("El Arreglo Invertido es : "+Generos.reverse());
+console.log(genders);
+console.log("El Arreglo Invertido es : "+genders.reverse());
 
 /*-----------------------BUSQUEDAS------------------------------------------*/
 let Busqueda = String(prompt("Que Genero de Pelicula desea? "));
 
-let Encontrar = Generos.find(Genero=>Genero === Busqueda);
-let Indice = Generos.findIndex(Genero=>Genero === Busqueda);
+let Encontrar = genders.find(Genero=>Genero === Busqueda);
+let Indice = genders.findIndex(Genero=>Genero === Busqueda);
 
 console.log("Genero Encontrado : "+Indice+" .- "+Encontrar);
 
