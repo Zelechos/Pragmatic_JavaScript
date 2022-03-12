@@ -67,7 +67,7 @@
                     <a href="#section13" data-scroll-spy>Video Inteligente</a>
                 </li>
                 <li>
-                    <a href="#section14" data-scroll-spy>none</a>
+                    <a href="#section14" data-scroll-spy>Validaciones de Formulario</a>
                 </li>
                 <li>
                     <a href="#section15" data-scroll-spy>none</a>
@@ -217,6 +217,26 @@
             <video src="./assets/video/hacker-video.webm"  controls loop data-smart-video></video>
         </section>
         <section id="section14" class="section" data-scroll-spy>
+            <h2>Validaciones de Formulario</h2>
+            <!-- Creamos nuestro formulario -->
+            <form class="contact-form">
+                <legend>Envianos tus comentarios</legend>
+                <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Escribe tu email" title="Email Incorrecto!!" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+                <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido">
+                <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres!!!" data-pattern="^.{1,255}$" required></textarea>
+                <input type="submit" value="Enviar">
+                
+                <!-- Loader se envio -->
+                <div class="contact-form-loader none">
+                    <img src="./assets/img/rings.svg" alt="Cargando">
+                </div>
+
+                <!-- Respuesta al enviar los datos del formulario -->
+                <div class="contact-form-response none">
+                    <p>Los datos han sido enviados</p>
+                </div>
+            </form>
         </section>
         <section id="section15" class="section" data-scroll-spy>
         </section>
