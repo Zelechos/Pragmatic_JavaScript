@@ -37,7 +37,26 @@ export default class ValidationsForm{
                     : document.getElementById($input.name).classList.remove('is-active');
                 }
             }
+        });
 
+        document.addEventListener('submit', e=>{
+            // e.preventDefault();
+            let $loader = document.querySelector('.contact-form-loader');
+            let $response = document.querySelector('.contact-form-response');
+
+            // Removemos la class none para visualizar el loader
+            $loader.classList.remove('none');
+
+            setTimeout(()=>{
+                $loader.classList.add('none');
+                $response.classList.remove('none');
+                this.form.reset();
+
+                setTimeout(()=>$response.classList.add('none'),3000);
+            },3000);
+
+
+            
         });
 
     }
