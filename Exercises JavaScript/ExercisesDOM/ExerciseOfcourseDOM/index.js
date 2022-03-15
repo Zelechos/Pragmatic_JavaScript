@@ -20,6 +20,7 @@ import Slider from '../23_Exercise(DOM).js';
 import ScrollSpy from '../24_Exercise(DOM).js';
 import SmartVideo from '../25_Exercise(DOM).js';
 import ValidationsForm from '../26_Exercise(DOM).js';
+import StoryTeller from '../27_Exercise(DOM).js';
 // ----------------------------------------------------------------------
 
 
@@ -114,6 +115,8 @@ document.addEventListener('DOMContentLoaded', e=>{
     const validations = new ValidationsForm();
     validations.checkData();
 
+    
+
 
 });
 
@@ -145,3 +148,8 @@ darkTheme.dark();
 // ---------- Instance of WifiConnection ----------
 const connection = new WifiConnection();
 connection.connectionChecker();
+
+
+// ---------- Instance of StoryTeller ----------
+const storyTeller = new StoryTeller();
+storyTeller.speechReader();
