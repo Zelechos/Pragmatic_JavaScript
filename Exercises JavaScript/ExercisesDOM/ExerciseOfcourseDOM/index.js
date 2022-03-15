@@ -19,6 +19,7 @@ import Draw from '../22_Exercise(DOM).js';
 import Slider from '../23_Exercise(DOM).js';
 import ScrollSpy from '../24_Exercise(DOM).js';
 import SmartVideo from '../25_Exercise(DOM).js';
+import ValidationsForm from '../26_Exercise(DOM).js';
 // ----------------------------------------------------------------------
 
 
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', e=>{
     // ---------- Instance of ResponsibleJs ----------
 
     const responsiveTester = new ResponsiveTester('form');
-    responsiveTester.tester();
+    // responsiveTester.tester();
 
     // ---------- Instance of UserDeviceInfo ----------
 
@@ -108,6 +109,10 @@ document.addEventListener('DOMContentLoaded', e=>{
     // ---------- Instance of Smart Video ----------
     const smart = new SmartVideo();
     smart.play();
+
+    // ---------- Instance of Validations Form ----------
+    const validations = new ValidationsForm();
+    validations.checkData();
 
 
 });
