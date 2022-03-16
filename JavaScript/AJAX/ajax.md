@@ -1,7 +1,10 @@
 # AJAX: Asynchronous JavaScript & XML
 
+
+
 <img align="center" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="javascript" width="1000"/>
 
+##### ***AJAX*** significa ***Asynchronous JavaScript & XML***.<br>En pocas palabras, es el uso del objeto ***XMLHttpRequest*** para comunicarse con los servidores. Puede enviar y recibir informacion en varios formatos, incluidos ***JSON, XML, HTML*** y archivos de texto. <br>El atractivo de ***AJAX*** es su naturaleza ***"asincrona"*** lo que significa que puede comunicarse con el servidor, intercambiar datos y actualizar la pagina sin tener que actualizar el navegador.
 
 <img align="center" src="https://user-images.githubusercontent.com/41464891/158658860-1cef01e4-e0f6-49af-875e-e2b48b141369.png" alt="ajax" width="1000"/>
 
