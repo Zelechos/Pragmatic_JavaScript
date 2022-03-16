@@ -15,7 +15,7 @@
             // })
             .then((response) => response.ok ? response.json() : Promise.reject(response))
             .then(json =>{
-                console.log(json);
+                // console.log(json);
 
                 json.forEach(user => {
                     const $li = document.createElement('li');

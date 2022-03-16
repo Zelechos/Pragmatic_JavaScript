@@ -16,11 +16,11 @@
         if(xhr.status >= 200 && xhr.status < 300){
             console.warn(`Conexion existosa => ${xhr.status}`);
             // respuesta textual en JSON de la API
-            console.log(xhr.responseText);
+            // console.log(xhr.responseText);
 
             // Convertimos en JSON la respuesta textual de la API
             let json = JSON.parse(xhr.responseText);
-            console.log(json);
+            // console.log(json);
 
             // Mostramos el contenido en la web
             json.forEach(user => {
