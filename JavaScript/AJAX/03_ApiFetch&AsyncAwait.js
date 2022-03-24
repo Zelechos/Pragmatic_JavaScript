@@ -33,9 +33,9 @@
             $list.innerHTML = message;
 
         }finally{
-
             console.warn("I love the code");
         }
     }
     getData();
+    
 })();
