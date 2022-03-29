@@ -36,6 +36,7 @@
             console.warn("I love the code");
         }
     }
+    
     getData();
     
 })();
