@@ -7,7 +7,6 @@ try{
     let array = new Array(9999);
 }catch(error){
     console.log(error);
-    alert('a ocurrido un error en el codigo');
 }finally{
     console.warn(`Process finished`);
 }
