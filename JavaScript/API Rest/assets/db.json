@@ -1,66 +1,66 @@
 {
-    "hello_world": [
-        {
-            "id": 1,
-            "language": "Java",
-            "code": "System.out.println('Hello World');"
-        },
-        {
-            "id": 2,
-            "language": "JavaScript",
-            "code": "console.log('Hello World');"
-        },
-        {
-            "id": 3,
-            "language": "Python",
-            "code": "print('Hello World')"
-        },
-        {
-            "id": 4,
-            "language": "C",
-            "code": "printf('Hello World');"
-        },
-        {
-            "id": 5,
-            "language": "C++",
-            "code": "cout<<'Hello World';"
-        },
-        {
-            "id": 6,
-            "language": "Php",
-            "code": "echo('Hello World');"
-        }
-    ],
-    "programmers":[
-        {
-            "id": 1,
-            "name": "Alex",
-            "profession": "Frontend Developer"
-        },
-        {
-            "id": 2,
-            "name": "Gustav",
-            "profession": "Backend Developer"
-        },
-        {
-            "id": 3,
-            "name": "Yared",
-            "profession": "Mobile Developer"
-        },
-        {
-            "id": 4,
-            "name": "Eliot",
-            "profession": "Hacker"
-        },
-        {
-            "id": 5,
-            "name": "Argus",
-            "profession": "Data scientist"
-        },
-        {
-            "id": 6,
-            "name": "Arthur",
-            "profession": "Pentester"
-        }
-    ]
+  "hello_world": [
+    {
+      "id": 1,
+      "language": "Java",
+      "code": "System.out.println('Hello World');"
+    },
+    {
+      "id": 2,
+      "language": "JavaScript",
+      "code": "console.log('Hello World');"
+    },
+    {
+      "id": 3,
+      "language": "Python",
+      "code": "print('Hello World')"
+    },
+    {
+      "id": 4,
+      "language": "C",
+      "code": "printf('Hello World');"
+    },
+    {
+      "id": 5,
+      "language": "C++",
+      "code": "cout<<'Hello World';"
+    },
+    {
+      "id": 6,
+      "language": "Php",
+      "code": "echo('Hello World');"
+    }
+  ],
+  "programmers": [
+    {
+      "id": 1,
+      "name": "Alex",
+      "profession": "Frontend Developer"
+    },
+    {
+      "id": 2,
+      "name": "Gustav",
+      "profession": "Backend Developer"
+    },
+    {
+      "id": 3,
+      "name": "Yared",
+      "profession": "Mobile Developer"
+    },
+    {
+      "id": 4,
+      "name": "Eliot",
+      "profession": "Hacker"
+    },
+    {
+      "id": 5,
+      "name": "Argus",
+      "profession": "Data scientist"
+    },
+    {
+      "id": 6,
+      "name": "Arthur",
+      "profession": "Pentester"
+    }
+  ]
 }
