@@ -1,5 +1,5 @@
 (()=>{
-    // Instaciamos un objeto XMLHttpRequest
+    // Instanciamos un objeto XMLHttpRequest
     const xhr = new XMLHttpRequest();
     const $list = document.getElementById('xhr');
     const $fragment = document.createDocumentFragment();
@@ -7,10 +7,8 @@
     // Se activa el evento cuando ocurra un cambio de estado 
     xhr.addEventListener('readystatechange', e=>{
 
-        
         // Mecanismo para saber si el estado ya ha sido completado 
         if(xhr.readyState !== 4)return;
-        
         
         // Validacion mediante el codigo de respuesta de nuestra peticion
         if(xhr.status >= 200 && xhr.status < 300){
