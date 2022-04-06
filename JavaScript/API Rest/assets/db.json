@@ -39,7 +39,7 @@
     },
     {
       "id": 2,
-      "name": "Gustav",
+      "name": "Gustavo",
       "profession": "Backend Developer"
     },
     {
@@ -56,6 +56,11 @@
       "id": 5,
       "name": "Argus Aphocraphex",
       "profession": "Data scientist"
+    },
+    {
+      "id": 6,
+      "name": "Mark",
+      "profession": "Software Engineer"
     }
   ]
 }
