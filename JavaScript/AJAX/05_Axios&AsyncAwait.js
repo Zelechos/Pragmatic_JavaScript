@@ -2,8 +2,6 @@
     const $list = document.getElementById('axios-async');
     const $fragment = document.createDocumentFragment();
 
-    
-    
     async function getData(){
         try{
             // Llamando a la libreria axios!!
