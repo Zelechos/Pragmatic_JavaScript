@@ -19,9 +19,8 @@ d.addEventListener('DOMContentLoaded', e=>{
 
             if(xhr.readyState !== 4)return;
 
-            if(xhr.status>= 200 && xhr.status < 300){
-
-                let json = JSON.parse(xhr.statusText);
+            if(xhr.status >= 200 && xhr.status < 300){
+                let json = JSON.parse(xhr.responseText);
                 success(json);
             }else{
                 let message = xhr.statusText || `<h2> Error : ${xhr.status} - Ocurrio un error !!!</h2>`
