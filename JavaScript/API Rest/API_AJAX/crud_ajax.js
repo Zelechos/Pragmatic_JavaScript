@@ -19,8 +19,7 @@ const $fragment = d.createDocumentFragment();
                 let json = JSON.parse(xhr.responseText);
                 success(json);
             }else{
-                let message = xhr.statusText || `Error : ${xhr.status} - Ocurrio un error !!!`
-                console.warn(message);
+                let message = `Error : ${xhr.status} - Ocurrio un error !!!`
                 error(message);
             }
 
@@ -37,12 +36,27 @@ const $fragment = d.createDocumentFragment();
     const getAllProgrammers = ()=>{
 
         ajax({
-            url: "http://localhost:5001/prog0rammers/",
+            url: "http://localhost:5001/programmers/",
             success : response =>{
-                console.log(response);
+                response.forEach(programmer =>{
+                    $template.querySelector('.name').textContent = programmer.name;
+                    $template.querySelector('.profession').textContent = programmer.profession;
+                // Creamos los data atribute para editar y eliminar los elementos con respecto al {id}
+                    // - Para el boton de editar nos importa obtener todos los datos mediante los data-attributes para poder modificarlos    
+                    $template.querySelector('.edit').dataset.id = programmer.id;
+                    $template.querySelector('.edit').dataset.name = programmer.name;
+                    $template.querySelector('.edit').dataset.profession = programmer.profession;
+
+                    //- Sin Embargo para eliminar los datos solo necesitamos el id
+                    $template.querySelector('.delete').dataset.id = programmer.id;
+                    
+                    let $clone = d.importNode($template, true);
+                    $fragment.appendChild($clone);
+                });
+
+                $table.querySelector("tbody").appendChild($fragment);
             },
             error : message => {
-                console.log(message);
                 let p = `<p>${message}</p>`
                 $table.insertAdjacentHTML("afterend", p);
             }
