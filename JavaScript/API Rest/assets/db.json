@@ -49,18 +49,13 @@
     },
     {
       "id": 4,
-      "name": "Eliot",
+      "name": "Eliot Alderson",
       "profession": "Hacker"
     },
     {
       "id": 5,
-      "name": "Argus",
+      "name": "Argus Aphocraphex",
       "profession": "Data scientist"
-    },
-    {
-      "id": 6,
-      "name": "Arthur",
-      "profession": "Pentester"
     }
   ]
 }
