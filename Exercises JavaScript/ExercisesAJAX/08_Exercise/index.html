@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de formulario con Fetch y Php</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <h1>Envio de formulario con Fetch y Php</h1>
+        <h2>Validaciones de Formulario</h2>
+        <!-- Creamos nuestro formulario -->
+        <form class="contact-form">
+            <legend>Envianos tus comentarios</legend>
+            <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+            <input type="email" name="email" placeholder="Escribe tu email" title="Email Incorrecto!!" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+            <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
+            <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres!!!" data-pattern="^.{1,255}$" required></textarea>
+            <input type="submit" value="Enviar">
+            
+            <!-- Loader se envio -->
+            <div class="contact-form-loader none">
+                <img src="./assets/rings.svg" alt="Cargando">
+            </div>
+
+            <!-- Respuesta al enviar los datos del formulario -->
+            <div class="contact-form-response none">
+                <p>Los datos han sido enviados</p>
+            </div>
+        </form>
+        <script src="./validations_form.js"></script>
+</body>
+</html>
