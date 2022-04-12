@@ -1,3 +1,3 @@
-# Testting con JavaScript
+# Testing con JavaScript
 
-### Usaremos y Aprenderemos ha hacer test con JavaScript
+### Aprenderemos a hacer test con Js usando Jest!!
