@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout with Stripe</title>
+</head>
+<body>
+    <h1>Checkout with Stripe</h1>
+    <section class="courses" id="courses">
+
+    </section>  
+    <template id="course-template">
+        <figure class="course">
+            <img>
+            <figcaption>
+                <h2 class="tittle"></h2>
+                <h4 class="subtittle"></h4>
+            </figcaption>
+        </figure>
+    </template>
+
+    <!-- Importamos la libreria de Stripe Js -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Importamos nuestro script para manejar el stripe-->
+    <script type="module" src="./assets/stripe-checkout.js"></script>
+
+</body>
+</html>
