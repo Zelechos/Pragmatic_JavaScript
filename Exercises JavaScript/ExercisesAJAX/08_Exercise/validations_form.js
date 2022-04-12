@@ -68,10 +68,9 @@ function contactForm(){
                         $response.innerHTML = "";
                     }, 3000);
                 });
-
         });
 
 }
-
+// Ejecutamos la subturina contactForm(); en la carga del documento
 d.addEventListener("DOMContentLoaded", contactForm);
 
