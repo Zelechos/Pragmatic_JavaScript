@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Canciones</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Buscador de Canciones</h1>
+    <form action="" id="song-search">
+        <input type="text" name="artist" placeholder="Nomber del Interprete" required><br>
+        <input type="text" name="song" placeholder="Nomber de la Cancion" required><br>
+        <input type="submit">
+    </form>
+    <img class="loader" src="./assets/rings.svg" alt="Cargando">
+    <aside class="error"></aside>
+    <main>
+        <article class="artist"></article>
+        <article class="song"></article>
+    </main>
+    <script src="./js/songs.js"></script>
+</body>
+</html>

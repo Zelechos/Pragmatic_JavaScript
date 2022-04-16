@@ -43,7 +43,7 @@ d.addEventListener('keypress', async e =>{
                 let message = error.statusText || "Error al cargar los Shows";
                 $shows.innerHTML = `<h2>Error ${error.status} : ${message}</h2>`;
             }finally{
-
+                console.warn('Code Love');
             }
 
         }

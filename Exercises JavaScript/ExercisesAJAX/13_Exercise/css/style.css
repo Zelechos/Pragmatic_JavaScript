@@ -1,0 +1,45 @@
+html{
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10px;
+}
+
+main > * {
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.loader{
+    display: none;
+    margin: auto;
+}
+
+.song blockquote{
+    white-space: pre-wrap;
+}
+
+@media screen and (min-width: 800px){
+
+    main{
+        flex-direction: row;
+    }
+
+    main > * {
+        flex-basis: 50%;
+        padding: 1rem;
+    }
+}
