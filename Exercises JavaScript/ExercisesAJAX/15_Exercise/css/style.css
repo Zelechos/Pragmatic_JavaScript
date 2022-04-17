@@ -1,3 +1,15 @@
+html{
+    box-sizing: border-box;
+    font-size: 16;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+
 body{
     background-color: #000;
     color: #fff;
@@ -5,5 +17,77 @@ body{
 
 .loader{
     display: none;
+    margin: auto;
+}
+
+a{
+    color: blueviolet;
+    transition: all .3s ease-out;
+}
+
+a:hover{
+    opacity: .75;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    border: thin solid blueviolet;
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.site{
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 50%;
+    text-align: center;
+}
+
+.post{
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 80%;
+    text-align: center;
+    background-color: blueviolet;
+}
+
+.post-author img{
+    width: 3%;
+    border-radius: 50%;
+}
+
+.post-date{
+    margin: 1rem auto;
+    display: block;
+}
+
+.post-excerpt,
+.post-categories,
+.post-tags,
+.post-content{
+    text-align: left;
+}
+
+.post-content summary{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.post-content > article{
+    padding: 1rem;
+    background-color: gray;
+}
+
+.post-content img{
+    display: block;
     margin: auto;
 }

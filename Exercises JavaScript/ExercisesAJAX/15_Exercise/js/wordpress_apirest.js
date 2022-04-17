@@ -45,10 +45,31 @@ function getPosts(){
     .then(json => {
         console.log(json)
         json.forEach(post =>{
+            
+            let categories = "", tags ="";
+
+            post._embedded["wp:term"][0].forEach(post => categories += `<li>${post.name}</li>`);
+            post._embedded["wp:term"][1].forEach(post => tags += `<li>${post.name}</li>`);
 
             $template.querySelector('.post-image').src = post._embedded["wp:featuredmedia"][0].source_url || "";
             $template.querySelector('.post-image').alt = post.title.rendered;
             $template.querySelector('.post-title').textContent = post.title.rendered;
+            $template.querySelector('.post-author').innerHTML = `
+                <img src="${post._embedded.author[0].avatar_urls["48"]}" alt="${post._embedded.author[0].name}">
+                <figcaption>${post._embedded.author[0].name}</figcaption>
+            `;
+            $template.querySelector('.post-date').innerHTML = new Date(post.date).toLocaleDateString();;
+            $template.querySelector('.post-link').href = post.link;
+            $template.querySelector('.post-excerpt').innerHTML = post.excerpt.rendered.replace("[&hellip;]","....");
+            $template.querySelector('.post-categories').innerHTML = `
+            <p>Categorias</p>
+            <ul>${categories}</ul>`;
+            $template.querySelector('.post-tags').innerHTML = `
+            <p>Tags</p>
+            <ul>${tags}</ul>`;
+
+            $template.querySelector('.post-content > article').innerHTML = post.content.rendered;
+
 
             let $clone = d.importNode($template, true);
             $fragment.appendChild($clone);
@@ -64,6 +85,7 @@ function getPosts(){
         $loader.style.display = "none";
     })
 }
+
 
 // Evento para ejecutar ambas funciones cuando la web termine de cargar
 d.addEventListener('DOMContentLoaded', e=>{
