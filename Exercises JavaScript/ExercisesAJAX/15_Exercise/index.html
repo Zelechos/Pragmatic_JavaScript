@@ -9,8 +9,28 @@
 </head>
 <body>
     <h1>Word Press REST API</h1>
-    
-
+    <article id="site" class="site"></article>
+    <section id="posts" class="posts"></section>
+    <img src="./assets/rings.svg" alt="Cargando .. " class="loader">
+    <template id="post-template">
+        <article class="post">
+            <img class="post-image">
+            <aside>
+                <h2 class="post-title"></h2>
+                <figure class="post-author"></figure>
+                <small class="post-date"></small>
+                <a class="post-link" target="_blank">Ver publicacion original</a>
+                <p class="post-excerpt"></p>
+                <div class="post-categories"></div>
+                <div class="post-tags"></div>
+                <details class="post-content">
+                    <summary>Ver contenido de la publicacion</summary>
+                    <article></article>
+                </details>
+            </aside>
+        </article>
+        <hr>
+    </template>
 
     <script src="./js/wordpress_apirest.js"></script>
 </body>
