@@ -10,7 +10,8 @@ const $fragment = d.createDocumentFragment();
 const DOMAIN = "https://css-tricks.com";
 const SITE = `${DOMAIN}/wp-json`;
 const API_WP = `${SITE}/wp/v2`;
-const POSTS = `${API_WP}/posts`;
+// le pasamos un atributo embed para que podeamos acceder a los contenido embebidos que hay en el json de respuesta de los post!!! importante
+const POSTS = `${API_WP}/posts?_embed`;
 const PAGES = `${API_WP}/pages`;
 const CATEGORIES = `${API_WP}/categories`;
 
@@ -38,15 +39,26 @@ function getSiteData(){
 
 // subrutina para traer la informacion de los posts
 function getPosts(){
+    $loader.style.display = "block";
     fetch(POSTS)
     .then(response => response.ok ? response.json() : Promise.reject(response))
     .then(json => {
         console.log(json)
-        
+        json.forEach(post =>{
+
+            $template.querySelector('.post-image').src = post._embedded["wp:featuredmedia"][0].source_url || "";
+            $template.querySelector('.post-image').alt = post.title.rendered;
+            $template.querySelector('.post-title').textContent = post.title.rendered;
+
+            let $clone = d.importNode($template, true);
+            $fragment.appendChild($clone);
+
+        });
+        $posts.appendChild($fragment);
         $loader.style.display = "none";
     })
     .catch(error => {
-        console.error(error)
+        console.error(error);
         let message = error.statusText || "Ocurrio un error";
         $posts.innerHTML = `<h3> Error ${error.status}: ${message} </h3>`;
         $loader.style.display = "none";
