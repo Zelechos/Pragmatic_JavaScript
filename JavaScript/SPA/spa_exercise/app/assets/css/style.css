@@ -1,4 +1,38 @@
+html{
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
 body{
+    margin: 0;
+    overflow-x: hidden;
     background-color: #141414;
     color: #e0e0e0;
+}
+
+a{
+    color: #8E2DE2;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #4A00E0, #8E2DE2); 
+    transition: color 0.3s ease ;
+}
+
+a:hover{
+    color: #4A00E0;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
