@@ -55,3 +55,32 @@ img{
     color: #fff;
     background-color:#f85149;
 }
+
+.form-search{
+    margin: auto;
+    text-align: center;
+}
+
+.form-search input{
+    display: block;
+    margin: auto;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.header{
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: #fff;
+    /* Lineas para dar border-radius al bottom de mi header */
+    border-bottom-left-radius: 50%; 
+    border-bottom-right-radius: 50%;
+}
+
+.header > *{
+    margin: 1rem auto;
+}
+
