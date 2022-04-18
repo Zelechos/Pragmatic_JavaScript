@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 html{
     box-sizing: border-box;
     font-size: 16;
+    font-family: 'Comfortaa', cursive;
 }
 
 *,
@@ -11,8 +13,16 @@ html{
 
 
 body{
-    background-color: #000;
-    color: #fff;
+    background-color: #0d1117;
+    color: white;
+}
+
+h1{
+    width: 30%;
+    background-color: #3fb950;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: auto;
 }
 
 .loader{
@@ -21,7 +31,11 @@ body{
 }
 
 a{
-    color: blueviolet;
+    background-color: #673AB7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
     transition: all .3s ease-out;
 }
 
@@ -31,7 +45,8 @@ a:hover{
 
 img{
     width: 100%;
-    height: auto;
+    height: 15rem;
+    border-radius: 5px;
 }
 
 h1{
@@ -39,7 +54,7 @@ h1{
 }
 
 hr{
-    border: thin solid blueviolet;
+    border: thin solid #673AB7;
     margin: 3rem auto;
     width: 80%;
 }
@@ -52,16 +67,18 @@ hr{
 }
 
 .post{
+    width: 60%;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 1rem;
     max-width: 80%;
     text-align: center;
-    background-color: blueviolet;
+    border: 3px solid #484f58;
 }
 
 .post-author img{
-    width: 3%;
+    width: 10%;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -78,13 +95,29 @@ hr{
 }
 
 .post-content summary{
+    padding: 10px 20px;
+    background-color: #1f6feb;
     font-size: 1.5rem;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 .post-content > article{
     padding: 1rem;
-    background-color: gray;
+    background-color: #1f6feb;
+}
+
+.post-content a{
+    background-color: #1f6feb;
+    color: #0d1117;
+    padding: 0px 0px;
+}
+
+.post-content pre {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0d1117;
+    color: #3fb950;
 }
 
 .post-content img{
