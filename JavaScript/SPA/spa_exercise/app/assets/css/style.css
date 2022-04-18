@@ -18,16 +18,19 @@ body{
 }
 
 a{
-    color: #8E2DE2;  /* fallback for old browsers */
-    color: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    color: linear-gradient(to right, #4A00E0, #8E2DE2); 
+    color: #8957e5;
     transition: color 0.3s ease ;
+    text-decoration: none;
 }
 
 a:hover{
-    color: #4A00E0;
+    background-color: #8957e5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
+/* color: #398eff; */
 h1{
     text-align: center;
 }
@@ -35,4 +38,20 @@ h1{
 img{
     max-width: 100%;
     height: auto;
+}
+
+.loader{
+    margin: 15rem auto;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+}
+
+.error{
+    padding: 1rem;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color:#f85149;
 }
