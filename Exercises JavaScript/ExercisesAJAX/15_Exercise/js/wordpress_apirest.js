@@ -1,5 +1,6 @@
-'use strict'
+'use strict';
 const d = document;
+const w = window;
 const $site = d.getElementById('site');
 const $posts = d.getElementById('posts');
 const $loader = d.querySelector('.loader');
@@ -14,6 +15,10 @@ const API_WP = `${SITE}/wp/v2`;
 const POSTS = `${API_WP}/posts?_embed`;
 const PAGES = `${API_WP}/pages`;
 const CATEGORIES = `${API_WP}/categories`;
+let page = 1;
+let posts = 5;
+
+
 
 // subrutina para traer los datos del sitio
 function getSiteData(){
@@ -40,7 +45,7 @@ function getSiteData(){
 // subrutina para traer la informacion de los posts
 function getPosts(){
     $loader.style.display = "block";
-    fetch(POSTS)
+    fetch(`${POSTS}&per_page=${posts}&page=${page}`)//ruta para el cambio de pagina para lograr el infinite scroll
     .then(response => response.ok ? response.json() : Promise.reject(response))
     .then(json => {
         console.log(json)
@@ -86,11 +91,23 @@ function getPosts(){
     })
 }
 
-
 // Evento para ejecutar ambas funciones cuando la web termine de cargar
 d.addEventListener('DOMContentLoaded', e=>{
     getSiteData();
     getPosts();
     console.warn("Code Love");
+})
+
+// Evento para el infinite scroll 
+w.addEventListener('scroll', e=>{
+
+    // Aplicamos destructuracion
+    const {scrollTop, clientHeight, scrollHeight} = d.documentElement;
+
+    if(scrollTop + clientHeight >= scrollHeight){
+        page++;
+        getPosts();
+        console.log("Cargar mas posts");
+    }
 })
 
