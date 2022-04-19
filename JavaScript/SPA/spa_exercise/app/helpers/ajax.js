@@ -8,10 +8,11 @@ export function ajax(props){
         .then(json => success(json))
         .catch(error => {
             let message = error.statusText || "Ocurrio un error al acceder a la API!!!";
-            document.getElementById('root').innerHTML = `
+            document.getElementById('posts').innerHTML = `
             <div class="error">
                 <p>Error ${error.status} : ${message}</p>
             </div>`;
+            document.querySelector('.loader').style.dysplay = "none";
             console.error(error);
         });
         

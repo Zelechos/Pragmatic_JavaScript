@@ -8,6 +8,8 @@ export function Menu(){
         <span>-</span>
         <a href="#/search">Search</a>
         <span>-</span>
+        <a href="#/secrets">Secrets</a>
+        <span>-</span>
         <a href="https://github.com/Zelechos" target="_blank" rel="noopener">Me</a>
     `;
 
