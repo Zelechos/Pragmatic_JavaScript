@@ -18,19 +18,17 @@ body{
 }
 
 a{
-    color: #8957e5;
-    transition: color 0.3s ease ;
+    background-color: #8957e5;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
     text-decoration: none;
 }
 
-a:hover{
-    background-color: #8957e5;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+nav{
+    padding: 1rem;
 }
 
-/* color: #398eff; */
 h1{
     text-align: center;
 }
@@ -69,6 +67,13 @@ img{
     font-size: 1rem;
 }
 
+.grid-fluid{
+    margin: 1rem auto;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .header{
     padding: 0.5rem;
     position: sticky;
@@ -76,11 +81,23 @@ img{
     text-align: center;
     background-color: #fff;
     /* Lineas para dar border-radius al bottom de mi header */
-    border-bottom-left-radius: 50%; 
-    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 5%; 
+    border-bottom-right-radius: 5%;
 }
 
 .header > *{
     margin: 1rem auto;
 }
 
+.post-card{
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 80%;
+    background-color: #398eff;
+    border-radius: 10px;
+}
+
+.post-card p{
+    display: flex;
+    justify-content: space-between;
+}
