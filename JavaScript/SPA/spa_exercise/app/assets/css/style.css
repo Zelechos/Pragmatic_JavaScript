@@ -18,15 +18,12 @@ body{
 }
 
 a{
-    background-color: #8957e5;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
+    color: #8957e5;
     text-decoration: none;
 }
 
 nav{
-    padding: 1rem;
+    padding: 0.1rem;
 }
 
 h1{
@@ -62,7 +59,7 @@ img{
 .search-form input{
     display: block;
     margin: auto;
-    padding: 0.25rem;
+    padding: 0.2rem;
     border-radius: 0.25rem;
     font-size: 1rem;
 }
@@ -75,18 +72,19 @@ img{
 }
 
 .header{
-    padding: 0.5rem;
+    display: flex;
+    padding: 0.1rem;
     position: sticky;
     top: 0;
     text-align: center;
     background-color: #fff;
     /* Lineas para dar border-radius al bottom de mi header */
-    border-bottom-left-radius: 5%; 
-    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 1%; 
+    border-bottom-right-radius: 1%;
 }
 
 .header > *{
-    margin: 1rem auto;
+    margin: 0.5rem auto;
 }
 
 .post-card{
@@ -100,4 +98,41 @@ img{
 .post-card p{
     display: flex;
     justify-content: space-between;
+}
+
+.post-page{
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 90%;
+    background-color: #141414;
+}
+
+.post-page > aside{
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.post-page > hr{
+    border:thin solid #8957e5;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.post-page time{
+    margin: 1rem auto;
+    display: block;
+}
+
+.post-page > article{
+    padding: 0 2rem;
+}
+
+.post-page img,
+.post-page audio,
+.post-page iframe,
+.post-page video{
+    margin: auto;
+    display: block;
+    max-width: 100%;
 }

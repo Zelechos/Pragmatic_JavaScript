@@ -3,6 +3,7 @@
 import API from '../helpers/wordprees_api.js';
 import { ajax } from '../helpers/ajax.js';
 import { PostCart } from './PostCart.js';
+import { Post } from './Post.js';
 
 export async function Router(){
     const d = document;
@@ -12,7 +13,7 @@ export async function Router(){
     // usamos destructuracion para obtener el hash del navegador
     let { hash } = location;
 
-    console.log(hash);
+    // console.log(hash);
 
     $main.innerHTML = null;
 
@@ -28,6 +29,7 @@ export async function Router(){
                 $main.innerHTML = postCode;
             }
         });
+        console.log(API.POST);
 
     }else if(hash.includes("#/search")){  
         $main.innerHTML = `<h2>search mode</h2>`
@@ -36,13 +38,12 @@ export async function Router(){
         $main.innerHTML = `<h2>secrets mode</h2>`
         
     }else {
-        $main.innerHTML = `<h2>informacion del post mode</h2>`
+        await ajax({
+            url: `${API.POST}/${localStorage.getItem("wpPostId")}`,
+            success: (data)=> $main.innerHTML = Post(data)
+        });
     }
 
 
     d.querySelector('.loader').style.display = "none";
-
-
-
-
 }
