@@ -10,6 +10,5 @@ export function Header(){
     $header.appendChild(Title());
     $header.appendChild(Menu());
     $header.appendChild(SearchForm());
-    
     return $header;
 }

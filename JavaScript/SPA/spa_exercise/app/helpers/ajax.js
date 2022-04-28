@@ -15,5 +15,4 @@ export async function ajax(props){
             document.querySelector('.loader').style.dysplay = "none";
             console.error(error);
         });
-        
 }

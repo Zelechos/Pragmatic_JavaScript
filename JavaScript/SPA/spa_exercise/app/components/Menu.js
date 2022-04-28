@@ -10,9 +10,9 @@ export function Menu(){
         <span>-</span>
         <a href="#/secrets">Secrets</a>
         <span>-</span>
+        <a href="#/hacker">Hacker</a>
+        <span>-</span>
         <a href="https://github.com/Zelechos" target="_blank" rel="noopener">Me</a>
     `;
-
-
     return $menu;
 }

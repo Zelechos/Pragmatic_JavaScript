@@ -12,7 +12,6 @@ export function App(){
     $root.appendChild(Header());
     $root.appendChild(Loader());
     $root.appendChild(Main());
-    
     Router();
     bye();
 }
