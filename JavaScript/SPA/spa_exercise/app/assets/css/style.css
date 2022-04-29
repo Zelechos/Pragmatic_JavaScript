@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+
 html{
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
 }
 
@@ -33,6 +35,18 @@ h1{
 img{
     max-width: 100%;
     height: auto;
+}
+
+code{
+    color: #8957e5;
+    font-family: 'Fira code', sans-serif;
+}
+
+pre{
+    border: 1px solid #8957e5;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: transparent;
 }
 
 .loader{

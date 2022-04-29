@@ -4,6 +4,7 @@ import API from '../helpers/wordprees_api.js';
 import { ajax } from '../helpers/ajax.js';
 import { PostCart } from './PostCart.js';
 import { Post } from './Post.js';
+import { SearchCard } from './SeachCard.js';
 
 export async function Router(){
     const d = document;
@@ -31,12 +32,21 @@ export async function Router(){
     }else if(hash.includes("#/search")){  
         let query = localStorage.getItem('wpSearch');
 
-        if(!query)return false;
+        if(!query){
+            d.querySelector('.loader').style.display = "none";
+            return false;
+        };
 
         await ajax({
             url: `${API.SEARCH}${query}`,
             success: (responses)=>{
-                console.log(responses);
+                let searchCode = "";
+
+                (responses.length === 0)
+                    ? searchCode = `<h1 class="error" >No matches found of ${query}!!</h1>`
+                    : responses.forEach(response => searchCode += SearchCard(response));
+
+                $main.innerHTML = searchCode;
             }
         })
         
