@@ -5,6 +5,7 @@ import { ajax } from '../helpers/ajax.js';
 import { PostCart } from './PostCart.js';
 import { Post } from './Post.js';
 import { SearchCard } from './SeachCard.js';
+import { ContactForm } from './ContactForm.js';
 
 export async function Router(){
     const d = document;
@@ -50,8 +51,8 @@ export async function Router(){
             }
         })
         
-    }else if(hash === "#/secrets"){  
-        $main.innerHTML = `<h2>secrets mode</h2>`
+    }else if(hash === "#/contact"){  
+        $main.appendChild(ContactForm());
         
     }else if(hash === "#/hacker"){  
         $main.innerHTML = `
