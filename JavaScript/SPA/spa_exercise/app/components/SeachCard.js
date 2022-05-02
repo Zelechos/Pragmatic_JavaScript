@@ -8,6 +8,7 @@ export function SearchCard(props){
         if(!e.target.matches(".post-card a"))return false;
         localStorage.setItem('wpPostId', e.target.dataset.id);
     });
+    
     return `
         <article class="post-card">
             <h2>${title}</h2>
