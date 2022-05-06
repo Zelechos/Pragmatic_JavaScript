@@ -23,11 +23,31 @@ const render = ()=>{
     $list.innerHTML = template();
 }
 
+// NOTA : EL ESTADO SE TIENE QUE MANTENER INMUTABLEEEE!!!
+// Actualizar el State de forma Reactiva
+const setState = (object)=>{
+    for (let key in object) {
+        if(state.hasOwnProperty(key)){
+            state[key] = object[key];
+        }
+    }
+    render();
+}
+
 /**
  * Evento para ejecutar el render a la carga de la pagina
  */
 d.addEventListener('DOMContentLoaded', render);
 
+// Establecemos valores por defecto al state
+setState({
+    todoList: ["Task 1", "Task 2", "Task 3"],
+    name : "virus"
+});
+
+// Tenemos que evitar que el estado sea mutable
+const item = state.todoList;
+item.push("Task 4");
 
 /**
  * Evento para traer los valores del form !!
@@ -38,8 +58,7 @@ d.addEventListener('submit', e=>{
     const $item = d.getElementById('todo-item');
     if(!$item)return;
 
-    //Una buena practica de programacion es evitar manipularlo directamente aqui entra el concepto de mutabilidad, inmutabilidad, reactividad
-    // Actualizar el State y UI NOTA : ESTO NO SE HACE SOLUCION => en 03_reactividad_del_estado.js
+    // Actualizar el State y UI
     state.todoList.push($item.value);
     render();
 
