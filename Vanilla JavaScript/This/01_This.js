@@ -1,10 +1,10 @@
 'use strict'
-
 // This
 
-// muestra valores en base a su contexto
-
-// el contexto actual de this es el del objeto window por defecto
+/**
+ * muestra valores en base a su contexto
+ * el contexto actual de this es el del objeto window por defecto
+ */ 
 console.log(this);
 console.log(window);
 console.warn(this === window);

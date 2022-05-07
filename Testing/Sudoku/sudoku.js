@@ -40,8 +40,6 @@ export default class Sudoku{
     }
 }
 
-// module.exports = Sudoku;
-
 // test code
 let text = '005910308009403060027500100030000201000820007006007004000080000640150700890000420';
 let obj = new Sudoku();
