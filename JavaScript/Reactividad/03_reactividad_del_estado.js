@@ -42,10 +42,16 @@ d.addEventListener('DOMContentLoaded', render);
 // Establecemos valores por defecto al state
 setState({
     todoList: ["Task 1", "Task 2", "Task 3"],
+    //esto no aparece porque mi estado esta programado para ser inmutable osea esta protegido claramente esto se puede cambiar!!!!
     name : "virus"
 });
 
-// Tenemos que evitar que el estado sea mutable
+/**
+ *  Tenemos que evitar que el estado sea mutable el 
+ *  Estado es Mutable cuando permitimos modificar 
+ *  el estado directamente creando una copia del 
+ *  objeto y agregando otro elemento.
+ */ 
 const item = state.todoList;
 item.push("Task 4");
 
