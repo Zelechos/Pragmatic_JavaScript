@@ -85,3 +85,5 @@ Factorial.programar();
 Factorial.depurar();
 Factorial.utilidad();
 Factorial.produccion();
+console.log(Factorial.valueOf());
+
