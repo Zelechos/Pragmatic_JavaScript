@@ -2,7 +2,8 @@
   "name": "tdd",
   "version": "1.0.0",
   "description": "primer tdd practica",
-  "main": "areas-calculator.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage"
@@ -10,6 +11,6 @@
   "author": "Pragmatic Coder",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.4.3"
+    "jest": "^27.5.1"
   }
 }
